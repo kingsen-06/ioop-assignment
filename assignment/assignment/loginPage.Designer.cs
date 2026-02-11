@@ -1,6 +1,6 @@
-﻿namespace loginPage
+﻿namespace assignment
 {
-    partial class Form1
+    partial class loginPage
     {
         /// <summary>
         ///  Required designer variable.
@@ -91,8 +91,9 @@
             btnRegister.TabIndex = 6;
             btnRegister.Text = "Register";
             btnRegister.UseVisualStyleBackColor = true;
+            btnRegister.Click += btnRegister_Click;
             // 
-            // Form1
+            // loginPage
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -103,7 +104,7 @@
             Controls.Add(lblPassword);
             Controls.Add(txtUsername);
             Controls.Add(lblUsername);
-            Name = "Form1";
+            Name = "loginPage";
             Text = "Form1";
             ResumeLayout(false);
             PerformLayout();
