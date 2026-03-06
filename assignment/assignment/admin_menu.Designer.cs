@@ -31,14 +31,14 @@
             btnRegisterTrainer = new Button();
             btnViewFeedback = new Button();
             label1 = new Label();
-            btnBack = new Button();
             btnUpdate = new Button();
+            lblBack = new Label();
             SuspendLayout();
             // 
             // btnRegisterTrainer
             // 
             btnRegisterTrainer.Font = new Font("Segoe UI", 11F);
-            btnRegisterTrainer.Location = new Point(138, 138);
+            btnRegisterTrainer.Location = new Point(137, 131);
             btnRegisterTrainer.Name = "btnRegisterTrainer";
             btnRegisterTrainer.Size = new Size(370, 42);
             btnRegisterTrainer.TabIndex = 0;
@@ -48,7 +48,7 @@
             // btnViewFeedback
             // 
             btnViewFeedback.Font = new Font("Segoe UI", 11F);
-            btnViewFeedback.Location = new Point(138, 212);
+            btnViewFeedback.Location = new Point(137, 205);
             btnViewFeedback.Name = "btnViewFeedback";
             btnViewFeedback.Size = new Size(370, 42);
             btnViewFeedback.TabIndex = 3;
@@ -65,32 +65,32 @@
             label1.TabIndex = 7;
             label1.Text = "Administrator Functional Features";
             // 
-            // btnBack
-            // 
-            btnBack.Font = new Font("Segoe UI", 11F);
-            btnBack.Location = new Point(138, 362);
-            btnBack.Name = "btnBack";
-            btnBack.Size = new Size(370, 42);
-            btnBack.TabIndex = 11;
-            btnBack.Text = "Back to Login Page";
-            btnBack.UseVisualStyleBackColor = true;
-            // 
             // btnUpdate
             // 
             btnUpdate.Font = new Font("Segoe UI", 11F);
-            btnUpdate.Location = new Point(138, 291);
+            btnUpdate.Location = new Point(137, 284);
             btnUpdate.Name = "btnUpdate";
             btnUpdate.Size = new Size(370, 42);
             btnUpdate.TabIndex = 10;
             btnUpdate.Text = "Update Account Profile";
             btnUpdate.UseVisualStyleBackColor = true;
             // 
+            // lblBack
+            // 
+            lblBack.AutoSize = true;
+            lblBack.Font = new Font("Segoe UI", 11F);
+            lblBack.Location = new Point(12, 370);
+            lblBack.Name = "lblBack";
+            lblBack.Size = new Size(217, 30);
+            lblBack.TabIndex = 12;
+            lblBack.Text = "< Back to Login Page";
+            // 
             // admin_menu
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(672, 489);
-            Controls.Add(btnBack);
+            ClientSize = new Size(672, 419);
+            Controls.Add(lblBack);
             Controls.Add(btnUpdate);
             Controls.Add(label1);
             Controls.Add(btnViewFeedback);
@@ -106,7 +106,7 @@
         private Button btnRegisterTrainer;
         private Button btnViewFeedback;
         private Label label1;
-        private Button btnBack;
         private Button btnUpdate;
+        private Label lblBack;
     }
 }

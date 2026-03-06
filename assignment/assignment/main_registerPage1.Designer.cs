@@ -28,12 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btnNext = new Button();
             txtPw = new TextBox();
             lblPassword = new Label();
             txtUsername = new TextBox();
             lblUsername = new Label();
-            btnBack = new Button();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -45,23 +43,14 @@
             txtContactNum = new TextBox();
             cmbRole = new ComboBox();
             label6 = new Label();
+            lblBack = new Label();
+            lblNext = new Label();
             SuspendLayout();
-            // 
-            // btnNext
-            // 
-            btnNext.Font = new Font("Segoe UI", 11F);
-            btnNext.Location = new Point(495, 552);
-            btnNext.Margin = new Padding(4);
-            btnNext.Name = "btnNext";
-            btnNext.Size = new Size(150, 47);
-            btnNext.TabIndex = 12;
-            btnNext.Text = "Next";
-            btnNext.UseVisualStyleBackColor = true;
             // 
             // txtPw
             // 
             txtPw.Font = new Font("Segoe UI", 11F);
-            txtPw.Location = new Point(470, 192);
+            txtPw.Location = new Point(317, 177);
             txtPw.Margin = new Padding(4);
             txtPw.Name = "txtPw";
             txtPw.Size = new Size(275, 37);
@@ -71,7 +60,7 @@
             // 
             lblPassword.AutoSize = true;
             lblPassword.Font = new Font("Segoe UI", 11F);
-            lblPassword.Location = new Point(252, 196);
+            lblPassword.Location = new Point(99, 181);
             lblPassword.Margin = new Padding(4, 0, 4, 0);
             lblPassword.Name = "lblPassword";
             lblPassword.Size = new Size(114, 30);
@@ -81,7 +70,7 @@
             // txtUsername
             // 
             txtUsername.Font = new Font("Segoe UI", 11F);
-            txtUsername.Location = new Point(470, 138);
+            txtUsername.Location = new Point(317, 123);
             txtUsername.Margin = new Padding(4);
             txtUsername.Name = "txtUsername";
             txtUsername.Size = new Size(275, 37);
@@ -91,30 +80,18 @@
             // 
             lblUsername.AutoSize = true;
             lblUsername.Font = new Font("Segoe UI", 11F);
-            lblUsername.Location = new Point(252, 141);
+            lblUsername.Location = new Point(99, 126);
             lblUsername.Margin = new Padding(4, 0, 4, 0);
             lblUsername.Name = "lblUsername";
             lblUsername.Size = new Size(122, 30);
             lblUsername.TabIndex = 7;
             lblUsername.Text = "Username :";
             // 
-            // btnBack
-            // 
-            btnBack.Font = new Font("Segoe UI", 11F);
-            btnBack.Location = new Point(321, 552);
-            btnBack.Margin = new Padding(4);
-            btnBack.Name = "btnBack";
-            btnBack.Size = new Size(150, 47);
-            btnBack.TabIndex = 11;
-            btnBack.Text = "Back";
-            btnBack.UseVisualStyleBackColor = true;
-            btnBack.Click += btnBack_Click;
-            // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 11F);
-            label1.Location = new Point(252, 251);
+            label1.Location = new Point(99, 236);
             label1.Name = "label1";
             label1.Size = new Size(198, 30);
             label1.TabIndex = 13;
@@ -124,7 +101,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 11F);
-            label2.Location = new Point(252, 306);
+            label2.Location = new Point(99, 291);
             label2.Name = "label2";
             label2.Size = new Size(75, 30);
             label2.TabIndex = 14;
@@ -134,7 +111,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 11F);
-            label3.Location = new Point(252, 361);
+            label3.Location = new Point(99, 346);
             label3.Name = "label3";
             label3.Size = new Size(102, 30);
             label3.TabIndex = 15;
@@ -144,7 +121,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 11F);
-            label4.Location = new Point(252, 416);
+            label4.Location = new Point(99, 401);
             label4.Name = "label4";
             label4.Size = new Size(184, 30);
             label4.TabIndex = 16;
@@ -154,7 +131,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 11F);
-            label5.Location = new Point(252, 471);
+            label5.Location = new Point(99, 456);
             label5.Name = "label5";
             label5.Size = new Size(66, 30);
             label5.TabIndex = 17;
@@ -163,7 +140,7 @@
             // txtConfirmPw
             // 
             txtConfirmPw.Font = new Font("Segoe UI", 11F);
-            txtConfirmPw.Location = new Point(470, 248);
+            txtConfirmPw.Location = new Point(317, 233);
             txtConfirmPw.Name = "txtConfirmPw";
             txtConfirmPw.Size = new Size(275, 37);
             txtConfirmPw.TabIndex = 18;
@@ -171,7 +148,7 @@
             // txtEmail
             // 
             txtEmail.Font = new Font("Segoe UI", 11F);
-            txtEmail.Location = new Point(470, 303);
+            txtEmail.Location = new Point(317, 288);
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(275, 37);
             txtEmail.TabIndex = 19;
@@ -179,7 +156,7 @@
             // txtAddress
             // 
             txtAddress.Font = new Font("Segoe UI", 11F);
-            txtAddress.Location = new Point(470, 358);
+            txtAddress.Location = new Point(317, 343);
             txtAddress.Name = "txtAddress";
             txtAddress.Size = new Size(275, 37);
             txtAddress.TabIndex = 20;
@@ -187,7 +164,7 @@
             // txtContactNum
             // 
             txtContactNum.Font = new Font("Segoe UI", 11F);
-            txtContactNum.Location = new Point(470, 413);
+            txtContactNum.Location = new Point(317, 398);
             txtContactNum.Name = "txtContactNum";
             txtContactNum.Size = new Size(275, 37);
             txtContactNum.TabIndex = 21;
@@ -197,7 +174,7 @@
             cmbRole.Font = new Font("Segoe UI", 11F);
             cmbRole.FormattingEnabled = true;
             cmbRole.Items.AddRange(new object[] { "Administrator", "Trainer", "Lecturer", "Student" });
-            cmbRole.Location = new Point(470, 468);
+            cmbRole.Location = new Point(317, 453);
             cmbRole.Name = "cmbRole";
             cmbRole.Size = new Size(275, 38);
             cmbRole.TabIndex = 22;
@@ -206,17 +183,39 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.Location = new Point(310, 49);
+            label6.Location = new Point(157, 34);
             label6.Name = "label6";
             label6.Size = new Size(370, 48);
             label6.TabIndex = 23;
             label6.Text = "Register Your Account";
             // 
+            // lblBack
+            // 
+            lblBack.AutoSize = true;
+            lblBack.Font = new Font("Segoe UI", 11F);
+            lblBack.Location = new Point(25, 553);
+            lblBack.Name = "lblBack";
+            lblBack.Size = new Size(217, 30);
+            lblBack.TabIndex = 24;
+            lblBack.Text = "< Back to Login Page";
+            // 
+            // lblNext
+            // 
+            lblNext.AutoSize = true;
+            lblNext.Font = new Font("Segoe UI", 11F);
+            lblNext.Location = new Point(580, 553);
+            lblNext.Name = "lblNext";
+            lblNext.Size = new Size(79, 30);
+            lblNext.TabIndex = 25;
+            lblNext.Text = "Next >";
+            // 
             // registerPage1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1000, 657);
+            ClientSize = new Size(691, 611);
+            Controls.Add(lblNext);
+            Controls.Add(lblBack);
             Controls.Add(label6);
             Controls.Add(cmbRole);
             Controls.Add(txtContactNum);
@@ -228,8 +227,6 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(btnNext);
-            Controls.Add(btnBack);
             Controls.Add(txtPw);
             Controls.Add(lblPassword);
             Controls.Add(txtUsername);
@@ -242,13 +239,10 @@
         }
 
         #endregion
-
-        private Button btnNext;
         private TextBox txtPw;
         private Label lblPassword;
         private TextBox txtUsername;
         private Label lblUsername;
-        private Button btnBack;
         private Label label1;
         private Label label2;
         private Label label3;
@@ -260,5 +254,7 @@
         private TextBox txtContactNum;
         private ComboBox cmbRole;
         private Label label6;
+        private Label lblBack;
+        private Label lblNext;
     }
 }
