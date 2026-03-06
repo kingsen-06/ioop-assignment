@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace assignment
 {
-    public partial class registerPage : Form
+    public partial class admin_selectTrainer : Form
     {
-        public registerPage()
+        public admin_selectTrainer()
         {
             InitializeComponent();
-        }
-
-        private void btnBack_Click(object sender, EventArgs e)
-        {
-            loginPage login = new loginPage();
-            login.Show();
-            this.Hide();
         }
     }
 }

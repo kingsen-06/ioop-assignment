@@ -1,6 +1,6 @@
 ﻿namespace assignment
 {
-    partial class registerPage
+    partial class registerPage1
     {
         /// <summary>
         /// Required designer variable.
@@ -50,8 +50,8 @@
             // btnNext
             // 
             btnNext.Font = new Font("Segoe UI", 11F);
-            btnNext.Location = new Point(496, 557);
-            btnNext.Margin = new Padding(4, 4, 4, 4);
+            btnNext.Location = new Point(495, 552);
+            btnNext.Margin = new Padding(4);
             btnNext.Name = "btnNext";
             btnNext.Size = new Size(150, 47);
             btnNext.TabIndex = 12;
@@ -61,8 +61,8 @@
             // txtPw
             // 
             txtPw.Font = new Font("Segoe UI", 11F);
-            txtPw.Location = new Point(471, 197);
-            txtPw.Margin = new Padding(4, 4, 4, 4);
+            txtPw.Location = new Point(470, 192);
+            txtPw.Margin = new Padding(4);
             txtPw.Name = "txtPw";
             txtPw.Size = new Size(275, 37);
             txtPw.TabIndex = 10;
@@ -71,7 +71,7 @@
             // 
             lblPassword.AutoSize = true;
             lblPassword.Font = new Font("Segoe UI", 11F);
-            lblPassword.Location = new Point(253, 201);
+            lblPassword.Location = new Point(252, 196);
             lblPassword.Margin = new Padding(4, 0, 4, 0);
             lblPassword.Name = "lblPassword";
             lblPassword.Size = new Size(114, 30);
@@ -81,8 +81,8 @@
             // txtUsername
             // 
             txtUsername.Font = new Font("Segoe UI", 11F);
-            txtUsername.Location = new Point(471, 143);
-            txtUsername.Margin = new Padding(4, 4, 4, 4);
+            txtUsername.Location = new Point(470, 138);
+            txtUsername.Margin = new Padding(4);
             txtUsername.Name = "txtUsername";
             txtUsername.Size = new Size(275, 37);
             txtUsername.TabIndex = 8;
@@ -91,7 +91,7 @@
             // 
             lblUsername.AutoSize = true;
             lblUsername.Font = new Font("Segoe UI", 11F);
-            lblUsername.Location = new Point(253, 146);
+            lblUsername.Location = new Point(252, 141);
             lblUsername.Margin = new Padding(4, 0, 4, 0);
             lblUsername.Name = "lblUsername";
             lblUsername.Size = new Size(122, 30);
@@ -101,8 +101,8 @@
             // btnBack
             // 
             btnBack.Font = new Font("Segoe UI", 11F);
-            btnBack.Location = new Point(322, 557);
-            btnBack.Margin = new Padding(4, 4, 4, 4);
+            btnBack.Location = new Point(321, 552);
+            btnBack.Margin = new Padding(4);
             btnBack.Name = "btnBack";
             btnBack.Size = new Size(150, 47);
             btnBack.TabIndex = 11;
@@ -114,7 +114,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 11F);
-            label1.Location = new Point(253, 256);
+            label1.Location = new Point(252, 251);
             label1.Name = "label1";
             label1.Size = new Size(198, 30);
             label1.TabIndex = 13;
@@ -124,7 +124,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 11F);
-            label2.Location = new Point(253, 311);
+            label2.Location = new Point(252, 306);
             label2.Name = "label2";
             label2.Size = new Size(75, 30);
             label2.TabIndex = 14;
@@ -134,7 +134,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 11F);
-            label3.Location = new Point(253, 366);
+            label3.Location = new Point(252, 361);
             label3.Name = "label3";
             label3.Size = new Size(102, 30);
             label3.TabIndex = 15;
@@ -144,7 +144,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 11F);
-            label4.Location = new Point(253, 421);
+            label4.Location = new Point(252, 416);
             label4.Name = "label4";
             label4.Size = new Size(184, 30);
             label4.TabIndex = 16;
@@ -154,7 +154,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 11F);
-            label5.Location = new Point(253, 476);
+            label5.Location = new Point(252, 471);
             label5.Name = "label5";
             label5.Size = new Size(66, 30);
             label5.TabIndex = 17;
@@ -163,7 +163,7 @@
             // txtConfirmPw
             // 
             txtConfirmPw.Font = new Font("Segoe UI", 11F);
-            txtConfirmPw.Location = new Point(471, 253);
+            txtConfirmPw.Location = new Point(470, 248);
             txtConfirmPw.Name = "txtConfirmPw";
             txtConfirmPw.Size = new Size(275, 37);
             txtConfirmPw.TabIndex = 18;
@@ -171,7 +171,7 @@
             // txtEmail
             // 
             txtEmail.Font = new Font("Segoe UI", 11F);
-            txtEmail.Location = new Point(471, 308);
+            txtEmail.Location = new Point(470, 303);
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(275, 37);
             txtEmail.TabIndex = 19;
@@ -179,7 +179,7 @@
             // txtAddress
             // 
             txtAddress.Font = new Font("Segoe UI", 11F);
-            txtAddress.Location = new Point(471, 363);
+            txtAddress.Location = new Point(470, 358);
             txtAddress.Name = "txtAddress";
             txtAddress.Size = new Size(275, 37);
             txtAddress.TabIndex = 20;
@@ -187,7 +187,7 @@
             // txtContactNum
             // 
             txtContactNum.Font = new Font("Segoe UI", 11F);
-            txtContactNum.Location = new Point(471, 418);
+            txtContactNum.Location = new Point(470, 413);
             txtContactNum.Name = "txtContactNum";
             txtContactNum.Size = new Size(275, 37);
             txtContactNum.TabIndex = 21;
@@ -197,7 +197,7 @@
             cmbRole.Font = new Font("Segoe UI", 11F);
             cmbRole.FormattingEnabled = true;
             cmbRole.Items.AddRange(new object[] { "Administrator", "Trainer", "Lecturer", "Student" });
-            cmbRole.Location = new Point(471, 473);
+            cmbRole.Location = new Point(470, 468);
             cmbRole.Name = "cmbRole";
             cmbRole.Size = new Size(275, 38);
             cmbRole.TabIndex = 22;
@@ -206,13 +206,13 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.Location = new Point(311, 54);
+            label6.Location = new Point(310, 49);
             label6.Name = "label6";
             label6.Size = new Size(370, 48);
             label6.TabIndex = 23;
             label6.Text = "Register Your Account";
             // 
-            // registerPage
+            // registerPage1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -234,9 +234,9 @@
             Controls.Add(lblPassword);
             Controls.Add(txtUsername);
             Controls.Add(lblUsername);
-            Margin = new Padding(4, 4, 4, 4);
-            Name = "registerPage";
-            Text = "registerPage";
+            Margin = new Padding(4);
+            Name = "registerPage1";
+            Text = "registerPage1";
             ResumeLayout(false);
             PerformLayout();
         }

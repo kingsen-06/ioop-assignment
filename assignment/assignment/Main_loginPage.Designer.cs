@@ -103,7 +103,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(679, 370);
+            ClientSize = new Size(679, 348);
             Controls.Add(btnRegister);
             Controls.Add(btnLogin);
             Controls.Add(txtPassword);
@@ -112,7 +112,7 @@
             Controls.Add(lblUsername);
             Margin = new Padding(4);
             Name = "loginPage";
-            Text = "Form1";
+            Text = "loginPage";
             ResumeLayout(false);
             PerformLayout();
         }

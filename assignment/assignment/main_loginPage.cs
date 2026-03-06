@@ -9,7 +9,7 @@ namespace assignment
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            registerPage register = new registerPage();
+            registerPage1 register = new registerPage1();
             register.Show();
             this.Hide();
         }
