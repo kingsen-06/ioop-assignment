@@ -28,23 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            lblUsername = new Label();
+            lblEmail = new Label();
             txtUsername = new TextBox();
             txtPassword = new TextBox();
             lblPassword = new Label();
             btnLogin = new Button();
-            btnRegister = new Button();
             SuspendLayout();
             // 
-            // lblUsername
+            // lblEmail
             // 
-            lblUsername.AutoSize = true;
-            lblUsername.Font = new Font("Segoe UI", 12F);
-            lblUsername.Location = new Point(259, 127);
-            lblUsername.Name = "lblUsername";
-            lblUsername.Size = new Size(108, 28);
-            lblUsername.TabIndex = 0;
-            lblUsername.Text = "Username :";
+            lblEmail.AutoSize = true;
+            lblEmail.Font = new Font("Segoe UI", 12F);
+            lblEmail.Location = new Point(259, 127);
+            lblEmail.Name = "lblEmail";
+            lblEmail.Size = new Size(68, 28);
+            lblEmail.TabIndex = 0;
+            lblEmail.Text = "Email :";
             // 
             // txtUsername
             // 
@@ -75,35 +74,23 @@
             // btnLogin
             // 
             btnLogin.Font = new Font("Segoe UI", 12F);
-            btnLogin.Location = new Point(398, 247);
+            btnLogin.Location = new Point(259, 247);
             btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(131, 43);
+            btnLogin.Size = new Size(270, 43);
             btnLogin.TabIndex = 5;
             btnLogin.Text = "Login";
             btnLogin.UseVisualStyleBackColor = true;
-            // 
-            // btnRegister
-            // 
-            btnRegister.Font = new Font("Segoe UI", 12F);
-            btnRegister.Location = new Point(259, 247);
-            btnRegister.Name = "btnRegister";
-            btnRegister.Size = new Size(131, 43);
-            btnRegister.TabIndex = 6;
-            btnRegister.Text = "Register";
-            btnRegister.UseVisualStyleBackColor = true;
-            btnRegister.Click += btnRegister_Click;
             // 
             // loginPage
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(btnRegister);
             Controls.Add(btnLogin);
             Controls.Add(txtPassword);
             Controls.Add(lblPassword);
             Controls.Add(txtUsername);
-            Controls.Add(lblUsername);
+            Controls.Add(lblEmail);
             Name = "loginPage";
             Text = "Form1";
             ResumeLayout(false);
@@ -112,11 +99,10 @@
 
         #endregion
 
-        private Label lblUsername;
+        private Label lblEmail;
         private TextBox txtUsername;
         private TextBox txtPassword;
         private Label lblPassword;
         private Button btnLogin;
-        private Button btnRegister;
     }
 }
