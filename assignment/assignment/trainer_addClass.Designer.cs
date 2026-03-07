@@ -1,6 +1,6 @@
 ﻿namespace assignment
 {
-    partial class admin_addTrainer
+    partial class trainer_addClass
     {
         /// <summary>
         /// Required designer variable.
@@ -33,156 +33,158 @@
             label3 = new Label();
             label4 = new Label();
             label5 = new Label();
-            txtName = new TextBox();
-            txtDOB = new TextBox();
-            txtEmail = new TextBox();
-            txtContact = new TextBox();
-            txtAddress = new TextBox();
+            comboBox1 = new ComboBox();
+            comboBox2 = new ComboBox();
+            dateTimePicker1 = new DateTimePicker();
+            textBox1 = new TextBox();
+            textBox2 = new TextBox();
             label6 = new Label();
             lblBack = new Label();
-            button1 = new Button();
+            btnAdd = new Button();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 11F);
-            label1.Location = new Point(83, 102);
+            label1.Location = new Point(84, 96);
             label1.Name = "label1";
-            label1.Size = new Size(121, 30);
+            label1.Size = new Size(163, 30);
             label1.TabIndex = 0;
-            label1.Text = "Full Name: ";
+            label1.Text = "Module Name: ";
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 11F);
-            label2.Location = new Point(83, 158);
+            label2.Location = new Point(84, 150);
             label2.Name = "label2";
-            label2.Size = new Size(146, 30);
+            label2.Size = new Size(128, 30);
             label2.TabIndex = 1;
-            label2.Text = "Date of Birth: ";
+            label2.Text = "Class Level: ";
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 11F);
-            label3.Location = new Point(83, 217);
+            label3.Location = new Point(84, 205);
             label3.Name = "label3";
-            label3.Size = new Size(75, 30);
+            label3.Size = new Size(166, 30);
             label3.TabIndex = 2;
-            label3.Text = "Email: ";
+            label3.Text = "Class Schedule: ";
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 11F);
-            label4.Location = new Point(83, 277);
+            label4.Location = new Point(84, 255);
             label4.Name = "label4";
-            label4.Size = new Size(184, 30);
+            label4.Size = new Size(139, 30);
             label4.TabIndex = 3;
-            label4.Text = "Contact Number: ";
+            label4.Text = "Class Venue: ";
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 11F);
-            label5.Location = new Point(83, 339);
+            label5.Location = new Point(84, 310);
             label5.Name = "label5";
-            label5.Size = new Size(102, 30);
+            label5.Size = new Size(113, 30);
             label5.TabIndex = 4;
-            label5.Text = "Address: ";
+            label5.Text = "Class Fee: ";
             // 
-            // txtName
+            // comboBox1
             // 
-            txtName.Font = new Font("Segoe UI", 11F);
-            txtName.Location = new Point(273, 99);
-            txtName.Name = "txtName";
-            txtName.Size = new Size(295, 37);
-            txtName.TabIndex = 5;
+            comboBox1.Font = new Font("Segoe UI", 11F);
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(273, 93);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(324, 38);
+            comboBox1.TabIndex = 5;
             // 
-            // txtDOB
+            // comboBox2
             // 
-            txtDOB.Font = new Font("Segoe UI", 11F);
-            txtDOB.Location = new Point(273, 155);
-            txtDOB.Name = "txtDOB";
-            txtDOB.Size = new Size(295, 37);
-            txtDOB.TabIndex = 6;
+            comboBox2.Font = new Font("Segoe UI", 11F);
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Location = new Point(273, 147);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(324, 38);
+            comboBox2.TabIndex = 6;
             // 
-            // txtEmail
+            // dateTimePicker1
             // 
-            txtEmail.Font = new Font("Segoe UI", 11F);
-            txtEmail.Location = new Point(273, 214);
-            txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(295, 37);
-            txtEmail.TabIndex = 7;
+            dateTimePicker1.Font = new Font("Segoe UI", 11F);
+            dateTimePicker1.Location = new Point(273, 200);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(324, 37);
+            dateTimePicker1.TabIndex = 7;
             // 
-            // txtContact
+            // textBox1
             // 
-            txtContact.Font = new Font("Segoe UI", 11F);
-            txtContact.Location = new Point(273, 274);
-            txtContact.Name = "txtContact";
-            txtContact.Size = new Size(295, 37);
-            txtContact.TabIndex = 8;
+            textBox1.Font = new Font("Segoe UI", 11F);
+            textBox1.Location = new Point(273, 252);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(324, 37);
+            textBox1.TabIndex = 8;
             // 
-            // txtAddress
+            // textBox2
             // 
-            txtAddress.Font = new Font("Segoe UI", 11F);
-            txtAddress.Location = new Point(273, 336);
-            txtAddress.Name = "txtAddress";
-            txtAddress.Size = new Size(295, 37);
-            txtAddress.TabIndex = 9;
+            textBox2.Font = new Font("Segoe UI", 11F);
+            textBox2.Location = new Point(273, 307);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(324, 37);
+            textBox2.TabIndex = 9;
             // 
             // label6
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 18F);
-            label6.Location = new Point(126, 23);
+            label6.Location = new Point(145, 21);
             label6.Name = "label6";
-            label6.Size = new Size(406, 48);
+            label6.Size = new Size(377, 48);
             label6.TabIndex = 10;
-            label6.Text = "New Trainer Information";
+            label6.Text = "New Class Information";
             // 
             // lblBack
             // 
             lblBack.AutoSize = true;
             lblBack.Font = new Font("Segoe UI", 11F);
-            lblBack.Location = new Point(31, 417);
+            lblBack.Location = new Point(12, 394);
             lblBack.Name = "lblBack";
             lblBack.Size = new Size(79, 30);
-            lblBack.TabIndex = 13;
+            lblBack.TabIndex = 11;
             lblBack.Text = "< Back";
             // 
-            // button1
+            // btnAdd
             // 
-            button1.Font = new Font("Segoe UI", 11F);
-            button1.Location = new Point(327, 401);
-            button1.Name = "button1";
-            button1.Size = new Size(179, 43);
-            button1.TabIndex = 14;
-            button1.Text = "Add New Class";
-            button1.UseVisualStyleBackColor = true;
+            btnAdd.Font = new Font("Segoe UI", 11F);
+            btnAdd.Location = new Point(351, 381);
+            btnAdd.Name = "btnAdd";
+            btnAdd.Size = new Size(171, 46);
+            btnAdd.TabIndex = 12;
+            btnAdd.Text = "Add New Class";
+            btnAdd.UseVisualStyleBackColor = true;
             // 
-            // admin_addTrainer
+            // trainer_addClass
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(667, 469);
-            Controls.Add(button1);
+            ClientSize = new Size(688, 444);
+            Controls.Add(btnAdd);
             Controls.Add(lblBack);
             Controls.Add(label6);
-            Controls.Add(txtAddress);
-            Controls.Add(txtContact);
-            Controls.Add(txtEmail);
-            Controls.Add(txtDOB);
-            Controls.Add(txtName);
+            Controls.Add(textBox2);
+            Controls.Add(textBox1);
+            Controls.Add(dateTimePicker1);
+            Controls.Add(comboBox2);
+            Controls.Add(comboBox1);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Name = "admin_addTrainer";
-            Text = "addTrainer";
+            Name = "trainer_addClass";
+            Text = "addClass";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -194,13 +196,13 @@
         private Label label3;
         private Label label4;
         private Label label5;
-        private TextBox txtName;
-        private TextBox txtDOB;
-        private TextBox txtEmail;
-        private TextBox txtContact;
-        private TextBox txtAddress;
+        private ComboBox comboBox1;
+        private ComboBox comboBox2;
+        private DateTimePicker dateTimePicker1;
+        private TextBox textBox1;
+        private TextBox textBox2;
         private Label label6;
         private Label lblBack;
-        private Button button1;
+        private Button btnAdd;
     }
 }

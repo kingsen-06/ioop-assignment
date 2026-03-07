@@ -96,7 +96,7 @@
             Controls.Add(btnViewFeedback);
             Controls.Add(btnRegisterTrainer);
             Name = "admin_menu";
-            Text = "administratorMenuPage1";
+            Text = "administratorMenu";
             ResumeLayout(false);
             PerformLayout();
         }

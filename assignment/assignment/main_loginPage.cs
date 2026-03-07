@@ -1,15 +1,16 @@
 namespace assignment
 {
-    public partial class loginPage : Form
+    public partial class main_loginPage : Form
     {
-        public loginPage()
+        public main_loginPage()
         {
             InitializeComponent();
+            txtPassword.PasswordChar = '*';
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            registerPage1 register = new registerPage1();
+            main_registerPage register = new main_registerPage();
             register.Show();
             this.Hide();
         }

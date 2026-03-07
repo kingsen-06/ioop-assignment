@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace assignment
 {
-    public partial class admin_updateProfile : Form
+    public partial class admin_viewFeedback : Form
     {
-        public admin_updateProfile()
+        public admin_viewFeedback()
         {
             InitializeComponent();
-            txtPw.PasswordChar = '*';
         }
-        private void btnShow_Click(object sender, EventArgs e)
+
+        private void lblBack_Click(object sender, EventArgs e)
         {
-            txtPw.PasswordChar = '\0';
+
         }
     }
 }
