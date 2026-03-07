@@ -28,29 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btnRegisterTrainer = new Button();
+            btnTrainers = new Button();
             btnViewFeedback = new Button();
             label1 = new Label();
-            btnUpdate = new Button();
+            btnSettings = new Button();
             lblBack = new Label();
+            btnLecturers = new Button();
             SuspendLayout();
             // 
-            // btnRegisterTrainer
+            // btnTrainers
             // 
-            btnRegisterTrainer.Font = new Font("Segoe UI", 11F);
-            btnRegisterTrainer.Location = new Point(137, 131);
-            btnRegisterTrainer.Name = "btnRegisterTrainer";
-            btnRegisterTrainer.Size = new Size(370, 42);
-            btnRegisterTrainer.TabIndex = 0;
-            btnRegisterTrainer.Text = "Add / Remove / View Trainer Details";
-            btnRegisterTrainer.UseVisualStyleBackColor = true;
+            btnTrainers.Font = new Font("Segoe UI", 11F);
+            btnTrainers.Location = new Point(113, 144);
+            btnTrainers.Margin = new Padding(2, 2, 2, 2);
+            btnTrainers.Name = "btnTrainers";
+            btnTrainers.Size = new Size(296, 34);
+            btnTrainers.TabIndex = 0;
+            btnTrainers.Text = "Manage Trainers";
+            btnTrainers.UseVisualStyleBackColor = true;
             // 
             // btnViewFeedback
             // 
             btnViewFeedback.Font = new Font("Segoe UI", 11F);
-            btnViewFeedback.Location = new Point(137, 205);
+            btnViewFeedback.Location = new Point(113, 254);
+            btnViewFeedback.Margin = new Padding(2, 2, 2, 2);
             btnViewFeedback.Name = "btnViewFeedback";
-            btnViewFeedback.Size = new Size(370, 42);
+            btnViewFeedback.Size = new Size(296, 34);
             btnViewFeedback.TabIndex = 3;
             btnViewFeedback.Text = "View Feedback";
             btnViewFeedback.UseVisualStyleBackColor = true;
@@ -59,42 +62,58 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 18F);
-            label1.Location = new Point(56, 38);
+            label1.Location = new Point(48, 69);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(555, 48);
+            label1.Size = new Size(463, 41);
             label1.TabIndex = 7;
             label1.Text = "Administrator Functional Features";
             // 
-            // btnUpdate
+            // btnSettings
             // 
-            btnUpdate.Font = new Font("Segoe UI", 11F);
-            btnUpdate.Location = new Point(137, 284);
-            btnUpdate.Name = "btnUpdate";
-            btnUpdate.Size = new Size(370, 42);
-            btnUpdate.TabIndex = 10;
-            btnUpdate.Text = "Update Account Profile";
-            btnUpdate.UseVisualStyleBackColor = true;
+            btnSettings.Font = new Font("Segoe UI", 11F);
+            btnSettings.Location = new Point(113, 309);
+            btnSettings.Margin = new Padding(2, 2, 2, 2);
+            btnSettings.Name = "btnSettings";
+            btnSettings.Size = new Size(296, 34);
+            btnSettings.TabIndex = 10;
+            btnSettings.Text = "Settings";
+            btnSettings.UseVisualStyleBackColor = true;
             // 
             // lblBack
             // 
             lblBack.AutoSize = true;
             lblBack.Font = new Font("Segoe UI", 11F);
-            lblBack.Location = new Point(12, 370);
+            lblBack.Location = new Point(11, 9);
+            lblBack.Margin = new Padding(2, 0, 2, 0);
             lblBack.Name = "lblBack";
-            lblBack.Size = new Size(217, 30);
+            lblBack.Size = new Size(189, 25);
             lblBack.TabIndex = 12;
             lblBack.Text = "< Back to Login Page";
             // 
+            // btnLecturers
+            // 
+            btnLecturers.Font = new Font("Segoe UI", 11F);
+            btnLecturers.Location = new Point(113, 199);
+            btnLecturers.Margin = new Padding(2);
+            btnLecturers.Name = "btnLecturers";
+            btnLecturers.Size = new Size(296, 34);
+            btnLecturers.TabIndex = 13;
+            btnLecturers.Text = "Manage Lecturers";
+            btnLecturers.UseVisualStyleBackColor = true;
+            // 
             // admin_menu
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(672, 419);
+            ClientSize = new Size(556, 390);
+            Controls.Add(btnLecturers);
             Controls.Add(lblBack);
-            Controls.Add(btnUpdate);
+            Controls.Add(btnSettings);
             Controls.Add(label1);
             Controls.Add(btnViewFeedback);
-            Controls.Add(btnRegisterTrainer);
+            Controls.Add(btnTrainers);
+            Margin = new Padding(2, 2, 2, 2);
             Name = "admin_menu";
             Text = "administratorMenuPage1";
             ResumeLayout(false);
@@ -103,10 +122,11 @@
 
         #endregion
 
-        private Button btnRegisterTrainer;
+        private Button btnTrainers;
         private Button btnViewFeedback;
         private Label label1;
-        private Button btnUpdate;
+        private Button btnSettings;
         private Label lblBack;
+        private Button btnLecturers;
     }
 }
