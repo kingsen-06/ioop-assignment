@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace assignment
 {
-    public partial class admin_updateProfile : Form
+    public partial class share_updateProfile : Form
     {
-        public admin_updateProfile()
+        public share_updateProfile()
         {
             InitializeComponent();
             txtPw.PasswordChar = '*';

@@ -89,7 +89,7 @@
             // 
             lblBack.AutoSize = true;
             lblBack.Font = new Font("Segoe UI", 11F);
-            lblBack.Location = new Point(9, 313);
+            lblBack.Location = new Point(9, 309);
             lblBack.Name = "lblBack";
             lblBack.Size = new Size(304, 30);
             lblBack.TabIndex = 6;

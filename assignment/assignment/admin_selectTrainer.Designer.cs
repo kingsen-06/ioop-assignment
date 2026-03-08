@@ -28,65 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridView1 = new DataGridView();
+            dataTrainer = new DataGridView();
+            triainer = new DataGridViewTextBoxColumn();
+            income = new DataGridViewTextBoxColumn();
             btnAddTrainer = new Button();
             btnRemove = new Button();
             btnEdit = new Button();
             lblBack = new Label();
-            triainer = new DataGridViewTextBoxColumn();
-            income = new DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataTrainer).BeginInit();
             SuspendLayout();
             // 
-            // dataGridView1
+            // dataTrainer
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { triainer, income });
-            dataGridView1.Location = new Point(210, 87);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(360, 225);
-            dataGridView1.TabIndex = 0;
-            // 
-            // btnAddTrainer
-            // 
-            btnAddTrainer.Font = new Font("Segoe UI", 11F);
-            btnAddTrainer.Location = new Point(33, 367);
-            btnAddTrainer.Name = "btnAddTrainer";
-            btnAddTrainer.Size = new Size(222, 43);
-            btnAddTrainer.TabIndex = 1;
-            btnAddTrainer.Text = "Add New Trainer";
-            btnAddTrainer.UseVisualStyleBackColor = true;
-            // 
-            // btnRemove
-            // 
-            btnRemove.Font = new Font("Segoe UI", 11F);
-            btnRemove.Location = new Point(283, 367);
-            btnRemove.Name = "btnRemove";
-            btnRemove.Size = new Size(222, 43);
-            btnRemove.TabIndex = 2;
-            btnRemove.Text = "Remove Trainer";
-            btnRemove.UseVisualStyleBackColor = true;
-            // 
-            // btnEdit
-            // 
-            btnEdit.Font = new Font("Segoe UI", 11F);
-            btnEdit.Location = new Point(529, 367);
-            btnEdit.Name = "btnEdit";
-            btnEdit.Size = new Size(222, 43);
-            btnEdit.TabIndex = 3;
-            btnEdit.Text = "Edit Trainer Detail";
-            btnEdit.UseVisualStyleBackColor = true;
-            // 
-            // lblBack
-            // 
-            lblBack.AutoSize = true;
-            lblBack.Font = new Font("Segoe UI", 11F);
-            lblBack.Location = new Point(33, 25);
-            lblBack.Name = "lblBack";
-            lblBack.Size = new Size(167, 30);
-            lblBack.TabIndex = 5;
-            lblBack.Text = "< Back to Menu";
+            dataTrainer.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataTrainer.Columns.AddRange(new DataGridViewColumn[] { triainer, income });
+            dataTrainer.Location = new Point(221, 45);
+            dataTrainer.Name = "dataTrainer";
+            dataTrainer.RowHeadersWidth = 62;
+            dataTrainer.Size = new Size(360, 225);
+            dataTrainer.TabIndex = 0;
             // 
             // triainer
             // 
@@ -102,6 +62,46 @@
             income.Name = "income";
             income.Width = 150;
             // 
+            // btnAddTrainer
+            // 
+            btnAddTrainer.Font = new Font("Segoe UI", 11F);
+            btnAddTrainer.Location = new Point(44, 325);
+            btnAddTrainer.Name = "btnAddTrainer";
+            btnAddTrainer.Size = new Size(222, 43);
+            btnAddTrainer.TabIndex = 1;
+            btnAddTrainer.Text = "Add New Trainer";
+            btnAddTrainer.UseVisualStyleBackColor = true;
+            // 
+            // btnRemove
+            // 
+            btnRemove.Font = new Font("Segoe UI", 11F);
+            btnRemove.Location = new Point(294, 325);
+            btnRemove.Name = "btnRemove";
+            btnRemove.Size = new Size(222, 43);
+            btnRemove.TabIndex = 2;
+            btnRemove.Text = "Remove Trainer";
+            btnRemove.UseVisualStyleBackColor = true;
+            // 
+            // btnEdit
+            // 
+            btnEdit.Font = new Font("Segoe UI", 11F);
+            btnEdit.Location = new Point(540, 325);
+            btnEdit.Name = "btnEdit";
+            btnEdit.Size = new Size(222, 43);
+            btnEdit.TabIndex = 3;
+            btnEdit.Text = "Edit Trainer Detail";
+            btnEdit.UseVisualStyleBackColor = true;
+            // 
+            // lblBack
+            // 
+            lblBack.AutoSize = true;
+            lblBack.Font = new Font("Segoe UI", 11F);
+            lblBack.Location = new Point(17, 394);
+            lblBack.Name = "lblBack";
+            lblBack.Size = new Size(304, 30);
+            lblBack.TabIndex = 5;
+            lblBack.Text = "< Back to Administrator Menu";
+            // 
             // admin_selectTrainer
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -111,17 +111,17 @@
             Controls.Add(btnEdit);
             Controls.Add(btnRemove);
             Controls.Add(btnAddTrainer);
-            Controls.Add(dataGridView1);
+            Controls.Add(dataTrainer);
             Name = "admin_selectTrainer";
             Text = "selectTrainer";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataTrainer).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private DataGridView dataGridView1;
+        private DataGridView dataTrainer;
         private Button btnAddTrainer;
         private Button btnRemove;
         private Button btnEdit;

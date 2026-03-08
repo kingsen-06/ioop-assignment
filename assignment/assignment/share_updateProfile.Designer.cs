@@ -1,6 +1,6 @@
 ﻿namespace assignment
 {
-    partial class admin_updateProfile
+    partial class share_updateProfile
     {
         /// <summary>
         /// Required designer variable.
@@ -42,6 +42,7 @@
             txtAddress = new TextBox();
             button1 = new Button();
             btnShow = new Button();
+            lblBack = new Label();
             SuspendLayout();
             // 
             // label6
@@ -58,7 +59,7 @@
             // 
             lblDelete.AutoSize = true;
             lblDelete.Font = new Font("Segoe UI", 11F);
-            lblDelete.Location = new Point(662, 411);
+            lblDelete.Location = new Point(662, 421);
             lblDelete.Name = "lblDelete";
             lblDelete.Size = new Size(181, 30);
             lblDelete.TabIndex = 23;
@@ -157,7 +158,7 @@
             // button1
             // 
             button1.Font = new Font("Segoe UI", 11F);
-            button1.Location = new Point(361, 393);
+            button1.Location = new Point(361, 403);
             button1.Name = "button1";
             button1.Size = new Size(159, 38);
             button1.TabIndex = 35;
@@ -175,11 +176,22 @@
             btnShow.UseVisualStyleBackColor = true;
             btnShow.Click += btnShow_Click;
             // 
-            // admin_updateProfile
+            // lblBack
+            // 
+            lblBack.AutoSize = true;
+            lblBack.Font = new Font("Segoe UI", 11F);
+            lblBack.Location = new Point(12, 421);
+            lblBack.Name = "lblBack";
+            lblBack.Size = new Size(304, 30);
+            lblBack.TabIndex = 37;
+            lblBack.Text = "< Back to Administrator Menu";
+            // 
+            // share_updateProfile
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(863, 453);
+            ClientSize = new Size(863, 470);
+            Controls.Add(lblBack);
             Controls.Add(btnShow);
             Controls.Add(button1);
             Controls.Add(txtAddress);
@@ -194,7 +206,7 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Name = "admin_updateProfile";
+            Name = "share_updateProfile";
             Text = "updateProfile";
             ResumeLayout(false);
             PerformLayout();
@@ -216,5 +228,6 @@
         private TextBox txtAddress;
         private Button button1;
         private Button btnShow;
+        private Label lblBack;
     }
 }

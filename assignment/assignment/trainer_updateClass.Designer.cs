@@ -32,29 +32,29 @@
             btnEdit = new Button();
             btnRemove = new Button();
             btnAdd = new Button();
-            dataGridView1 = new DataGridView();
+            dataClass = new DataGridView();
             name = new DataGridViewTextBoxColumn();
             level = new DataGridViewTextBoxColumn();
             schedule = new DataGridViewTextBoxColumn();
             venue = new DataGridViewTextBoxColumn();
             fee = new DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataClass).BeginInit();
             SuspendLayout();
             // 
             // lblBack
             // 
             lblBack.AutoSize = true;
             lblBack.Font = new Font("Segoe UI", 11F);
-            lblBack.Location = new Point(22, 34);
+            lblBack.Location = new Point(21, 385);
             lblBack.Name = "lblBack";
-            lblBack.Size = new Size(167, 30);
+            lblBack.Size = new Size(239, 30);
             lblBack.TabIndex = 10;
-            lblBack.Text = "< Back to Menu";
+            lblBack.Text = "< Back to Trainer Menu";
             // 
             // btnEdit
             // 
             btnEdit.Font = new Font("Segoe UI", 11F);
-            btnEdit.Location = new Point(562, 353);
+            btnEdit.Location = new Point(563, 305);
             btnEdit.Name = "btnEdit";
             btnEdit.Size = new Size(222, 43);
             btnEdit.TabIndex = 9;
@@ -64,7 +64,7 @@
             // btnRemove
             // 
             btnRemove.Font = new Font("Segoe UI", 11F);
-            btnRemove.Location = new Point(316, 353);
+            btnRemove.Location = new Point(317, 305);
             btnRemove.Name = "btnRemove";
             btnRemove.Size = new Size(222, 43);
             btnRemove.TabIndex = 8;
@@ -74,22 +74,22 @@
             // btnAdd
             // 
             btnAdd.Font = new Font("Segoe UI", 11F);
-            btnAdd.Location = new Point(66, 353);
+            btnAdd.Location = new Point(67, 305);
             btnAdd.Name = "btnAdd";
             btnAdd.Size = new Size(222, 43);
             btnAdd.TabIndex = 7;
             btnAdd.Text = "Add New Class";
             btnAdd.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dataClass
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { name, level, schedule, venue, fee });
-            dataGridView1.Location = new Point(47, 95);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(758, 225);
-            dataGridView1.TabIndex = 6;
+            dataClass.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataClass.Columns.AddRange(new DataGridViewColumn[] { name, level, schedule, venue, fee });
+            dataClass.Location = new Point(48, 47);
+            dataClass.Name = "dataClass";
+            dataClass.RowHeadersWidth = 62;
+            dataClass.Size = new Size(758, 225);
+            dataClass.TabIndex = 6;
             // 
             // name
             // 
@@ -124,6 +124,7 @@
             fee.HeaderText = "Fee";
             fee.MinimumWidth = 8;
             fee.Name = "fee";
+            fee.Width = 150;
             // 
             // trainer_updateClass
             // 
@@ -134,10 +135,10 @@
             Controls.Add(btnEdit);
             Controls.Add(btnRemove);
             Controls.Add(btnAdd);
-            Controls.Add(dataGridView1);
+            Controls.Add(dataClass);
             Name = "trainer_updateClass";
             Text = "updateClass";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataClass).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -148,7 +149,7 @@
         private Button btnEdit;
         private Button btnRemove;
         private Button btnAdd;
-        private DataGridView dataGridView1;
+        private DataGridView dataClass;
         private DataGridViewTextBoxColumn name;
         private DataGridViewTextBoxColumn level;
         private DataGridViewTextBoxColumn schedule;

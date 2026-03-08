@@ -39,9 +39,9 @@
             // button1
             // 
             button1.Font = new Font("Segoe UI", 11F);
-            button1.Location = new Point(160, 103);
+            button1.Location = new Point(163, 111);
             button1.Name = "button1";
-            button1.Size = new Size(278, 41);
+            button1.Size = new Size(278, 37);
             button1.TabIndex = 0;
             button1.Text = "Update Class Information";
             button1.UseVisualStyleBackColor = true;
@@ -49,9 +49,9 @@
             // button2
             // 
             button2.Font = new Font("Segoe UI", 11F);
-            button2.Location = new Point(160, 174);
+            button2.Location = new Point(163, 182);
             button2.Name = "button2";
-            button2.Size = new Size(278, 41);
+            button2.Size = new Size(278, 37);
             button2.TabIndex = 1;
             button2.Text = "View Student List";
             button2.UseVisualStyleBackColor = true;
@@ -59,9 +59,9 @@
             // button3
             // 
             button3.Font = new Font("Segoe UI", 11F);
-            button3.Location = new Point(160, 246);
+            button3.Location = new Point(163, 254);
             button3.Name = "button3";
-            button3.Size = new Size(278, 41);
+            button3.Size = new Size(278, 37);
             button3.TabIndex = 2;
             button3.Text = "Send Feedback";
             button3.UseVisualStyleBackColor = true;
@@ -69,9 +69,9 @@
             // button4
             // 
             button4.Font = new Font("Segoe UI", 11F);
-            button4.Location = new Point(160, 320);
+            button4.Location = new Point(163, 328);
             button4.Name = "button4";
-            button4.Size = new Size(278, 41);
+            button4.Size = new Size(278, 37);
             button4.TabIndex = 3;
             button4.Text = "Update Profile";
             button4.UseVisualStyleBackColor = true;
@@ -80,7 +80,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 18F);
-            label1.Location = new Point(75, 28);
+            label1.Location = new Point(78, 36);
             label1.Name = "label1";
             label1.Size = new Size(446, 48);
             label1.TabIndex = 4;
@@ -90,7 +90,7 @@
             // 
             lblBack.AutoSize = true;
             lblBack.Font = new Font("Segoe UI", 11F);
-            lblBack.Location = new Point(12, 391);
+            lblBack.Location = new Point(21, 406);
             lblBack.Name = "lblBack";
             lblBack.Size = new Size(217, 30);
             lblBack.TabIndex = 5;
@@ -100,7 +100,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(607, 434);
+            ClientSize = new Size(607, 455);
             Controls.Add(lblBack);
             Controls.Add(label1);
             Controls.Add(button4);
