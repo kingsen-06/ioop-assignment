@@ -17,5 +17,12 @@ namespace assignment
             InitializeComponent();
             txtPassword.PasswordChar = '*';
         }
+
+        private void lblBack_Click(object sender, EventArgs e)
+        {
+            admin_menu adminMenu = new admin_menu();
+            adminMenu.Show();
+            this.Hide();
+        }
     }
 }

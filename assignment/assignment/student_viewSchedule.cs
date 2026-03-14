@@ -16,5 +16,12 @@ namespace assignment
         {
             InitializeComponent();
         }
+
+        private void lblBack_Click(object sender, EventArgs e)
+        {
+            student_menu studentMenu = new student_menu();
+            studentMenu.Show();
+            this.Hide();
+        }
     }
 }

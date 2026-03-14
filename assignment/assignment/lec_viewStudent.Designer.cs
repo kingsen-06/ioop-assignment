@@ -33,7 +33,7 @@
             modName = new DataGridViewTextBoxColumn();
             level = new DataGridViewTextBoxColumn();
             status = new DataGridViewTextBoxColumn();
-            label2 = new Label();
+            lblBack = new Label();
             btnDel = new Button();
             btnAdd = new Button();
             lblName = new Label();
@@ -81,15 +81,16 @@
             status.Name = "status";
             status.Width = 150;
             // 
-            // label2
+            // lblBack
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 11F);
-            label2.Location = new Point(14, 481);
-            label2.Name = "label2";
-            label2.Size = new Size(252, 30);
-            label2.TabIndex = 5;
-            label2.Text = "< Back to Lecturer Menu";
+            lblBack.AutoSize = true;
+            lblBack.Font = new Font("Segoe UI", 11F);
+            lblBack.Location = new Point(14, 481);
+            lblBack.Name = "lblBack";
+            lblBack.Size = new Size(252, 30);
+            lblBack.TabIndex = 5;
+            lblBack.Text = "< Back to Lecturer Menu";
+            //lblBack.Click += label2_Click;
             // 
             // btnDel
             // 
@@ -110,6 +111,7 @@
             btnAdd.TabIndex = 7;
             btnAdd.Text = "Add New Student";
             btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.Click += btnAdd_Click;
             // 
             // lblName
             // 
@@ -161,7 +163,7 @@
             Controls.Add(lblName);
             Controls.Add(btnAdd);
             Controls.Add(btnDel);
-            Controls.Add(label2);
+            Controls.Add(lblBack);
             Controls.Add(dataStudent);
             Name = "lec_viewStudent";
             Text = "viewStudent";
@@ -177,7 +179,7 @@
         private DataGridViewTextBoxColumn modName;
         private DataGridViewTextBoxColumn level;
         private DataGridViewTextBoxColumn status;
-        private Label label2;
+        private Label lblBack;
         private Button btnDel;
         private Button btnAdd;
         private Label lblName;

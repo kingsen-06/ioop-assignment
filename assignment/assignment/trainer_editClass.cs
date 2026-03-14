@@ -16,5 +16,12 @@ namespace assignment
         {
             InitializeComponent();
         }
+
+        private void lblBack_Click(object sender, EventArgs e)
+        {
+            trainer_updateClass updateClass = new trainer_updateClass();
+            updateClass.Show();
+            this.Hide();
+        }
     }
 }

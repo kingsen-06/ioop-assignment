@@ -73,6 +73,7 @@
             lblBack.Size = new Size(239, 30);
             lblBack.TabIndex = 3;
             lblBack.Text = "< Back to Trainer Menu";
+            lblBack.Click += lblBack_Click;
             // 
             // trainer_feedback
             // 

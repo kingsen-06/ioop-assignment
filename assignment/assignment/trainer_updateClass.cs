@@ -16,5 +16,26 @@ namespace assignment
         {
             InitializeComponent();
         }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            trainer_addClass addClass = new trainer_addClass();
+            addClass.Show();
+            this.Hide();
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            trainer_editClass editClass = new trainer_editClass();
+            editClass.Show();
+            this.Hide();
+        }
+
+        private void lblBack_Click(object sender, EventArgs e)
+        {
+            trainer_menu trainerMenu = new trainer_menu();
+            trainerMenu.Show();
+            this.Hide();
+        }
     }
 }

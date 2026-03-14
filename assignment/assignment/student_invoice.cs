@@ -16,5 +16,12 @@ namespace assignment
         {
             InitializeComponent();
         }
+
+        private void lblBack_Click(object sender, EventArgs e)
+        {
+            student_paymentList paymentList = new student_paymentList();
+            paymentList.Show();
+            this.Hide();
+        }
     }
 }

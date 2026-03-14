@@ -94,6 +94,7 @@
             lblBack.Size = new Size(304, 30);
             lblBack.TabIndex = 6;
             lblBack.Text = "< Back to Administrator Menu";
+            lblBack.Click += lblBack_Click;
             // 
             // admin_assignClass
             // 

@@ -16,5 +16,33 @@ namespace assignment
         {
             InitializeComponent();
         }
+
+        private void btnManage_Click(object sender, EventArgs e)
+        {
+            lec_viewStudent viewStudent = new lec_viewStudent();
+            viewStudent.Show();
+            this.Hide();
+        }
+
+        private void btnApprove_Click(object sender, EventArgs e)
+        {
+            lec_viewRequest request = new lec_viewRequest();
+            request.Show();
+            this.Hide();
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            share_confirmPassword confirmPassword = new share_confirmPassword();
+            confirmPassword.Show();
+            this.Hide();
+        }
+
+        private void lblBack_Click(object sender, EventArgs e)
+        {
+            main_loginPage loginPage = new main_loginPage();
+            loginPage.Show();
+            this.Hide();
+        }
     }
 }

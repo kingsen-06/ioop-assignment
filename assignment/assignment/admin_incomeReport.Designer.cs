@@ -296,6 +296,7 @@
             lblBack.Size = new Size(79, 30);
             lblBack.TabIndex = 20;
             lblBack.Text = "< Back";
+            lblBack.Click += lblBack_Click;
             // 
             // admin_incomeReport
             // 

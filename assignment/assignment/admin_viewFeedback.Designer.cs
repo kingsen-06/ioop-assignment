@@ -77,16 +77,18 @@
             lblBack.Size = new Size(304, 30);
             lblBack.TabIndex = 1;
             lblBack.Text = "< Back to Administrator Menu";
+            lblBack.Click += lblBack_Click_1;
             // 
             // btnView
             // 
             btnView.Font = new Font("Segoe UI", 11F);
-            btnView.Location = new Point(294, 368);
+            btnView.Location = new Point(254, 366);
             btnView.Name = "btnView";
-            btnView.Size = new Size(183, 38);
+            btnView.Size = new Size(255, 38);
             btnView.TabIndex = 2;
-            btnView.Text = "View Feedback";
+            btnView.Text = "View Feedback Detail";
             btnView.UseVisualStyleBackColor = true;
+            btnView.Click += btnView_Click;
             // 
             // admin_viewFeedback
             // 

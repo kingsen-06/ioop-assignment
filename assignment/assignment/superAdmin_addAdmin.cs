@@ -10,11 +10,18 @@ using System.Windows.Forms;
 
 namespace assignment
 {
-    public partial class lec_approveRequest : Form
+    public partial class superAdmin_addAdmin : Form
     {
-        public lec_approveRequest()
+        public superAdmin_addAdmin()
         {
             InitializeComponent();
+        }
+
+        private void lblBack_Click(object sender, EventArgs e)
+        {
+            superAdmin_manageAdmin manageAdmin = new superAdmin_manageAdmin();
+            manageAdmin.Show();
+            this.Hide();
         }
     }
 }

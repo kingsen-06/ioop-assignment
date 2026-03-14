@@ -16,5 +16,19 @@ namespace assignment
         {
             InitializeComponent();
         }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            student_addRequest addRequest = new student_addRequest();
+            addRequest.Show();
+            this.Hide();
+        }
+
+        private void lblBack_Click(object sender, EventArgs e)
+        {
+            student_menu studentMenu = new student_menu();
+            studentMenu.Show();
+            this.Hide();
+        }
     }
 }

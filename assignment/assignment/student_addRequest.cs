@@ -16,5 +16,12 @@ namespace assignment
         {
             InitializeComponent();
         }
+
+        private void lblBack_Click(object sender, EventArgs e)
+        {
+            student_manageRequest manageRequest = new student_manageRequest();
+            manageRequest.Show();
+            this.Hide();
+        }
     }
 }

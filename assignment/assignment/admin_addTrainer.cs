@@ -16,5 +16,12 @@ namespace assignment
         {
             InitializeComponent();
         }
+
+        private void lblBack_Click(object sender, EventArgs e)
+        {
+            admin_manageTrainer manageTrainer = new admin_manageTrainer();
+            manageTrainer.Show();
+            this.Hide();
+        }
     }
 }

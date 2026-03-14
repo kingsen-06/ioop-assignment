@@ -10,11 +10,18 @@ using System.Windows.Forms;
 
 namespace assignment
 {
-    public partial class admin_TrainerDetail : Form
+    public partial class admin_trainerDetail : Form
     {
-        public admin_TrainerDetail()
+        public admin_trainerDetail()
         {
             InitializeComponent();
+        }
+
+        private void btnNew_Click(object sender, EventArgs e)
+        {
+            admin_assignClass assignClass = new admin_assignClass();
+            assignClass.Show();
+            this.Hide();
         }
     }
 }

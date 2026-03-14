@@ -45,6 +45,7 @@
             btnUpdateClass.TabIndex = 0;
             btnUpdateClass.Text = "Update Class Information";
             btnUpdateClass.UseVisualStyleBackColor = true;
+            btnUpdateClass.Click += btnUpdateClass_Click;
             // 
             // btnView
             // 
@@ -55,6 +56,7 @@
             btnView.TabIndex = 1;
             btnView.Text = "View Student List";
             btnView.UseVisualStyleBackColor = true;
+            btnView.Click += btnView_Click;
             // 
             // btnFeedback
             // 
@@ -65,6 +67,7 @@
             btnFeedback.TabIndex = 2;
             btnFeedback.Text = "Send Feedback";
             btnFeedback.UseVisualStyleBackColor = true;
+            btnFeedback.Click += btnFeedback_Click;
             // 
             // btnUpdate
             // 
@@ -75,6 +78,7 @@
             btnUpdate.TabIndex = 3;
             btnUpdate.Text = "Update Profile";
             btnUpdate.UseVisualStyleBackColor = true;
+            btnUpdate.Click += btnUpdate_Click;
             // 
             // label1
             // 
@@ -95,6 +99,7 @@
             lblBack.Size = new Size(217, 30);
             lblBack.TabIndex = 5;
             lblBack.Text = "< Back to Login Page";
+            lblBack.Click += lblBack_Click;
             // 
             // trainer_menu
             // 

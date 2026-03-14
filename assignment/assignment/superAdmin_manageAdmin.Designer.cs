@@ -54,6 +54,7 @@
             btnRegister.TabIndex = 1;
             btnRegister.Text = "Register New Admin";
             btnRegister.UseVisualStyleBackColor = true;
+            btnRegister.Click += btnRegister_Click;
             // 
             // btnRemove
             // 
@@ -74,6 +75,7 @@
             btnView.TabIndex = 3;
             btnView.Text = "View Admin Detail";
             btnView.UseVisualStyleBackColor = true;
+            btnView.Click += btnView_Click;
             // 
             // lblBack
             // 
@@ -84,6 +86,7 @@
             lblBack.Size = new Size(299, 30);
             lblBack.TabIndex = 4;
             lblBack.Text = "< Back to Super Admin Menu";
+            lblBack.Click += lblBack_Click;
             // 
             // superAdmin_manageAdmin
             // 

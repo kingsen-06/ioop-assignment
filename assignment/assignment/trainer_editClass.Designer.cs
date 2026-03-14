@@ -111,6 +111,7 @@
             lblBack.Size = new Size(85, 30);
             lblBack.TabIndex = 10;
             lblBack.Text = "< Back ";
+            lblBack.Click += lblBack_Click;
             // 
             // btnSave
             // 

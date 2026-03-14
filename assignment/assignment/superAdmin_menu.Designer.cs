@@ -40,11 +40,12 @@
             // 
             lblBack.AutoSize = true;
             lblBack.Font = new Font("Segoe UI", 11F);
-            lblBack.Location = new Point(98, 413);
+            lblBack.Location = new Point(48, 414);
             lblBack.Name = "lblBack";
             lblBack.Size = new Size(217, 30);
             lblBack.TabIndex = 17;
             lblBack.Text = "< Back to Login Page";
+            lblBack.Click += lblBack_Click;
             // 
             // btnUpdate
             // 
@@ -55,6 +56,7 @@
             btnUpdate.TabIndex = 16;
             btnUpdate.Text = "Update Account Profile";
             btnUpdate.UseVisualStyleBackColor = true;
+            btnUpdate.Click += btnUpdate_Click;
             // 
             // label1
             // 
@@ -75,6 +77,7 @@
             btnViewFeedback.TabIndex = 14;
             btnViewFeedback.Text = "View Feedback";
             btnViewFeedback.UseVisualStyleBackColor = true;
+            btnViewFeedback.Click += btnViewFeedback_Click;
             // 
             // btnManageTrainer
             // 
@@ -85,6 +88,7 @@
             btnManageTrainer.TabIndex = 13;
             btnManageTrainer.Text = "Manage Trainer ";
             btnManageTrainer.UseVisualStyleBackColor = true;
+            btnManageTrainer.Click += btnManageTrainer_Click;
             // 
             // btnManageAdmin
             // 
@@ -95,6 +99,7 @@
             btnManageAdmin.TabIndex = 18;
             btnManageAdmin.Text = "Manage Administrator";
             btnManageAdmin.UseVisualStyleBackColor = true;
+            btnManageAdmin.Click += btnManageAdmin_Click;
             // 
             // superAdmin_menu
             // 

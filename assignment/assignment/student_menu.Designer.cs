@@ -50,11 +50,12 @@
             // 
             lblBack.AutoSize = true;
             lblBack.Font = new Font("Segoe UI", 11F);
-            lblBack.Location = new Point(12, 377);
+            lblBack.Location = new Point(12, 374);
             lblBack.Name = "lblBack";
             lblBack.Size = new Size(217, 30);
             lblBack.TabIndex = 13;
             lblBack.Text = "< Back to Login Page";
+            lblBack.Click += lblBack_Click;
             // 
             // btnSchedule
             // 
@@ -65,6 +66,7 @@
             btnSchedule.TabIndex = 14;
             btnSchedule.Text = "View Schedule";
             btnSchedule.UseVisualStyleBackColor = true;
+            btnSchedule.Click += btnSchedule_Click;
             // 
             // btnPayment
             // 
@@ -75,6 +77,7 @@
             btnPayment.TabIndex = 16;
             btnPayment.Text = "Make Payment and View Invoice";
             btnPayment.UseVisualStyleBackColor = true;
+            btnPayment.Click += btnPayment_Click;
             // 
             // btnManage
             // 
@@ -85,6 +88,7 @@
             btnManage.TabIndex = 17;
             btnManage.Text = "Manage Class Request";
             btnManage.UseVisualStyleBackColor = true;
+            btnManage.Click += btnManage_Click;
             // 
             // btnUpdate
             // 
@@ -95,6 +99,7 @@
             btnUpdate.TabIndex = 18;
             btnUpdate.Text = "Update Account Profile";
             btnUpdate.UseVisualStyleBackColor = true;
+            btnUpdate.Click += btnUpdate_Click;
             // 
             // student_menu
             // 

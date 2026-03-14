@@ -50,6 +50,7 @@
             lblBack.Size = new Size(247, 30);
             lblBack.TabIndex = 0;
             lblBack.Text = "< Back to Student Menu";
+            lblBack.Click += lblBack_Click;
             // 
             // btnInvoice
             // 
@@ -60,6 +61,7 @@
             btnInvoice.TabIndex = 1;
             btnInvoice.Text = "View Invoice";
             btnInvoice.UseVisualStyleBackColor = true;
+            btnInvoice.Click += btnInvoice_Click;
             // 
             // btnPay
             // 

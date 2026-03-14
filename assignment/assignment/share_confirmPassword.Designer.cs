@@ -61,6 +61,7 @@
             lblBack.Size = new Size(167, 30);
             lblBack.TabIndex = 2;
             lblBack.Text = "< Back to Menu";
+            lblBack.Click += lblBack_Click;
             // 
             // lblNext
             // 

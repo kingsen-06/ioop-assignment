@@ -84,7 +84,7 @@
             lblName.AutoSize = true;
             lblName.BorderStyle = BorderStyle.Fixed3D;
             lblName.Font = new Font("Segoe UI", 11F);
-            lblName.Location = new Point(337, 52);
+            lblName.Location = new Point(337, 57);
             lblName.Name = "lblName";
             lblName.Size = new Size(2, 32);
             lblName.TabIndex = 12;
@@ -113,7 +113,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 11F);
-            label1.Location = new Point(126, 52);
+            label1.Location = new Point(126, 57);
             label1.Name = "label1";
             label1.Size = new Size(82, 30);
             label1.TabIndex = 9;
@@ -128,6 +128,7 @@
             lblBack.Size = new Size(79, 30);
             lblBack.TabIndex = 17;
             lblBack.Text = "< Back";
+            lblBack.Click += lblBack_Click;
             // 
             // superAdmin_adminDetail
             // 

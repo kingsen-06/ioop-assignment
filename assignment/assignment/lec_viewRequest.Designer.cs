@@ -1,6 +1,6 @@
 ﻿namespace assignment
 {
-    partial class lec_approveRequest
+    partial class lec_viewRequest
     {
         /// <summary>
         /// Required designer variable.
@@ -69,6 +69,7 @@
             btnReject.TabIndex = 2;
             btnReject.Text = "Reject Request";
             btnReject.UseVisualStyleBackColor = true;
+            btnReject.Click += btnReject_Click;
             // 
             // dataRequest
             // 
@@ -110,6 +111,7 @@
             label2.Size = new Size(252, 30);
             label2.TabIndex = 4;
             label2.Text = "< Back to Lecturer Menu";
+            label2.Click += label2_Click;
             // 
             // label1
             // 
@@ -121,7 +123,7 @@
             label1.TabIndex = 5;
             label1.Text = "Student : ";
             // 
-            // lec_approveRequest
+            // lec_viewRequest
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -132,8 +134,8 @@
             Controls.Add(btnReject);
             Controls.Add(btnApprove);
             Controls.Add(lblStudent);
-            Name = "lec_approveRequest";
-            Text = "approveRequest";
+            Name = "lec_viewRequest";
+            Text = "viewRequest";
             ((System.ComponentModel.ISupportInitialize)dataRequest).EndInit();
             ResumeLayout(false);
             PerformLayout();

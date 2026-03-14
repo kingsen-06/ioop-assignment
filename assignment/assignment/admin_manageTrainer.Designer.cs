@@ -46,6 +46,7 @@
             btnAddTrainer.TabIndex = 1;
             btnAddTrainer.Text = "Register New Trainer";
             btnAddTrainer.UseVisualStyleBackColor = true;
+            btnAddTrainer.Click += btnAddTrainer_Click;
             // 
             // btnRemove
             // 
@@ -68,6 +69,7 @@
             btnViewDetail.TabIndex = 3;
             btnViewDetail.Text = "View Trainer Detail";
             btnViewDetail.UseVisualStyleBackColor = true;
+            btnViewDetail.Click += btnViewDetail_Click;
             // 
             // lblBack
             // 
@@ -78,6 +80,7 @@
             lblBack.Size = new Size(304, 30);
             lblBack.TabIndex = 5;
             lblBack.Text = "< Back to Administrator Menu";
+            lblBack.Click += lblBack_Click;
             // 
             // btnViewReport
             // 
@@ -88,6 +91,7 @@
             btnViewReport.TabIndex = 6;
             btnViewReport.Text = "View Monthly Income Report";
             btnViewReport.UseVisualStyleBackColor = true;
+            btnViewReport.Click += btnViewReport_Click;
             // 
             // lstTrainer
             // 

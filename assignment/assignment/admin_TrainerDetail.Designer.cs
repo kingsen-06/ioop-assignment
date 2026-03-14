@@ -1,6 +1,6 @@
 ﻿namespace assignment
 {
-    partial class admin_TrainerDetail
+    partial class admin_trainerDetail
     {
         /// <summary>
         /// Required designer variable.
@@ -53,6 +53,7 @@
             btnNew.TabIndex = 0;
             btnNew.Text = "Assign New Module";
             btnNew.UseVisualStyleBackColor = true;
+            btnNew.Click += btnNew_Click;
             // 
             // label1
             // 
@@ -168,7 +169,7 @@
             label9.TabIndex = 10;
             label9.Text = "< Back";
             // 
-            // admin_TrainerDetail
+            // admin_trainerDetail
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -184,7 +185,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(btnNew);
-            Name = "admin_TrainerDetail";
+            Name = "admin_trainerDetail";
             Text = "trainerDetail";
             ((System.ComponentModel.ISupportInitialize)dataClass).EndInit();
             ResumeLayout(false);

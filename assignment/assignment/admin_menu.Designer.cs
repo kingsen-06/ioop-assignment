@@ -44,6 +44,7 @@
             btnManageTrainer.TabIndex = 0;
             btnManageTrainer.Text = "Manage Trainer ";
             btnManageTrainer.UseVisualStyleBackColor = true;
+            btnManageTrainer.Click += btnManageTrainer_Click;
             // 
             // btnViewFeedback
             // 
@@ -54,6 +55,7 @@
             btnViewFeedback.TabIndex = 3;
             btnViewFeedback.Text = "View Feedback";
             btnViewFeedback.UseVisualStyleBackColor = true;
+            btnViewFeedback.Click += btnViewFeedback_Click;
             // 
             // label1
             // 
@@ -74,6 +76,7 @@
             btnUpdateProfile.TabIndex = 10;
             btnUpdateProfile.Text = "Update Account Profile";
             btnUpdateProfile.UseVisualStyleBackColor = true;
+            btnUpdateProfile.Click += btnUpdateProfile_Click;
             // 
             // lblBack
             // 
@@ -84,6 +87,7 @@
             lblBack.Size = new Size(217, 30);
             lblBack.TabIndex = 12;
             lblBack.Text = "< Back to Login Page";
+            lblBack.Click += lblBack_Click;
             // 
             // admin_menu
             // 

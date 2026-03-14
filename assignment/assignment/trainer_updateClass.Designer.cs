@@ -50,6 +50,7 @@
             lblBack.Size = new Size(239, 30);
             lblBack.TabIndex = 10;
             lblBack.Text = "< Back to Trainer Menu";
+            lblBack.Click += lblBack_Click;
             // 
             // btnEdit
             // 
@@ -60,6 +61,7 @@
             btnEdit.TabIndex = 9;
             btnEdit.Text = "Edit Class Detail";
             btnEdit.UseVisualStyleBackColor = true;
+            btnEdit.Click += btnEdit_Click;
             // 
             // btnRemove
             // 
@@ -80,6 +82,7 @@
             btnAdd.TabIndex = 7;
             btnAdd.Text = "Add New Class";
             btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.Click += btnAdd_Click;
             // 
             // dataClass
             // 

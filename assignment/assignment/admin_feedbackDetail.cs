@@ -16,5 +16,12 @@ namespace assignment
         {
             InitializeComponent();
         }
+
+        private void lblBack_Click(object sender, EventArgs e)
+        {
+            admin_viewFeedback viewFeedback = new admin_viewFeedback();
+            viewFeedback.Show();
+            this.Hide();
+        }
     }
 }

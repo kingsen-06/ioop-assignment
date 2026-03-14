@@ -37,7 +37,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 11F);
-            label1.Location = new Point(50, 43);
+            label1.Location = new Point(50, 38);
             label1.Name = "label1";
             label1.Size = new Size(159, 30);
             label1.TabIndex = 0;
@@ -46,7 +46,7 @@
             // txtReason
             // 
             txtReason.Font = new Font("Segoe UI", 11F);
-            txtReason.Location = new Point(50, 81);
+            txtReason.Location = new Point(50, 76);
             txtReason.Name = "txtReason";
             txtReason.Size = new Size(474, 234);
             txtReason.TabIndex = 1;
@@ -61,6 +61,7 @@
             lblBack.Size = new Size(79, 30);
             lblBack.TabIndex = 2;
             lblBack.Text = "< Back";
+            lblBack.Click += lblBack_Click;
             // 
             // lec_rejectReason
             // 

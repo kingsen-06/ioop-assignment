@@ -114,6 +114,7 @@
             lblBack.Size = new Size(85, 30);
             lblBack.TabIndex = 7;
             lblBack.Text = "< Back ";
+            lblBack.Click += lblBack_Click;
             // 
             // student_addRequest
             // 

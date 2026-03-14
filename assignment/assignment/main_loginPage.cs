@@ -7,12 +7,5 @@ namespace assignment
             InitializeComponent();
             txtPassword.PasswordChar = '*';
         }
-
-        private void btnRegister_Click(object sender, EventArgs e)
-        {
-            main_registerPage register = new main_registerPage();
-            register.Show();
-            this.Hide();
-        }
     }
 }

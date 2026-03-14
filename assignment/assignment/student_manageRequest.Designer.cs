@@ -86,6 +86,7 @@
             lblBack.Size = new Size(247, 30);
             lblBack.TabIndex = 1;
             lblBack.Text = "< Back to Student Menu";
+            lblBack.Click += lblBack_Click;
             // 
             // btnAdd
             // 
@@ -96,6 +97,7 @@
             btnAdd.TabIndex = 2;
             btnAdd.Text = "Add New Request";
             btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.Click += btnAdd_Click;
             // 
             // btnCancel
             // 

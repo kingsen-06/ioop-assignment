@@ -16,5 +16,12 @@ namespace assignment
         {
             InitializeComponent();
         }
+
+        private void lblBack_Click(object sender, EventArgs e)
+        {
+            superAdmin_manageAdmin manageAdmin = new superAdmin_manageAdmin();
+            manageAdmin.Show();
+            this.Hide();
+        }
     }
 }

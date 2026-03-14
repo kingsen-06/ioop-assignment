@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             btnUpdate = new Button();
-            btnApprove = new Button();
+            btnViewRequest = new Button();
             btnManage = new Button();
             lblBack = new Label();
             label1 = new Label();
@@ -44,16 +44,18 @@
             btnUpdate.TabIndex = 24;
             btnUpdate.Text = "Update Account Profile";
             btnUpdate.UseVisualStyleBackColor = true;
+            btnUpdate.Click += btnUpdate_Click;
             // 
-            // btnApprove
+            // btnViewRequest
             // 
-            btnApprove.Font = new Font("Segoe UI", 11F);
-            btnApprove.Location = new Point(148, 184);
-            btnApprove.Name = "btnApprove";
-            btnApprove.Size = new Size(430, 43);
-            btnApprove.TabIndex = 23;
-            btnApprove.Text = "Approve Request";
-            btnApprove.UseVisualStyleBackColor = true;
+            btnViewRequest.Font = new Font("Segoe UI", 11F);
+            btnViewRequest.Location = new Point(148, 184);
+            btnViewRequest.Name = "btnViewRequest";
+            btnViewRequest.Size = new Size(430, 43);
+            btnViewRequest.TabIndex = 23;
+            btnViewRequest.Text = "View Student Request";
+            btnViewRequest.UseVisualStyleBackColor = true;
+            btnViewRequest.Click += btnApprove_Click;
             // 
             // btnManage
             // 
@@ -64,6 +66,7 @@
             btnManage.TabIndex = 21;
             btnManage.Text = "Manage Student";
             btnManage.UseVisualStyleBackColor = true;
+            btnManage.Click += btnManage_Click;
             // 
             // lblBack
             // 
@@ -74,6 +77,7 @@
             lblBack.Size = new Size(217, 30);
             lblBack.TabIndex = 20;
             lblBack.Text = "< Back to Login Page";
+            lblBack.Click += lblBack_Click;
             // 
             // label1
             // 
@@ -91,7 +95,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(727, 376);
             Controls.Add(btnUpdate);
-            Controls.Add(btnApprove);
+            Controls.Add(btnViewRequest);
             Controls.Add(btnManage);
             Controls.Add(lblBack);
             Controls.Add(label1);
@@ -104,7 +108,7 @@
         #endregion
 
         private Button btnUpdate;
-        private Button btnApprove;
+        private Button btnViewRequest;
         private Button btnManage;
         private Label lblBack;
         private Label label1;

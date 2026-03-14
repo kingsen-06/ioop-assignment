@@ -63,6 +63,7 @@
             lblBack.Size = new Size(79, 30);
             lblBack.TabIndex = 2;
             lblBack.Text = "< Back";
+            lblBack.Click += lblBack_Click;
             // 
             // admin_monthChoice
             // 

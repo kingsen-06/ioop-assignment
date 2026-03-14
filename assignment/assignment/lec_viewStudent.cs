@@ -16,5 +16,19 @@ namespace assignment
         {
             InitializeComponent();
         }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            lec_addStudent addStudent = new lec_addStudent();
+            addStudent.Show();
+            this.Hide();
+        }
+
+        private void lblBack_Click(object sender, EventArgs e)
+        {
+            lec_menu lecMenu = new lec_menu();
+            lecMenu.Show();
+            this.Hide();
+        }
     }
 }

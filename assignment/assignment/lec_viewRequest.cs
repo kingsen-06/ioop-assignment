@@ -10,24 +10,24 @@ using System.Windows.Forms;
 
 namespace assignment
 {
-    public partial class student_paymentList : Form
+    public partial class lec_viewRequest : Form
     {
-        public student_paymentList()
+        public lec_viewRequest()
         {
             InitializeComponent();
         }
 
-        private void btnInvoice_Click(object sender, EventArgs e)
+        private void btnReject_Click(object sender, EventArgs e)
         {
-            student_invoice invoice = new student_invoice();
-            invoice.Show();
+            lec_rejectReason rejectReason = new lec_rejectReason();
+            rejectReason.Show();
             this.Hide();
         }
 
-        private void lblBack_Click(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
         {
-            student_menu studentMenu = new student_menu();
-            studentMenu.Show();
+            lec_menu lecMenu = new lec_menu();
+            lecMenu.Show();
             this.Hide();
         }
     }

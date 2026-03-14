@@ -16,5 +16,12 @@ namespace assignment
         {
             InitializeComponent();
         }
+
+        private void lblBack_Click(object sender, EventArgs e)
+        {
+            admin_monthChoice monthChoice = new admin_monthChoice();
+            monthChoice.Show();
+            this.Hide();
+        }
     }
 }

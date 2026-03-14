@@ -164,9 +164,9 @@
             lblBack.Font = new Font("Segoe UI", 11F);
             lblBack.Location = new Point(12, 445);
             lblBack.Name = "lblBack";
-            lblBack.Size = new Size(304, 30);
+            lblBack.Size = new Size(85, 30);
             lblBack.TabIndex = 37;
-            lblBack.Text = "< Back to Administrator Menu";
+            lblBack.Text = "< Back ";
             // 
             // txtName
             // 
