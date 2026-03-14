@@ -41,6 +41,10 @@
             label6 = new Label();
             lblBack = new Label();
             button1 = new Button();
+            label7 = new Label();
+            label8 = new Label();
+            cmbLevel = new ComboBox();
+            cmbModule = new ComboBox();
             SuspendLayout();
             // 
             // label1
@@ -147,7 +151,7 @@
             // 
             lblBack.AutoSize = true;
             lblBack.Font = new Font("Segoe UI", 11F);
-            lblBack.Location = new Point(31, 417);
+            lblBack.Location = new Point(29, 557);
             lblBack.Name = "lblBack";
             lblBack.Size = new Size(79, 30);
             lblBack.TabIndex = 13;
@@ -156,18 +160,61 @@
             // button1
             // 
             button1.Font = new Font("Segoe UI", 11F);
-            button1.Location = new Point(327, 401);
+            button1.Location = new Point(296, 529);
             button1.Name = "button1";
-            button1.Size = new Size(179, 43);
+            button1.Size = new Size(236, 43);
             button1.TabIndex = 14;
-            button1.Text = "Add New Class";
+            button1.Text = "Register New Trainer";
             button1.UseVisualStyleBackColor = true;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 11F);
+            label7.Location = new Point(83, 408);
+            label7.Name = "label7";
+            label7.Size = new Size(157, 30);
+            label7.TabIndex = 15;
+            label7.Text = "Module Name:";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 11F);
+            label8.Location = new Point(83, 469);
+            label8.Name = "label8";
+            label8.Size = new Size(122, 30);
+            label8.TabIndex = 17;
+            label8.Text = "Class Level:";
+            // 
+            // cmbLevel
+            // 
+            cmbLevel.Font = new Font("Segoe UI", 11F);
+            cmbLevel.FormattingEnabled = true;
+            cmbLevel.Items.AddRange(new object[] { "Beginner", "Intermediate", "Advance" });
+            cmbLevel.Location = new Point(273, 466);
+            cmbLevel.Name = "cmbLevel";
+            cmbLevel.Size = new Size(295, 38);
+            cmbLevel.TabIndex = 18;
+            // 
+            // cmbModule
+            // 
+            cmbModule.Font = new Font("Segoe UI", 11F);
+            cmbModule.FormattingEnabled = true;
+            cmbModule.Location = new Point(273, 405);
+            cmbModule.Name = "cmbModule";
+            cmbModule.Size = new Size(295, 38);
+            cmbModule.TabIndex = 19;
             // 
             // admin_addTrainer
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(667, 469);
+            ClientSize = new Size(667, 614);
+            Controls.Add(cmbModule);
+            Controls.Add(cmbLevel);
+            Controls.Add(label8);
+            Controls.Add(label7);
             Controls.Add(button1);
             Controls.Add(lblBack);
             Controls.Add(label6);
@@ -202,5 +249,9 @@
         private Label label6;
         private Label lblBack;
         private Button button1;
+        private Label label7;
+        private Label label8;
+        private ComboBox cmbLevel;
+        private ComboBox cmbModule;
     }
 }

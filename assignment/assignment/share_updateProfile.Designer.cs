@@ -34,15 +34,15 @@
             label4 = new Label();
             label3 = new Label();
             label2 = new Label();
-            label1 = new Label();
-            txtUsername = new TextBox();
-            txtPw = new TextBox();
+            txtPassword = new TextBox();
             txtEmail = new TextBox();
             txtContact = new TextBox();
             txtAddress = new TextBox();
-            button1 = new Button();
+            btnSave = new Button();
             btnShow = new Button();
             lblBack = new Label();
+            txtName = new TextBox();
+            label1 = new Label();
             SuspendLayout();
             // 
             // label6
@@ -59,7 +59,7 @@
             // 
             lblDelete.AutoSize = true;
             lblDelete.Font = new Font("Segoe UI", 11F);
-            lblDelete.Location = new Point(662, 421);
+            lblDelete.Location = new Point(662, 445);
             lblDelete.Name = "lblDelete";
             lblDelete.Size = new Size(181, 30);
             lblDelete.TabIndex = 23;
@@ -89,7 +89,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 11F);
-            label3.Location = new Point(48, 209);
+            label3.Location = new Point(48, 85);
             label3.Name = "label3";
             label3.Size = new Size(64, 30);
             label3.TabIndex = 20;
@@ -99,42 +99,24 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 11F);
-            label2.Location = new Point(48, 146);
+            label2.Location = new Point(48, 209);
             label2.Name = "label2";
             label2.Size = new Size(103, 30);
             label2.TabIndex = 19;
             label2.Text = "Password";
             // 
-            // label1
+            // txtPassword
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 11F);
-            label1.Location = new Point(48, 85);
-            label1.Name = "label1";
-            label1.Size = new Size(111, 30);
-            label1.TabIndex = 18;
-            label1.Text = "Username";
-            // 
-            // txtUsername
-            // 
-            txtUsername.Font = new Font("Segoe UI", 11F);
-            txtUsername.Location = new Point(244, 86);
-            txtUsername.Name = "txtUsername";
-            txtUsername.Size = new Size(395, 37);
-            txtUsername.TabIndex = 30;
-            // 
-            // txtPw
-            // 
-            txtPw.Font = new Font("Segoe UI", 11F);
-            txtPw.Location = new Point(244, 147);
-            txtPw.Name = "txtPw";
-            txtPw.Size = new Size(395, 37);
-            txtPw.TabIndex = 31;
+            txtPassword.Font = new Font("Segoe UI", 11F);
+            txtPassword.Location = new Point(244, 210);
+            txtPassword.Name = "txtPassword";
+            txtPassword.Size = new Size(395, 37);
+            txtPassword.TabIndex = 31;
             // 
             // txtEmail
             // 
             txtEmail.Font = new Font("Segoe UI", 11F);
-            txtEmail.Location = new Point(244, 210);
+            txtEmail.Location = new Point(244, 86);
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(395, 37);
             txtEmail.TabIndex = 32;
@@ -155,20 +137,20 @@
             txtAddress.Size = new Size(395, 37);
             txtAddress.TabIndex = 34;
             // 
-            // button1
+            // btnSave
             // 
-            button1.Font = new Font("Segoe UI", 11F);
-            button1.Location = new Point(361, 403);
-            button1.Name = "button1";
-            button1.Size = new Size(159, 38);
-            button1.TabIndex = 35;
-            button1.Text = "Save Change";
-            button1.UseVisualStyleBackColor = true;
+            btnSave.Font = new Font("Segoe UI", 11F);
+            btnSave.Location = new Point(361, 403);
+            btnSave.Name = "btnSave";
+            btnSave.Size = new Size(159, 38);
+            btnSave.TabIndex = 35;
+            btnSave.Text = "Save Change";
+            btnSave.UseVisualStyleBackColor = true;
             // 
             // btnShow
             // 
             btnShow.Font = new Font("Segoe UI", 11F);
-            btnShow.Location = new Point(662, 147);
+            btnShow.Location = new Point(662, 210);
             btnShow.Name = "btnShow";
             btnShow.Size = new Size(180, 38);
             btnShow.TabIndex = 36;
@@ -180,32 +162,50 @@
             // 
             lblBack.AutoSize = true;
             lblBack.Font = new Font("Segoe UI", 11F);
-            lblBack.Location = new Point(12, 421);
+            lblBack.Location = new Point(12, 445);
             lblBack.Name = "lblBack";
             lblBack.Size = new Size(304, 30);
             lblBack.TabIndex = 37;
             lblBack.Text = "< Back to Administrator Menu";
             // 
+            // txtName
+            // 
+            txtName.Font = new Font("Segoe UI", 11F);
+            txtName.Location = new Point(244, 149);
+            txtName.Name = "txtName";
+            txtName.Size = new Size(395, 37);
+            txtName.TabIndex = 39;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 11F);
+            label1.Location = new Point(48, 148);
+            label1.Name = "label1";
+            label1.Size = new Size(71, 30);
+            label1.TabIndex = 38;
+            label1.Text = "Name";
+            // 
             // share_updateProfile
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(863, 470);
+            ClientSize = new Size(863, 496);
+            Controls.Add(txtName);
+            Controls.Add(label1);
             Controls.Add(lblBack);
             Controls.Add(btnShow);
-            Controls.Add(button1);
+            Controls.Add(btnSave);
             Controls.Add(txtAddress);
             Controls.Add(txtContact);
             Controls.Add(txtEmail);
-            Controls.Add(txtPw);
-            Controls.Add(txtUsername);
+            Controls.Add(txtPassword);
             Controls.Add(label6);
             Controls.Add(lblDelete);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(label1);
             Name = "share_updateProfile";
             Text = "updateProfile";
             ResumeLayout(false);
@@ -220,14 +220,14 @@
         private Label label4;
         private Label label3;
         private Label label2;
-        private Label label1;
-        private TextBox txtUsername;
-        private TextBox txtPw;
+        private TextBox txtPassword;
         private TextBox txtEmail;
         private TextBox txtContact;
         private TextBox txtAddress;
-        private Button button1;
+        private Button btnSave;
         private Button btnShow;
         private Label lblBack;
+        private TextBox txtName;
+        private Label label1;
     }
 }

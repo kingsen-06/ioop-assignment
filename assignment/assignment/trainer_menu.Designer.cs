@@ -28,53 +28,53 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
+            btnUpdateClass = new Button();
+            btnView = new Button();
+            btnFeedback = new Button();
+            btnUpdate = new Button();
             label1 = new Label();
             lblBack = new Label();
             SuspendLayout();
             // 
-            // button1
+            // btnUpdateClass
             // 
-            button1.Font = new Font("Segoe UI", 11F);
-            button1.Location = new Point(163, 111);
-            button1.Name = "button1";
-            button1.Size = new Size(278, 37);
-            button1.TabIndex = 0;
-            button1.Text = "Update Class Information";
-            button1.UseVisualStyleBackColor = true;
+            btnUpdateClass.Font = new Font("Segoe UI", 11F);
+            btnUpdateClass.Location = new Point(149, 108);
+            btnUpdateClass.Name = "btnUpdateClass";
+            btnUpdateClass.Size = new Size(295, 42);
+            btnUpdateClass.TabIndex = 0;
+            btnUpdateClass.Text = "Update Class Information";
+            btnUpdateClass.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnView
             // 
-            button2.Font = new Font("Segoe UI", 11F);
-            button2.Location = new Point(163, 182);
-            button2.Name = "button2";
-            button2.Size = new Size(278, 37);
-            button2.TabIndex = 1;
-            button2.Text = "View Student List";
-            button2.UseVisualStyleBackColor = true;
+            btnView.Font = new Font("Segoe UI", 11F);
+            btnView.Location = new Point(149, 179);
+            btnView.Name = "btnView";
+            btnView.Size = new Size(295, 42);
+            btnView.TabIndex = 1;
+            btnView.Text = "View Student List";
+            btnView.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnFeedback
             // 
-            button3.Font = new Font("Segoe UI", 11F);
-            button3.Location = new Point(163, 254);
-            button3.Name = "button3";
-            button3.Size = new Size(278, 37);
-            button3.TabIndex = 2;
-            button3.Text = "Send Feedback";
-            button3.UseVisualStyleBackColor = true;
+            btnFeedback.Font = new Font("Segoe UI", 11F);
+            btnFeedback.Location = new Point(149, 251);
+            btnFeedback.Name = "btnFeedback";
+            btnFeedback.Size = new Size(295, 42);
+            btnFeedback.TabIndex = 2;
+            btnFeedback.Text = "Send Feedback";
+            btnFeedback.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnUpdate
             // 
-            button4.Font = new Font("Segoe UI", 11F);
-            button4.Location = new Point(163, 328);
-            button4.Name = "button4";
-            button4.Size = new Size(278, 37);
-            button4.TabIndex = 3;
-            button4.Text = "Update Profile";
-            button4.UseVisualStyleBackColor = true;
+            btnUpdate.Font = new Font("Segoe UI", 11F);
+            btnUpdate.Location = new Point(149, 325);
+            btnUpdate.Name = "btnUpdate";
+            btnUpdate.Size = new Size(295, 42);
+            btnUpdate.TabIndex = 3;
+            btnUpdate.Text = "Update Profile";
+            btnUpdate.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -90,7 +90,7 @@
             // 
             lblBack.AutoSize = true;
             lblBack.Font = new Font("Segoe UI", 11F);
-            lblBack.Location = new Point(21, 406);
+            lblBack.Location = new Point(21, 405);
             lblBack.Name = "lblBack";
             lblBack.Size = new Size(217, 30);
             lblBack.TabIndex = 5;
@@ -103,10 +103,10 @@
             ClientSize = new Size(607, 455);
             Controls.Add(lblBack);
             Controls.Add(label1);
-            Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(btnUpdate);
+            Controls.Add(btnFeedback);
+            Controls.Add(btnView);
+            Controls.Add(btnUpdateClass);
             Name = "trainer_menu";
             Text = "trainerMenu";
             ResumeLayout(false);
@@ -115,10 +115,10 @@
 
         #endregion
 
-        private Button button1;
-        private Button button2;
-        private Button button3;
-        private Button button4;
+        private Button btnUpdateClass;
+        private Button btnView;
+        private Button btnFeedback;
+        private Button btnUpdate;
         private Label label1;
         private Label lblBack;
     }

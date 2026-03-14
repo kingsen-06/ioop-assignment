@@ -34,7 +34,7 @@
             cmbLec = new ComboBox();
             cmbName = new ComboBox();
             cmbLevel = new ComboBox();
-            button1 = new Button();
+            btnSend = new Button();
             lblBack = new Label();
             SuspendLayout();
             // 
@@ -95,15 +95,15 @@
             cmbLevel.Size = new Size(354, 38);
             cmbLevel.TabIndex = 5;
             // 
-            // button1
+            // btnSend
             // 
-            button1.Font = new Font("Segoe UI", 11F);
-            button1.Location = new Point(321, 255);
-            button1.Name = "button1";
-            button1.Size = new Size(212, 43);
-            button1.TabIndex = 6;
-            button1.Text = "Send Request";
-            button1.UseVisualStyleBackColor = true;
+            btnSend.Font = new Font("Segoe UI", 11F);
+            btnSend.Location = new Point(321, 255);
+            btnSend.Name = "btnSend";
+            btnSend.Size = new Size(212, 43);
+            btnSend.TabIndex = 6;
+            btnSend.Text = "Send Request";
+            btnSend.UseVisualStyleBackColor = true;
             // 
             // lblBack
             // 
@@ -121,7 +121,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(687, 352);
             Controls.Add(lblBack);
-            Controls.Add(button1);
+            Controls.Add(btnSend);
             Controls.Add(cmbLevel);
             Controls.Add(cmbName);
             Controls.Add(cmbLec);
@@ -142,7 +142,7 @@
         private ComboBox cmbLec;
         private ComboBox cmbName;
         private ComboBox cmbLevel;
-        private Button button1;
+        private Button btnSend;
         private Label lblBack;
     }
 }

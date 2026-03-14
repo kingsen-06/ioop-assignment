@@ -31,19 +31,19 @@
             lblStudent = new Label();
             btnApprove = new Button();
             btnReject = new Button();
-            dataGridView1 = new DataGridView();
-            label2 = new Label();
-            label1 = new Label();
+            dataRequest = new DataGridView();
             stuName = new DataGridViewTextBoxColumn();
             courseName = new DataGridViewTextBoxColumn();
             level = new DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            label2 = new Label();
+            label1 = new Label();
+            ((System.ComponentModel.ISupportInitialize)dataRequest).BeginInit();
             SuspendLayout();
             // 
             // lblStudent
             // 
             lblStudent.AutoSize = true;
-            lblStudent.BorderStyle = BorderStyle.FixedSingle;
+            lblStudent.BorderStyle = BorderStyle.Fixed3D;
             lblStudent.Font = new Font("Segoe UI", 11F);
             lblStudent.Location = new Point(150, 54);
             lblStudent.Name = "lblStudent";
@@ -70,35 +70,15 @@
             btnReject.Text = "Reject Request";
             btnReject.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dataRequest
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { stuName, courseName, level });
-            dataGridView1.Location = new Point(115, 121);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(662, 246);
-            dataGridView1.TabIndex = 3;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 11F);
-            label2.Location = new Point(15, 392);
-            label2.Name = "label2";
-            label2.Size = new Size(252, 30);
-            label2.TabIndex = 4;
-            label2.Text = "< Back to Lecturer Menu";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 11F);
-            label1.Location = new Point(40, 54);
-            label1.Name = "label1";
-            label1.Size = new Size(104, 30);
-            label1.TabIndex = 5;
-            label1.Text = "Student : ";
+            dataRequest.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataRequest.Columns.AddRange(new DataGridViewColumn[] { stuName, courseName, level });
+            dataRequest.Location = new Point(115, 121);
+            dataRequest.Name = "dataRequest";
+            dataRequest.RowHeadersWidth = 62;
+            dataRequest.Size = new Size(662, 246);
+            dataRequest.TabIndex = 3;
             // 
             // stuName
             // 
@@ -121,6 +101,26 @@
             level.Name = "level";
             level.Width = 150;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 11F);
+            label2.Location = new Point(15, 392);
+            label2.Name = "label2";
+            label2.Size = new Size(252, 30);
+            label2.TabIndex = 4;
+            label2.Text = "< Back to Lecturer Menu";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 11F);
+            label1.Location = new Point(40, 54);
+            label1.Name = "label1";
+            label1.Size = new Size(104, 30);
+            label1.TabIndex = 5;
+            label1.Text = "Student : ";
+            // 
             // lec_approveRequest
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -128,13 +128,13 @@
             ClientSize = new Size(902, 445);
             Controls.Add(label1);
             Controls.Add(label2);
-            Controls.Add(dataGridView1);
+            Controls.Add(dataRequest);
             Controls.Add(btnReject);
             Controls.Add(btnApprove);
             Controls.Add(lblStudent);
             Name = "lec_approveRequest";
             Text = "approveRequest";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataRequest).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -144,7 +144,7 @@
         private Label lblStudent;
         private Button btnApprove;
         private Button btnReject;
-        private DataGridView dataGridView1;
+        private DataGridView dataRequest;
         private Label label2;
         private DataGridViewTextBoxColumn stuName;
         private DataGridViewTextBoxColumn courseName;

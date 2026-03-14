@@ -33,11 +33,11 @@
             cmbName = new ComboBox();
             cmbLevel = new ComboBox();
             dataStudent = new DataGridView();
-            label3 = new Label();
             name = new DataGridViewTextBoxColumn();
             schedule = new DataGridViewTextBoxColumn();
             venue = new DataGridViewTextBoxColumn();
             status = new DataGridViewTextBoxColumn();
+            lblBack = new Label();
             ((System.ComponentModel.ISupportInitialize)dataStudent).BeginInit();
             SuspendLayout();
             // 
@@ -89,16 +89,6 @@
             dataStudent.Size = new Size(663, 285);
             dataStudent.TabIndex = 4;
             // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 11F);
-            label3.Location = new Point(12, 447);
-            label3.Name = "label3";
-            label3.Size = new Size(239, 30);
-            label3.TabIndex = 5;
-            label3.Text = "< Back to Trainer Menu";
-            // 
             // name
             // 
             name.HeaderText = "Student Name";
@@ -127,12 +117,22 @@
             status.Name = "status";
             status.Width = 150;
             // 
+            // lblBack
+            // 
+            lblBack.AutoSize = true;
+            lblBack.Font = new Font("Segoe UI", 11F);
+            lblBack.Location = new Point(12, 454);
+            lblBack.Name = "lblBack";
+            lblBack.Size = new Size(239, 30);
+            lblBack.TabIndex = 5;
+            lblBack.Text = "< Back to Trainer Menu";
+            // 
             // trainer_viewStudent
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(789, 489);
-            Controls.Add(label3);
+            ClientSize = new Size(789, 504);
+            Controls.Add(lblBack);
             Controls.Add(dataStudent);
             Controls.Add(cmbLevel);
             Controls.Add(cmbName);
@@ -152,7 +152,7 @@
         private ComboBox cmbName;
         private ComboBox cmbLevel;
         private DataGridView dataStudent;
-        private Label label3;
+        private Label lblBack;
         private DataGridViewTextBoxColumn name;
         private DataGridViewTextBoxColumn schedule;
         private DataGridViewTextBoxColumn venue;

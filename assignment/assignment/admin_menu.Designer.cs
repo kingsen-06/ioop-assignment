@@ -28,29 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btnRegisterTrainer = new Button();
+            btnManageTrainer = new Button();
             btnViewFeedback = new Button();
             label1 = new Label();
-            btnUpdate = new Button();
+            btnUpdateProfile = new Button();
             lblBack = new Label();
             SuspendLayout();
             // 
-            // btnRegisterTrainer
+            // btnManageTrainer
             // 
-            btnRegisterTrainer.Font = new Font("Segoe UI", 11F);
-            btnRegisterTrainer.Location = new Point(137, 131);
-            btnRegisterTrainer.Name = "btnRegisterTrainer";
-            btnRegisterTrainer.Size = new Size(370, 42);
-            btnRegisterTrainer.TabIndex = 0;
-            btnRegisterTrainer.Text = "Add / Remove / View Trainer Details";
-            btnRegisterTrainer.UseVisualStyleBackColor = true;
+            btnManageTrainer.Font = new Font("Segoe UI", 11F);
+            btnManageTrainer.Location = new Point(172, 126);
+            btnManageTrainer.Name = "btnManageTrainer";
+            btnManageTrainer.Size = new Size(290, 42);
+            btnManageTrainer.TabIndex = 0;
+            btnManageTrainer.Text = "Manage Trainer ";
+            btnManageTrainer.UseVisualStyleBackColor = true;
             // 
             // btnViewFeedback
             // 
             btnViewFeedback.Font = new Font("Segoe UI", 11F);
-            btnViewFeedback.Location = new Point(137, 205);
+            btnViewFeedback.Location = new Point(172, 200);
             btnViewFeedback.Name = "btnViewFeedback";
-            btnViewFeedback.Size = new Size(370, 42);
+            btnViewFeedback.Size = new Size(290, 42);
             btnViewFeedback.TabIndex = 3;
             btnViewFeedback.Text = "View Feedback";
             btnViewFeedback.UseVisualStyleBackColor = true;
@@ -65,15 +65,15 @@
             label1.TabIndex = 7;
             label1.Text = "Administrator Functional Features";
             // 
-            // btnUpdate
+            // btnUpdateProfile
             // 
-            btnUpdate.Font = new Font("Segoe UI", 11F);
-            btnUpdate.Location = new Point(137, 284);
-            btnUpdate.Name = "btnUpdate";
-            btnUpdate.Size = new Size(370, 42);
-            btnUpdate.TabIndex = 10;
-            btnUpdate.Text = "Update Account Profile";
-            btnUpdate.UseVisualStyleBackColor = true;
+            btnUpdateProfile.Font = new Font("Segoe UI", 11F);
+            btnUpdateProfile.Location = new Point(172, 279);
+            btnUpdateProfile.Name = "btnUpdateProfile";
+            btnUpdateProfile.Size = new Size(290, 42);
+            btnUpdateProfile.TabIndex = 10;
+            btnUpdateProfile.Text = "Update Account Profile";
+            btnUpdateProfile.UseVisualStyleBackColor = true;
             // 
             // lblBack
             // 
@@ -91,10 +91,10 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(672, 419);
             Controls.Add(lblBack);
-            Controls.Add(btnUpdate);
+            Controls.Add(btnUpdateProfile);
             Controls.Add(label1);
             Controls.Add(btnViewFeedback);
-            Controls.Add(btnRegisterTrainer);
+            Controls.Add(btnManageTrainer);
             Name = "admin_menu";
             Text = "administratorMenu";
             ResumeLayout(false);
@@ -103,10 +103,10 @@
 
         #endregion
 
-        private Button btnRegisterTrainer;
+        private Button btnManageTrainer;
         private Button btnViewFeedback;
         private Label label1;
-        private Button btnUpdate;
+        private Button btnUpdateProfile;
         private Label lblBack;
     }
 }

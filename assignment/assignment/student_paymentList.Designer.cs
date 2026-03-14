@@ -31,14 +31,14 @@
             lblBack = new Label();
             btnInvoice = new Button();
             btnPay = new Button();
-            dataGridView1 = new DataGridView();
+            dataPayment = new DataGridView();
             id = new DataGridViewTextBoxColumn();
             description = new DataGridViewTextBoxColumn();
             receiver = new DataGridViewTextBoxColumn();
             amount = new DataGridViewTextBoxColumn();
             date = new DataGridViewTextBoxColumn();
             status = new DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataPayment).BeginInit();
             SuspendLayout();
             // 
             // lblBack
@@ -71,15 +71,15 @@
             btnPay.Text = "Make Payment";
             btnPay.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dataPayment
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { id, description, receiver, amount, date, status });
-            dataGridView1.Location = new Point(48, 42);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(836, 279);
-            dataGridView1.TabIndex = 3;
+            dataPayment.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataPayment.Columns.AddRange(new DataGridViewColumn[] { id, description, receiver, amount, date, status });
+            dataPayment.Location = new Point(48, 42);
+            dataPayment.Name = "dataPayment";
+            dataPayment.RowHeadersWidth = 62;
+            dataPayment.Size = new Size(836, 279);
+            dataPayment.TabIndex = 3;
             // 
             // id
             // 
@@ -128,13 +128,13 @@
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(931, 467);
-            Controls.Add(dataGridView1);
+            Controls.Add(dataPayment);
             Controls.Add(btnPay);
             Controls.Add(btnInvoice);
             Controls.Add(lblBack);
             Name = "student_paymentList";
             Text = "paymentList";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataPayment).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -144,7 +144,7 @@
         private Label lblBack;
         private Button btnInvoice;
         private Button btnPay;
-        private DataGridView dataGridView1;
+        private DataGridView dataPayment;
         private DataGridViewTextBoxColumn id;
         private DataGridViewTextBoxColumn description;
         private DataGridViewTextBoxColumn receiver;

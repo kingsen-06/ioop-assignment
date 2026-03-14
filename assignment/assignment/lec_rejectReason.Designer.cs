@@ -1,6 +1,6 @@
 ﻿namespace assignment
 {
-    partial class share_confirmPassword
+    partial class lec_rejectReason
     {
         /// <summary>
         /// Required designer variable.
@@ -28,70 +28,58 @@
         /// </summary>
         private void InitializeComponent()
         {
-            txtPassword = new TextBox();
             label1 = new Label();
+            txtReason = new RichTextBox();
             lblBack = new Label();
-            lblNext = new Label();
             SuspendLayout();
-            // 
-            // txtPassword
-            // 
-            txtPassword.Font = new Font("Segoe UI", 11F);
-            txtPassword.Location = new Point(222, 106);
-            txtPassword.Name = "txtPassword";
-            txtPassword.Size = new Size(294, 37);
-            txtPassword.TabIndex = 0;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 11F);
-            label1.Location = new Point(65, 109);
+            label1.Location = new Point(50, 43);
             label1.Name = "label1";
-            label1.Size = new Size(120, 30);
-            label1.TabIndex = 1;
-            label1.Text = "Password : ";
+            label1.Size = new Size(159, 30);
+            label1.TabIndex = 0;
+            label1.Text = "Reject reason : ";
+            // 
+            // txtReason
+            // 
+            txtReason.Font = new Font("Segoe UI", 11F);
+            txtReason.Location = new Point(50, 81);
+            txtReason.Name = "txtReason";
+            txtReason.Size = new Size(474, 234);
+            txtReason.TabIndex = 1;
+            txtReason.Text = "";
             // 
             // lblBack
             // 
             lblBack.AutoSize = true;
             lblBack.Font = new Font("Segoe UI", 11F);
-            lblBack.Location = new Point(14, 217);
+            lblBack.Location = new Point(26, 343);
             lblBack.Name = "lblBack";
-            lblBack.Size = new Size(167, 30);
+            lblBack.Size = new Size(79, 30);
             lblBack.TabIndex = 2;
-            lblBack.Text = "< Back to Menu";
+            lblBack.Text = "< Back";
             // 
-            // lblNext
-            // 
-            lblNext.AutoSize = true;
-            lblNext.Font = new Font("Segoe UI", 11F);
-            lblNext.Location = new Point(502, 217);
-            lblNext.Name = "lblNext";
-            lblNext.Size = new Size(79, 30);
-            lblNext.TabIndex = 3;
-            lblNext.Text = "Next >";
-            // 
-            // share_confirmPassword
+            // lec_rejectReason
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(599, 270);
-            Controls.Add(lblNext);
+            ClientSize = new Size(579, 392);
             Controls.Add(lblBack);
+            Controls.Add(txtReason);
             Controls.Add(label1);
-            Controls.Add(txtPassword);
-            Name = "share_confirmPassword";
-            Text = "confirmPassword";
+            Name = "lec_rejectReason";
+            Text = "lec_rejectReason";
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private TextBox txtPassword;
         private Label label1;
+        private RichTextBox txtReason;
         private Label lblBack;
-        private Label lblNext;
     }
 }

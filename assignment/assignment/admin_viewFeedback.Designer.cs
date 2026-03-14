@@ -33,6 +33,7 @@
             trainer = new DataGridViewTextBoxColumn();
             date = new DataGridViewTextBoxColumn();
             lblBack = new Label();
+            btnView = new Button();
             ((System.ComponentModel.ISupportInitialize)dataFeedback).BeginInit();
             SuspendLayout();
             // 
@@ -71,17 +72,28 @@
             // 
             lblBack.AutoSize = true;
             lblBack.Font = new Font("Segoe UI", 11F);
-            lblBack.Location = new Point(12, 376);
+            lblBack.Location = new Point(12, 423);
             lblBack.Name = "lblBack";
             lblBack.Size = new Size(304, 30);
             lblBack.TabIndex = 1;
             lblBack.Text = "< Back to Administrator Menu";
             // 
+            // btnView
+            // 
+            btnView.Font = new Font("Segoe UI", 11F);
+            btnView.Location = new Point(294, 368);
+            btnView.Name = "btnView";
+            btnView.Size = new Size(183, 38);
+            btnView.TabIndex = 2;
+            btnView.Text = "View Feedback";
+            btnView.UseVisualStyleBackColor = true;
+            // 
             // admin_viewFeedback
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 424);
+            ClientSize = new Size(800, 468);
+            Controls.Add(btnView);
             Controls.Add(lblBack);
             Controls.Add(dataFeedback);
             Name = "admin_viewFeedback";
@@ -98,5 +110,6 @@
         private DataGridViewTextBoxColumn trainer;
         private DataGridViewTextBoxColumn date;
         private Label lblBack;
+        private Button btnView;
     }
 }

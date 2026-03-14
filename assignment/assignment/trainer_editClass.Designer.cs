@@ -36,10 +36,10 @@
             txtVenue = new TextBox();
             lblBack = new Label();
             btnSave = new Button();
-            cmbModule = new ComboBox();
-            cmbLevel = new ComboBox();
             numFee = new NumericUpDown();
             dateSchedule = new DateTimePicker();
+            lblName = new Label();
+            lblLevel = new Label();
             ((System.ComponentModel.ISupportInitialize)numFee).BeginInit();
             SuspendLayout();
             // 
@@ -115,52 +115,58 @@
             // btnSave
             // 
             btnSave.Font = new Font("Segoe UI", 11F);
-            btnSave.Location = new Point(274, 364);
+            btnSave.Location = new Point(271, 360);
             btnSave.Name = "btnSave";
             btnSave.Size = new Size(172, 43);
             btnSave.TabIndex = 11;
             btnSave.Text = "Save Change";
             btnSave.UseVisualStyleBackColor = true;
             // 
-            // cmbModule
-            // 
-            cmbModule.FormattingEnabled = true;
-            cmbModule.Location = new Point(299, 53);
-            cmbModule.Name = "cmbModule";
-            cmbModule.Size = new Size(300, 33);
-            cmbModule.TabIndex = 12;
-            // 
-            // cmbLevel
-            // 
-            cmbLevel.FormattingEnabled = true;
-            cmbLevel.Location = new Point(299, 110);
-            cmbLevel.Name = "cmbLevel";
-            cmbLevel.Size = new Size(300, 33);
-            cmbLevel.TabIndex = 13;
-            // 
             // numFee
             // 
-            numFee.Location = new Point(299, 300);
+            numFee.Font = new Font("Segoe UI", 11F);
+            numFee.Location = new Point(299, 296);
             numFee.Name = "numFee";
-            numFee.Size = new Size(300, 31);
+            numFee.Size = new Size(300, 37);
             numFee.TabIndex = 14;
             // 
             // dateSchedule
             // 
+            dateSchedule.Font = new Font("Segoe UI", 11F);
             dateSchedule.Location = new Point(299, 172);
             dateSchedule.Name = "dateSchedule";
-            dateSchedule.Size = new Size(300, 31);
+            dateSchedule.Size = new Size(300, 37);
             dateSchedule.TabIndex = 15;
+            // 
+            // lblName
+            // 
+            lblName.AutoSize = true;
+            lblName.BorderStyle = BorderStyle.Fixed3D;
+            lblName.Font = new Font("Segoe UI", 11F);
+            lblName.Location = new Point(299, 52);
+            lblName.Name = "lblName";
+            lblName.Size = new Size(2, 32);
+            lblName.TabIndex = 16;
+            // 
+            // lblLevel
+            // 
+            lblLevel.AutoSize = true;
+            lblLevel.BorderStyle = BorderStyle.Fixed3D;
+            lblLevel.Font = new Font("Segoe UI", 11F);
+            lblLevel.Location = new Point(299, 109);
+            lblLevel.Name = "lblLevel";
+            lblLevel.Size = new Size(2, 32);
+            lblLevel.TabIndex = 17;
             // 
             // trainer_editClass
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(728, 432);
+            Controls.Add(lblLevel);
+            Controls.Add(lblName);
             Controls.Add(dateSchedule);
             Controls.Add(numFee);
-            Controls.Add(cmbLevel);
-            Controls.Add(cmbModule);
             Controls.Add(btnSave);
             Controls.Add(lblBack);
             Controls.Add(txtVenue);
@@ -186,9 +192,9 @@
         private TextBox txtVenue;
         private Label lblBack;
         private Button btnSave;
-        private ComboBox cmbModule;
-        private ComboBox cmbLevel;
         private NumericUpDown numFee;
         private DateTimePicker dateSchedule;
+        private Label lblName;
+        private Label lblLevel;
     }
 }

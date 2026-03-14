@@ -32,20 +32,22 @@
             lblID = new Label();
             lblDate = new Label();
             label6 = new Label();
-            lblAmount = new Label();
+            lblTotal = new Label();
             label8 = new Label();
             lblName = new Label();
             label10 = new Label();
-            label1 = new Label();
+            lblBack = new Label();
             label3 = new Label();
             lblAddress1 = new Label();
             lblAddress2 = new Label();
             lblEmail = new Label();
             lblAddress3 = new Label();
-            dataGridView1 = new DataGridView();
+            dataDetail = new DataGridView();
             description = new DataGridViewTextBoxColumn();
             price = new DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            label4 = new Label();
+            label5 = new Label();
+            ((System.ComponentModel.ISupportInitialize)dataDetail).BeginInit();
             SuspendLayout();
             // 
             // label2
@@ -88,21 +90,21 @@
             label6.TabIndex = 5;
             label6.Text = "Transaction Date : ";
             // 
-            // lblAmount
+            // lblTotal
             // 
-            lblAmount.AutoSize = true;
-            lblAmount.BorderStyle = BorderStyle.Fixed3D;
-            lblAmount.Font = new Font("Segoe UI", 10F);
-            lblAmount.Location = new Point(603, 531);
-            lblAmount.Name = "lblAmount";
-            lblAmount.Size = new Size(2, 30);
-            lblAmount.TabIndex = 8;
+            lblTotal.AutoSize = true;
+            lblTotal.BorderStyle = BorderStyle.Fixed3D;
+            lblTotal.Font = new Font("Segoe UI", 10F);
+            lblTotal.Location = new Point(591, 531);
+            lblTotal.Name = "lblTotal";
+            lblTotal.Size = new Size(2, 30);
+            lblTotal.TabIndex = 8;
             // 
             // label8
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 10F);
-            label8.Location = new Point(516, 531);
+            label8.Location = new Point(504, 531);
             label8.Name = "label8";
             label8.Size = new Size(68, 28);
             label8.TabIndex = 7;
@@ -113,7 +115,7 @@
             lblName.AutoSize = true;
             lblName.BorderStyle = BorderStyle.Fixed3D;
             lblName.Font = new Font("Segoe UI", 10F);
-            lblName.Location = new Point(142, 80);
+            lblName.Location = new Point(159, 80);
             lblName.Name = "lblName";
             lblName.Size = new Size(2, 30);
             lblName.TabIndex = 10;
@@ -124,19 +126,19 @@
             label10.Font = new Font("Segoe UI", 10F);
             label10.Location = new Point(61, 80);
             label10.Name = "label10";
-            label10.Size = new Size(75, 28);
+            label10.Size = new Size(94, 28);
             label10.TabIndex = 9;
-            label10.Text = "Buyer : ";
+            label10.Text = "Student : ";
             // 
-            // label1
+            // lblBack
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 11F);
-            label1.Location = new Point(12, 576);
-            label1.Name = "label1";
-            label1.Size = new Size(79, 30);
-            label1.TabIndex = 11;
-            label1.Text = "< Back";
+            lblBack.AutoSize = true;
+            lblBack.Font = new Font("Segoe UI", 11F);
+            lblBack.Location = new Point(12, 569);
+            lblBack.Name = "lblBack";
+            lblBack.Size = new Size(79, 30);
+            lblBack.TabIndex = 11;
+            lblBack.Text = "< Back";
             // 
             // label3
             // 
@@ -153,7 +155,7 @@
             lblAddress1.AutoSize = true;
             lblAddress1.BorderStyle = BorderStyle.Fixed3D;
             lblAddress1.Font = new Font("Segoe UI", 10F);
-            lblAddress1.Location = new Point(142, 120);
+            lblAddress1.Location = new Point(159, 120);
             lblAddress1.Name = "lblAddress1";
             lblAddress1.Size = new Size(2, 30);
             lblAddress1.TabIndex = 13;
@@ -163,7 +165,7 @@
             lblAddress2.AutoSize = true;
             lblAddress2.BorderStyle = BorderStyle.Fixed3D;
             lblAddress2.Font = new Font("Segoe UI", 10F);
-            lblAddress2.Location = new Point(142, 160);
+            lblAddress2.Location = new Point(159, 160);
             lblAddress2.Name = "lblAddress2";
             lblAddress2.Size = new Size(2, 30);
             lblAddress2.TabIndex = 14;
@@ -173,7 +175,7 @@
             lblEmail.AutoSize = true;
             lblEmail.BorderStyle = BorderStyle.Fixed3D;
             lblEmail.Font = new Font("Segoe UI", 10F);
-            lblEmail.Location = new Point(142, 239);
+            lblEmail.Location = new Point(159, 239);
             lblEmail.Name = "lblEmail";
             lblEmail.Size = new Size(2, 30);
             lblEmail.TabIndex = 16;
@@ -183,20 +185,20 @@
             lblAddress3.AutoSize = true;
             lblAddress3.BorderStyle = BorderStyle.Fixed3D;
             lblAddress3.Font = new Font("Segoe UI", 10F);
-            lblAddress3.Location = new Point(142, 199);
+            lblAddress3.Location = new Point(159, 199);
             lblAddress3.Name = "lblAddress3";
             lblAddress3.Size = new Size(2, 30);
             lblAddress3.TabIndex = 15;
             // 
-            // dataGridView1
+            // dataDetail
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { description, price });
-            dataGridView1.Location = new Point(40, 300);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(692, 204);
-            dataGridView1.TabIndex = 17;
+            dataDetail.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataDetail.Columns.AddRange(new DataGridViewColumn[] { description, price });
+            dataDetail.Location = new Point(40, 300);
+            dataDetail.Name = "dataDetail";
+            dataDetail.RowHeadersWidth = 62;
+            dataDetail.Size = new Size(692, 204);
+            dataDetail.TabIndex = 17;
             // 
             // description
             // 
@@ -212,21 +214,43 @@
             price.Name = "price";
             price.Width = 130;
             // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 10F);
+            label4.Location = new Point(61, 120);
+            label4.Name = "label4";
+            label4.Size = new Size(96, 28);
+            label4.TabIndex = 18;
+            label4.Text = "Address : ";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 10F);
+            label5.Location = new Point(61, 239);
+            label5.Name = "label5";
+            label5.Size = new Size(73, 28);
+            label5.TabIndex = 19;
+            label5.Text = "Email : ";
+            // 
             // student_invoice
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(773, 619);
-            Controls.Add(dataGridView1);
+            Controls.Add(label5);
+            Controls.Add(label4);
+            Controls.Add(dataDetail);
             Controls.Add(lblEmail);
             Controls.Add(lblAddress3);
             Controls.Add(lblAddress2);
             Controls.Add(lblAddress1);
             Controls.Add(label3);
-            Controls.Add(label1);
+            Controls.Add(lblBack);
             Controls.Add(lblName);
             Controls.Add(label10);
-            Controls.Add(lblAmount);
+            Controls.Add(lblTotal);
             Controls.Add(label8);
             Controls.Add(lblDate);
             Controls.Add(label6);
@@ -234,8 +258,7 @@
             Controls.Add(label2);
             Name = "student_invoice";
             Text = "invoice";
-            Load += this.student_invoice_Load;
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataDetail).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -246,18 +269,20 @@
         private Label lblID;
         private Label lblDate;
         private Label label6;
-        private Label lblAmount;
+        private Label lblTotal;
         private Label label8;
         private Label lblName;
         private Label label10;
-        private Label label1;
+        private Label lblBack;
         private Label label3;
         private Label lblAddress1;
         private Label lblAddress2;
         private Label lblEmail;
         private Label lblAddress3;
-        private DataGridView dataGridView1;
+        private DataGridView dataDetail;
         private DataGridViewTextBoxColumn description;
         private DataGridViewTextBoxColumn price;
+        private Label label4;
+        private Label label5;
     }
 }

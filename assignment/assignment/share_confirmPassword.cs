@@ -15,7 +15,7 @@ namespace assignment
         public share_confirmPassword()
         {
             InitializeComponent();
-            txtPw.PasswordChar = '*';
+            txtPassword.PasswordChar = '*';
         }
     }
 }

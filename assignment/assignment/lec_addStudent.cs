@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace assignment
 {
-    public partial class share_updateProfile : Form
+    public partial class lec_addStudent : Form
     {
-        public share_updateProfile()
+        public lec_addStudent()
         {
             InitializeComponent();
-            txtPassword.PasswordChar = '*';
-        }
-        private void btnShow_Click(object sender, EventArgs e)
-        {
-            txtPassword.PasswordChar = '\0';
         }
     }
 }

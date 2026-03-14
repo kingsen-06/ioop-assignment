@@ -107,6 +107,7 @@
             // 
             cmbLevel.Font = new Font("Segoe UI", 11F);
             cmbLevel.FormattingEnabled = true;
+            cmbLevel.Items.AddRange(new object[] { "Beginner", "Intermediate", "Advance" });
             cmbLevel.Location = new Point(273, 147);
             cmbLevel.Name = "cmbLevel";
             cmbLevel.Size = new Size(324, 38);
@@ -143,16 +144,16 @@
             // 
             lblBack.AutoSize = true;
             lblBack.Font = new Font("Segoe UI", 11F);
-            lblBack.Location = new Point(12, 392);
+            lblBack.Location = new Point(26, 389);
             lblBack.Name = "lblBack";
-            lblBack.Size = new Size(239, 30);
+            lblBack.Size = new Size(85, 30);
             lblBack.TabIndex = 11;
-            lblBack.Text = "< Back to Trainer Menu";
+            lblBack.Text = "< Back ";
             // 
             // btnAdd
             // 
             btnAdd.Font = new Font("Segoe UI", 11F);
-            btnAdd.Location = new Point(351, 373);
+            btnAdd.Location = new Point(351, 365);
             btnAdd.Name = "btnAdd";
             btnAdd.Size = new Size(171, 46);
             btnAdd.TabIndex = 12;
@@ -161,9 +162,10 @@
             // 
             // numFee
             // 
-            numFee.Location = new Point(273, 312);
+            numFee.Font = new Font("Segoe UI", 11F);
+            numFee.Location = new Point(273, 308);
             numFee.Name = "numFee";
-            numFee.Size = new Size(324, 31);
+            numFee.Size = new Size(324, 37);
             numFee.TabIndex = 13;
             // 
             // trainer_addClass

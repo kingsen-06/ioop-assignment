@@ -34,7 +34,7 @@
             trainer = new DataGridViewTextBoxColumn();
             schedule = new DataGridViewTextBoxColumn();
             Venue = new DataGridViewTextBoxColumn();
-            label1 = new Label();
+            lblBack = new Label();
             ((System.ComponentModel.ISupportInitialize)dataSchedule).BeginInit();
             SuspendLayout();
             // 
@@ -83,22 +83,22 @@
             Venue.Name = "Venue";
             Venue.Width = 150;
             // 
-            // label1
+            // lblBack
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 11F);
-            label1.Location = new Point(14, 375);
-            label1.Name = "label1";
-            label1.Size = new Size(247, 30);
-            label1.TabIndex = 1;
-            label1.Text = "< Back to Student Menu";
+            lblBack.AutoSize = true;
+            lblBack.Font = new Font("Segoe UI", 11F);
+            lblBack.Location = new Point(14, 375);
+            lblBack.Name = "lblBack";
+            lblBack.Size = new Size(247, 30);
+            lblBack.TabIndex = 1;
+            lblBack.Text = "< Back to Student Menu";
             // 
             // student_viewSchedule
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(919, 425);
-            Controls.Add(label1);
+            Controls.Add(lblBack);
             Controls.Add(dataSchedule);
             Name = "student_viewSchedule";
             Text = "viewSchedule";
@@ -115,6 +115,6 @@
         private DataGridViewTextBoxColumn trainer;
         private DataGridViewTextBoxColumn schedule;
         private DataGridViewTextBoxColumn Venue;
-        private Label label1;
+        private Label lblBack;
     }
 }

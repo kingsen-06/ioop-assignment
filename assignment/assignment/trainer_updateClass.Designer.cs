@@ -54,7 +54,7 @@
             // btnEdit
             // 
             btnEdit.Font = new Font("Segoe UI", 11F);
-            btnEdit.Location = new Point(563, 305);
+            btnEdit.Location = new Point(562, 303);
             btnEdit.Name = "btnEdit";
             btnEdit.Size = new Size(222, 43);
             btnEdit.TabIndex = 9;
@@ -64,7 +64,7 @@
             // btnRemove
             // 
             btnRemove.Font = new Font("Segoe UI", 11F);
-            btnRemove.Location = new Point(317, 305);
+            btnRemove.Location = new Point(316, 303);
             btnRemove.Name = "btnRemove";
             btnRemove.Size = new Size(222, 43);
             btnRemove.TabIndex = 8;
@@ -74,7 +74,7 @@
             // btnAdd
             // 
             btnAdd.Font = new Font("Segoe UI", 11F);
-            btnAdd.Location = new Point(67, 305);
+            btnAdd.Location = new Point(66, 303);
             btnAdd.Name = "btnAdd";
             btnAdd.Size = new Size(222, 43);
             btnAdd.TabIndex = 7;

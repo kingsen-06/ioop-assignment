@@ -1,6 +1,6 @@
 ﻿namespace assignment
 {
-    partial class admin_assignTrainer
+    partial class admin_assignClass
     {
         /// <summary>
         /// Required designer variable.
@@ -42,9 +42,9 @@
             label1.Font = new Font("Segoe UI", 11F);
             label1.Location = new Point(155, 51);
             label1.Name = "label1";
-            label1.Size = new Size(204, 30);
+            label1.Size = new Size(128, 30);
             label1.TabIndex = 0;
-            label1.Text = "Coding Class Level: ";
+            label1.Text = "Class Level: ";
             // 
             // label2
             // 
@@ -95,7 +95,7 @@
             lblBack.TabIndex = 6;
             lblBack.Text = "< Back to Administrator Menu";
             // 
-            // admin_assignTrainer
+            // admin_assignClass
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -106,7 +106,7 @@
             Controls.Add(cmbLevel);
             Controls.Add(label2);
             Controls.Add(label1);
-            Name = "admin_assignTrainer";
+            Name = "admin_assignClass";
             Text = "assignTrainer";
             ResumeLayout(false);
             PerformLayout();

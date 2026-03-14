@@ -30,8 +30,7 @@
         {
             btnUpdate = new Button();
             btnApprove = new Button();
-            btnEdit = new Button();
-            btnRegister = new Button();
+            btnManage = new Button();
             lblBack = new Label();
             label1 = new Label();
             SuspendLayout();
@@ -39,7 +38,7 @@
             // btnUpdate
             // 
             btnUpdate.Font = new Font("Segoe UI", 11F);
-            btnUpdate.Location = new Point(148, 315);
+            btnUpdate.Location = new Point(149, 250);
             btnUpdate.Name = "btnUpdate";
             btnUpdate.Size = new Size(430, 43);
             btnUpdate.TabIndex = 24;
@@ -56,31 +55,21 @@
             btnApprove.Text = "Approve Request";
             btnApprove.UseVisualStyleBackColor = true;
             // 
-            // btnEdit
+            // btnManage
             // 
-            btnEdit.Font = new Font("Segoe UI", 11F);
-            btnEdit.Location = new Point(149, 248);
-            btnEdit.Name = "btnEdit";
-            btnEdit.Size = new Size(430, 43);
-            btnEdit.TabIndex = 22;
-            btnEdit.Text = "Edit Student List";
-            btnEdit.UseVisualStyleBackColor = true;
-            // 
-            // btnRegister
-            // 
-            btnRegister.Font = new Font("Segoe UI", 11F);
-            btnRegister.Location = new Point(149, 119);
-            btnRegister.Name = "btnRegister";
-            btnRegister.Size = new Size(430, 43);
-            btnRegister.TabIndex = 21;
-            btnRegister.Text = "Register Student";
-            btnRegister.UseVisualStyleBackColor = true;
+            btnManage.Font = new Font("Segoe UI", 11F);
+            btnManage.Location = new Point(149, 119);
+            btnManage.Name = "btnManage";
+            btnManage.Size = new Size(430, 43);
+            btnManage.TabIndex = 21;
+            btnManage.Text = "Manage Student";
+            btnManage.UseVisualStyleBackColor = true;
             // 
             // lblBack
             // 
             lblBack.AutoSize = true;
             lblBack.Font = new Font("Segoe UI", 11F);
-            lblBack.Location = new Point(33, 388);
+            lblBack.Location = new Point(25, 324);
             lblBack.Name = "lblBack";
             lblBack.Size = new Size(217, 30);
             lblBack.TabIndex = 20;
@@ -100,11 +89,10 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(727, 450);
+            ClientSize = new Size(727, 376);
             Controls.Add(btnUpdate);
             Controls.Add(btnApprove);
-            Controls.Add(btnEdit);
-            Controls.Add(btnRegister);
+            Controls.Add(btnManage);
             Controls.Add(lblBack);
             Controls.Add(label1);
             Name = "lec_menu";
@@ -117,8 +105,7 @@
 
         private Button btnUpdate;
         private Button btnApprove;
-        private Button btnEdit;
-        private Button btnRegister;
+        private Button btnManage;
         private Label lblBack;
         private Label label1;
     }
