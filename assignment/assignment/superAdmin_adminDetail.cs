@@ -1,0 +1,27 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace assignment
+{
+    public partial class superAdmin_adminDetail : Form
+    {
+        public superAdmin_adminDetail()
+        {
+            InitializeComponent();
+        }
+
+        private void lblBack_Click(object sender, EventArgs e)
+        {
+            superAdmin_manageAdmin manageAdmin = new superAdmin_manageAdmin();
+            manageAdmin.Show();
+            this.Hide();
+        }
+    }
+}

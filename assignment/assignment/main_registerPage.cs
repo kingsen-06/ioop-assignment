@@ -10,16 +10,18 @@ using System.Windows.Forms;
 
 namespace assignment
 {
-    public partial class registerPage : Form
+    public partial class main_registerPage : Form
     {
-        public registerPage()
+        public main_registerPage()
         {
             InitializeComponent();
+            txtPw.PasswordChar = '*';
+            txtConfirmPw.PasswordChar = '*';
         }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            loginPage login = new loginPage();
+            main_loginPage login = new main_loginPage();
             login.Show();
             this.Hide();
         }
