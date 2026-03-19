@@ -29,53 +29,26 @@
         private void InitializeComponent()
         {
             dataRequest = new DataGridView();
+            lblBack = new Label();
+            btnAdd = new Button();
+            btnCancel = new Button();
             name = new DataGridViewTextBoxColumn();
             level = new DataGridViewTextBoxColumn();
             lecturer = new DataGridViewTextBoxColumn();
             status = new DataGridViewTextBoxColumn();
-            lblBack = new Label();
-            btnAdd = new Button();
-            btnCancel = new Button();
+            reason = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dataRequest).BeginInit();
             SuspendLayout();
             // 
             // dataRequest
             // 
             dataRequest.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataRequest.Columns.AddRange(new DataGridViewColumn[] { name, level, lecturer, status });
+            dataRequest.Columns.AddRange(new DataGridViewColumn[] { name, level, lecturer, status, reason });
             dataRequest.Location = new Point(63, 43);
             dataRequest.Name = "dataRequest";
             dataRequest.RowHeadersWidth = 62;
-            dataRequest.Size = new Size(663, 291);
+            dataRequest.Size = new Size(812, 291);
             dataRequest.TabIndex = 0;
-            // 
-            // name
-            // 
-            name.HeaderText = "Module Name";
-            name.MinimumWidth = 8;
-            name.Name = "name";
-            name.Width = 150;
-            // 
-            // level
-            // 
-            level.HeaderText = "Class Level";
-            level.MinimumWidth = 8;
-            level.Name = "level";
-            level.Width = 150;
-            // 
-            // lecturer
-            // 
-            lecturer.HeaderText = "Lecturer";
-            lecturer.MinimumWidth = 8;
-            lecturer.Name = "lecturer";
-            lecturer.Width = 150;
-            // 
-            // status
-            // 
-            status.HeaderText = "Status";
-            status.MinimumWidth = 8;
-            status.Name = "status";
-            status.Width = 150;
             // 
             // lblBack
             // 
@@ -109,11 +82,46 @@
             btnCancel.Text = "Cancel Request";
             btnCancel.UseVisualStyleBackColor = true;
             // 
+            // name
+            // 
+            name.HeaderText = "Module Name";
+            name.MinimumWidth = 8;
+            name.Name = "name";
+            name.Width = 150;
+            // 
+            // level
+            // 
+            level.HeaderText = "Class Level";
+            level.MinimumWidth = 8;
+            level.Name = "level";
+            level.Width = 150;
+            // 
+            // lecturer
+            // 
+            lecturer.HeaderText = "Lecturer";
+            lecturer.MinimumWidth = 8;
+            lecturer.Name = "lecturer";
+            lecturer.Width = 150;
+            // 
+            // status
+            // 
+            status.HeaderText = "Status";
+            status.MinimumWidth = 8;
+            status.Name = "status";
+            status.Width = 150;
+            // 
+            // reason
+            // 
+            reason.HeaderText = "Reject Reason";
+            reason.MinimumWidth = 8;
+            reason.Name = "reason";
+            reason.Width = 150;
+            // 
             // student_manageRequest
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 488);
+            ClientSize = new Size(942, 488);
             Controls.Add(btnCancel);
             Controls.Add(btnAdd);
             Controls.Add(lblBack);
@@ -128,12 +136,13 @@
         #endregion
 
         private DataGridView dataRequest;
+        private Label lblBack;
+        private Button btnAdd;
+        private Button btnCancel;
         private DataGridViewTextBoxColumn name;
         private DataGridViewTextBoxColumn level;
         private DataGridViewTextBoxColumn lecturer;
         private DataGridViewTextBoxColumn status;
-        private Label lblBack;
-        private Button btnAdd;
-        private Button btnCancel;
+        private DataGridViewTextBoxColumn reason;
     }
 }
