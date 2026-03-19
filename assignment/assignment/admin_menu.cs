@@ -44,5 +44,12 @@ namespace assignment
             loginPage.Show();
             this.Hide();
         }
+
+        private void btnManageLecturer_Click(object sender, EventArgs e)
+        {
+            admin_manageLec manageLec = new admin_manageLec();
+            manageLec.Show();
+            this.Hide();
+        }
     }
 }
