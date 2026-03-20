@@ -97,6 +97,7 @@
             btnAddLec.TabIndex = 9;
             btnAddLec.Text = "Register New Lecturer";
             btnAddLec.UseVisualStyleBackColor = true;
+            btnAddLec.Click += btnAddLec_Click;
             // 
             // admin_manageLec
             // 

@@ -19,7 +19,7 @@ namespace assignment
 
         private void btnManageAdmin_Click(object sender, EventArgs e)
         {
-            superAdmin_manageAdmin manageAdmin = new superAdmin_manageAdmin();
+            superAdmin_manageAdmin1 manageAdmin = new superAdmin_manageAdmin1();
             manageAdmin.Show();
             this.Hide();
         }

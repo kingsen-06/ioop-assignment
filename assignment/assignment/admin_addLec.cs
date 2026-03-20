@@ -10,19 +10,17 @@ using System.Windows.Forms;
 
 namespace assignment
 {
-    public partial class main_registerPage : Form
+    public partial class admin_addLec : Form
     {
-        public main_registerPage()
+        public admin_addLec()
         {
             InitializeComponent();
-            txtPw.PasswordChar = '*';
-            txtConfirmPw.PasswordChar = '*';
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
+        private void lblBack_Click(object sender, EventArgs e)
         {
-            main_loginPage login = new main_loginPage();
-            login.Show();
+            admin_manageLec manageLec = new admin_manageLec();
+            manageLec.Show();
             this.Hide();
         }
     }

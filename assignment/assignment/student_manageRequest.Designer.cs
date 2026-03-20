@@ -64,7 +64,7 @@
             // btnAdd
             // 
             btnAdd.Font = new Font("Segoe UI", 11F);
-            btnAdd.Location = new Point(148, 366);
+            btnAdd.Location = new Point(219, 368);
             btnAdd.Name = "btnAdd";
             btnAdd.Size = new Size(202, 43);
             btnAdd.TabIndex = 2;
@@ -75,7 +75,7 @@
             // btnCancel
             // 
             btnCancel.Font = new Font("Segoe UI", 11F);
-            btnCancel.Location = new Point(429, 366);
+            btnCancel.Location = new Point(500, 368);
             btnCancel.Name = "btnCancel";
             btnCancel.Size = new Size(202, 43);
             btnCancel.TabIndex = 3;

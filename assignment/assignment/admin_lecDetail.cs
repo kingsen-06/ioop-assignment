@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace assignment
 {
-    public partial class admin_manageLec : Form
+    public partial class admin_lecDetail : Form
     {
-        public admin_manageLec()
+        public admin_lecDetail()
         {
             InitializeComponent();
-        }
-
-        private void btnAddLec_Click(object sender, EventArgs e)
-        {
-            admin_addLec addLec = new admin_addLec();
-            addLec.Show();
-            this.Hide();
         }
     }
 }

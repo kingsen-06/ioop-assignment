@@ -28,23 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            lblUsername = new Label();
+            lblEmail = new Label();
             txtEmail = new TextBox();
             txtPassword = new TextBox();
             lblPassword = new Label();
             btnLogin = new Button();
             SuspendLayout();
             // 
-            // lblUsername
+            // lblEmail
             // 
-            lblUsername.AutoSize = true;
-            lblUsername.Font = new Font("Segoe UI", 11F);
-            lblUsername.Location = new Point(143, 74);
-            lblUsername.Margin = new Padding(4, 0, 4, 0);
-            lblUsername.Name = "lblUsername";
-            lblUsername.Size = new Size(81, 30);
-            lblUsername.TabIndex = 0;
-            lblUsername.Text = "Email : ";
+            lblEmail.AutoSize = true;
+            lblEmail.Font = new Font("Segoe UI", 11F);
+            lblEmail.Location = new Point(143, 74);
+            lblEmail.Margin = new Padding(4, 0, 4, 0);
+            lblEmail.Name = "lblEmail";
+            lblEmail.Size = new Size(81, 30);
+            lblEmail.TabIndex = 0;
+            lblEmail.Text = "Email : ";
             // 
             // txtEmail
             // 
@@ -95,7 +95,7 @@
             Controls.Add(txtPassword);
             Controls.Add(lblPassword);
             Controls.Add(txtEmail);
-            Controls.Add(lblUsername);
+            Controls.Add(lblEmail);
             Margin = new Padding(4);
             Name = "main_loginPage";
             Text = "loginPage";
@@ -105,7 +105,7 @@
 
         #endregion
 
-        private Label lblUsername;
+        private Label lblEmail;
         private TextBox txtEmail;
         private TextBox txtPassword;
         private Label lblPassword;
