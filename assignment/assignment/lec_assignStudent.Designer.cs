@@ -31,13 +31,13 @@
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
-            comboBox1 = new ComboBox();
-            comboBox2 = new ComboBox();
-            comboBox3 = new ComboBox();
-            comboBox4 = new ComboBox();
+            cmbModule = new ComboBox();
+            cmbLevel = new ComboBox();
+            cmbTrainer = new ComboBox();
+            cmbSchedule = new ComboBox();
             label4 = new Label();
             label5 = new Label();
-            button1 = new Button();
+            btnAssign = new Button();
             SuspendLayout();
             // 
             // label1
@@ -70,41 +70,41 @@
             label3.TabIndex = 2;
             label3.Text = "Trainer : ";
             // 
-            // comboBox1
+            // cmbModule
             // 
-            comboBox1.Font = new Font("Segoe UI", 11F);
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(275, 71);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(366, 38);
-            comboBox1.TabIndex = 3;
+            cmbModule.Font = new Font("Segoe UI", 11F);
+            cmbModule.FormattingEnabled = true;
+            cmbModule.Location = new Point(275, 71);
+            cmbModule.Name = "cmbModule";
+            cmbModule.Size = new Size(366, 38);
+            cmbModule.TabIndex = 3;
             // 
-            // comboBox2
+            // cmbLevel
             // 
-            comboBox2.Font = new Font("Segoe UI", 11F);
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(275, 134);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(366, 38);
-            comboBox2.TabIndex = 4;
+            cmbLevel.Font = new Font("Segoe UI", 11F);
+            cmbLevel.FormattingEnabled = true;
+            cmbLevel.Location = new Point(275, 134);
+            cmbLevel.Name = "cmbLevel";
+            cmbLevel.Size = new Size(366, 38);
+            cmbLevel.TabIndex = 4;
             // 
-            // comboBox3
+            // cmbTrainer
             // 
-            comboBox3.Font = new Font("Segoe UI", 11F);
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(275, 200);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(366, 38);
-            comboBox3.TabIndex = 5;
+            cmbTrainer.Font = new Font("Segoe UI", 11F);
+            cmbTrainer.FormattingEnabled = true;
+            cmbTrainer.Location = new Point(275, 200);
+            cmbTrainer.Name = "cmbTrainer";
+            cmbTrainer.Size = new Size(366, 38);
+            cmbTrainer.TabIndex = 5;
             // 
-            // comboBox4
+            // cmbSchedule
             // 
-            comboBox4.Font = new Font("Segoe UI", 11F);
-            comboBox4.FormattingEnabled = true;
-            comboBox4.Location = new Point(275, 262);
-            comboBox4.Name = "comboBox4";
-            comboBox4.Size = new Size(366, 38);
-            comboBox4.TabIndex = 7;
+            cmbSchedule.Font = new Font("Segoe UI", 11F);
+            cmbSchedule.FormattingEnabled = true;
+            cmbSchedule.Location = new Point(275, 262);
+            cmbSchedule.Name = "cmbSchedule";
+            cmbSchedule.Size = new Size(366, 38);
+            cmbSchedule.TabIndex = 7;
             // 
             // label4
             // 
@@ -126,28 +126,28 @@
             label5.TabIndex = 8;
             label5.Text = "< Back";
             // 
-            // button1
+            // btnAssign
             // 
-            button1.Font = new Font("Segoe UI", 11F);
-            button1.Location = new Point(359, 321);
-            button1.Name = "button1";
-            button1.Size = new Size(189, 41);
-            button1.TabIndex = 9;
-            button1.Text = "Assign to Class";
-            button1.UseVisualStyleBackColor = true;
+            btnAssign.Font = new Font("Segoe UI", 11F);
+            btnAssign.Location = new Point(359, 321);
+            btnAssign.Name = "btnAssign";
+            btnAssign.Size = new Size(189, 41);
+            btnAssign.TabIndex = 9;
+            btnAssign.Text = "Assign to Class";
+            btnAssign.UseVisualStyleBackColor = true;
             // 
             // lec_assignStudent
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(746, 403);
-            Controls.Add(button1);
+            Controls.Add(btnAssign);
             Controls.Add(label5);
-            Controls.Add(comboBox4);
+            Controls.Add(cmbSchedule);
             Controls.Add(label4);
-            Controls.Add(comboBox3);
-            Controls.Add(comboBox2);
-            Controls.Add(comboBox1);
+            Controls.Add(cmbTrainer);
+            Controls.Add(cmbLevel);
+            Controls.Add(cmbModule);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -162,12 +162,12 @@
         private Label label1;
         private Label label2;
         private Label label3;
-        private ComboBox comboBox1;
-        private ComboBox comboBox2;
-        private ComboBox comboBox3;
-        private ComboBox comboBox4;
+        private ComboBox cmbModule;
+        private ComboBox cmbLevel;
+        private ComboBox cmbTrainer;
+        private ComboBox cmbSchedule;
         private Label label4;
         private Label label5;
-        private Button button1;
+        private Button btnAssign;
     }
 }

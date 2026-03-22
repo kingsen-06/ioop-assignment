@@ -35,8 +35,8 @@
             lblLevel = new Label();
             label6 = new Label();
             label8 = new Label();
-            comboBox1 = new ComboBox();
-            comboBox2 = new ComboBox();
+            cmbStatus = new ComboBox();
+            cmbSchedule = new ComboBox();
             label2 = new Label();
             label3 = new Label();
             btnEdit = new Button();
@@ -112,21 +112,21 @@
             label8.TabIndex = 6;
             label8.Text = "Class Schedule : ";
             // 
-            // comboBox1
+            // cmbStatus
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(278, 288);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(298, 33);
-            comboBox1.TabIndex = 7;
+            cmbStatus.FormattingEnabled = true;
+            cmbStatus.Location = new Point(278, 288);
+            cmbStatus.Name = "cmbStatus";
+            cmbStatus.Size = new Size(298, 33);
+            cmbStatus.TabIndex = 7;
             // 
-            // comboBox2
+            // cmbSchedule
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(278, 234);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(298, 33);
-            comboBox2.TabIndex = 8;
+            cmbSchedule.FormattingEnabled = true;
+            cmbSchedule.Location = new Point(278, 234);
+            cmbSchedule.Name = "cmbSchedule";
+            cmbSchedule.Size = new Size(298, 33);
+            cmbSchedule.TabIndex = 8;
             // 
             // label2
             // 
@@ -166,8 +166,8 @@
             Controls.Add(btnEdit);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(comboBox2);
-            Controls.Add(comboBox1);
+            Controls.Add(cmbSchedule);
+            Controls.Add(cmbStatus);
             Controls.Add(label8);
             Controls.Add(lblLevel);
             Controls.Add(label6);
@@ -190,8 +190,8 @@
         private Label lblLevel;
         private Label label6;
         private Label label8;
-        private ComboBox comboBox1;
-        private ComboBox comboBox2;
+        private ComboBox cmbStatus;
+        private ComboBox cmbSchedule;
         private Label label2;
         private Label label3;
         private Button btnEdit;
