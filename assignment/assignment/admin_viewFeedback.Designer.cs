@@ -41,7 +41,7 @@
             // 
             dataFeedback.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataFeedback.Columns.AddRange(new DataGridViewColumn[] { feedback, trainer, date });
-            dataFeedback.Location = new Point(32, 30);
+            dataFeedback.Location = new Point(32, 38);
             dataFeedback.Name = "dataFeedback";
             dataFeedback.RowHeadersWidth = 62;
             dataFeedback.Size = new Size(733, 317);
@@ -82,7 +82,7 @@
             // btnView
             // 
             btnView.Font = new Font("Segoe UI", 11F);
-            btnView.Location = new Point(254, 366);
+            btnView.Location = new Point(254, 374);
             btnView.Name = "btnView";
             btnView.Size = new Size(255, 38);
             btnView.TabIndex = 2;

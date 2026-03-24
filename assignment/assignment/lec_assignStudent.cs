@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace assignment
 {
-    public partial class superAdmin_manageAdmin : Form
+    public partial class lec_assignStudent : Form
     {
-        public superAdmin_manageAdmin()
+        public lec_assignStudent()
         {
             InitializeComponent();
         }

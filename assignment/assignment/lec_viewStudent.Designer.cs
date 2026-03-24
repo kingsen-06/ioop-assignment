@@ -40,6 +40,8 @@
             lblLevel = new Label();
             cmbName = new ComboBox();
             cmbLevel = new ComboBox();
+            btnAssignClass = new Button();
+            btnEdit = new Button();
             ((System.ComponentModel.ISupportInitialize)dataStudent).BeginInit();
             SuspendLayout();
             // 
@@ -85,17 +87,17 @@
             // 
             lblBack.AutoSize = true;
             lblBack.Font = new Font("Segoe UI", 11F);
-            lblBack.Location = new Point(14, 481);
+            lblBack.Location = new Point(14, 485);
             lblBack.Name = "lblBack";
             lblBack.Size = new Size(252, 30);
             lblBack.TabIndex = 5;
             lblBack.Text = "< Back to Lecturer Menu";
-            //lblBack.Click += label2_Click;
             // 
             // btnDel
             // 
             btnDel.Font = new Font("Segoe UI", 11F);
-            btnDel.Location = new Point(545, 410);
+            btnDel.ForeColor = Color.Red;
+            btnDel.Location = new Point(381, 469);
             btnDel.Name = "btnDel";
             btnDel.Size = new Size(209, 42);
             btnDel.TabIndex = 6;
@@ -105,9 +107,9 @@
             // btnAdd
             // 
             btnAdd.Font = new Font("Segoe UI", 11F);
-            btnAdd.Location = new Point(206, 410);
+            btnAdd.Location = new Point(115, 410);
             btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(209, 42);
+            btnAdd.Size = new Size(198, 42);
             btnAdd.TabIndex = 7;
             btnAdd.Text = "Add New Student";
             btnAdd.UseVisualStyleBackColor = true;
@@ -117,7 +119,7 @@
             // 
             lblName.AutoSize = true;
             lblName.Font = new Font("Segoe UI", 11F);
-            lblName.Location = new Point(132, 47);
+            lblName.Location = new Point(174, 46);
             lblName.Name = "lblName";
             lblName.Size = new Size(169, 30);
             lblName.TabIndex = 8;
@@ -127,7 +129,7 @@
             // 
             lblLevel.AutoSize = true;
             lblLevel.Font = new Font("Segoe UI", 11F);
-            lblLevel.Location = new Point(132, 94);
+            lblLevel.Location = new Point(174, 97);
             lblLevel.Name = "lblLevel";
             lblLevel.Size = new Size(134, 30);
             lblLevel.TabIndex = 9;
@@ -137,9 +139,9 @@
             // 
             cmbName.Font = new Font("Segoe UI", 11F);
             cmbName.FormattingEnabled = true;
-            cmbName.Location = new Point(332, 44);
+            cmbName.Location = new Point(374, 43);
             cmbName.Name = "cmbName";
-            cmbName.Size = new Size(385, 38);
+            cmbName.Size = new Size(418, 38);
             cmbName.TabIndex = 10;
             // 
             // cmbLevel
@@ -147,16 +149,40 @@
             cmbLevel.Font = new Font("Segoe UI", 11F);
             cmbLevel.FormattingEnabled = true;
             cmbLevel.Items.AddRange(new object[] { "Beginner", "Intermediate", "Advance" });
-            cmbLevel.Location = new Point(332, 91);
+            cmbLevel.Location = new Point(374, 94);
             cmbLevel.Name = "cmbLevel";
-            cmbLevel.Size = new Size(385, 38);
+            cmbLevel.Size = new Size(418, 38);
             cmbLevel.TabIndex = 11;
+            // 
+            // btnAssignClass
+            // 
+            btnAssignClass.Font = new Font("Segoe UI", 11F);
+            btnAssignClass.Location = new Point(355, 410);
+            btnAssignClass.Name = "btnAssignClass";
+            btnAssignClass.Size = new Size(259, 42);
+            btnAssignClass.TabIndex = 12;
+            btnAssignClass.Text = "Assign Student to Class";
+            btnAssignClass.UseVisualStyleBackColor = true;
+            btnAssignClass.Click += btnAssignClass_Click;
+            // 
+            // btnEdit
+            // 
+            btnEdit.Font = new Font("Segoe UI", 11F);
+            btnEdit.Location = new Point(660, 410);
+            btnEdit.Name = "btnEdit";
+            btnEdit.Size = new Size(198, 42);
+            btnEdit.TabIndex = 13;
+            btnEdit.Text = "Edit Class";
+            btnEdit.UseVisualStyleBackColor = true;
+            btnEdit.Click += btnEdit_Click;
             // 
             // lec_viewStudent
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(979, 537);
+            Controls.Add(btnEdit);
+            Controls.Add(btnAssignClass);
             Controls.Add(cmbLevel);
             Controls.Add(cmbName);
             Controls.Add(lblLevel);
@@ -186,5 +212,7 @@
         private Label lblLevel;
         private ComboBox cmbName;
         private ComboBox cmbLevel;
+        private Button btnAssignClass;
+        private Button btnEdit;
     }
 }

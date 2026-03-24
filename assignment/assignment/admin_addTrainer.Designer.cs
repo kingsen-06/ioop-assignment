@@ -40,7 +40,7 @@
             txtAddress = new TextBox();
             label6 = new Label();
             lblBack = new Label();
-            button1 = new Button();
+            btnRegister = new Button();
             label7 = new Label();
             label8 = new Label();
             cmbLevel = new ComboBox();
@@ -158,15 +158,15 @@
             lblBack.Text = "< Back";
             lblBack.Click += lblBack_Click;
             // 
-            // button1
+            // btnRegister
             // 
-            button1.Font = new Font("Segoe UI", 11F);
-            button1.Location = new Point(296, 529);
-            button1.Name = "button1";
-            button1.Size = new Size(236, 43);
-            button1.TabIndex = 14;
-            button1.Text = "Register New Trainer";
-            button1.UseVisualStyleBackColor = true;
+            btnRegister.Font = new Font("Segoe UI", 11F);
+            btnRegister.Location = new Point(296, 529);
+            btnRegister.Name = "btnRegister";
+            btnRegister.Size = new Size(236, 43);
+            btnRegister.TabIndex = 14;
+            btnRegister.Text = "Register New Trainer";
+            btnRegister.UseVisualStyleBackColor = true;
             // 
             // label7
             // 
@@ -216,7 +216,7 @@
             Controls.Add(cmbLevel);
             Controls.Add(label8);
             Controls.Add(label7);
-            Controls.Add(button1);
+            Controls.Add(btnRegister);
             Controls.Add(lblBack);
             Controls.Add(label6);
             Controls.Add(txtAddress);
@@ -249,7 +249,7 @@
         private TextBox txtAddress;
         private Label label6;
         private Label lblBack;
-        private Button button1;
+        private Button btnRegister;
         private Label label7;
         private Label label8;
         private ComboBox cmbLevel;

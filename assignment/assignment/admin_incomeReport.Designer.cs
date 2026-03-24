@@ -70,7 +70,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 11F);
-            label2.Location = new Point(528, 98);
+            label2.Location = new Point(570, 98);
             label2.Name = "label2";
             label2.Size = new Size(111, 30);
             label2.TabIndex = 1;
@@ -93,7 +93,7 @@
             dataReport.Location = new Point(53, 292);
             dataReport.Name = "dataReport";
             dataReport.RowHeadersWidth = 62;
-            dataReport.Size = new Size(864, 235);
+            dataReport.Size = new Size(961, 235);
             dataReport.TabIndex = 3;
             // 
             // earn
@@ -138,7 +138,7 @@
             // 
             lblTotal2.AutoSize = true;
             lblTotal2.Font = new Font("Segoe UI", 11F);
-            lblTotal2.Location = new Point(682, 542);
+            lblTotal2.Location = new Point(736, 542);
             lblTotal2.Name = "lblTotal2";
             lblTotal2.Size = new Size(129, 30);
             lblTotal2.TabIndex = 5;
@@ -160,7 +160,7 @@
             lblTotalDeduct.AutoSize = true;
             lblTotalDeduct.BorderStyle = BorderStyle.Fixed3D;
             lblTotalDeduct.Font = new Font("Segoe UI", 11F);
-            lblTotalDeduct.Location = new Point(817, 542);
+            lblTotalDeduct.Location = new Point(871, 542);
             lblTotalDeduct.Name = "lblTotalDeduct";
             lblTotalDeduct.Size = new Size(2, 32);
             lblTotalDeduct.TabIndex = 7;
@@ -180,7 +180,7 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 11F);
-            label7.Location = new Point(528, 192);
+            label7.Location = new Point(570, 192);
             label7.Name = "label7";
             label7.Size = new Size(131, 30);
             label7.TabIndex = 9;
@@ -190,7 +190,7 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 11F);
-            label8.Location = new Point(528, 240);
+            label8.Location = new Point(570, 240);
             label8.Name = "label8";
             label8.Size = new Size(164, 30);
             label8.TabIndex = 10;
@@ -241,7 +241,7 @@
             lblDate.AutoSize = true;
             lblDate.BorderStyle = BorderStyle.Fixed3D;
             lblDate.Font = new Font("Segoe UI", 11F);
-            lblDate.Location = new Point(698, 240);
+            lblDate.Location = new Point(740, 240);
             lblDate.Name = "lblDate";
             lblDate.Size = new Size(2, 32);
             lblDate.TabIndex = 15;
@@ -251,7 +251,7 @@
             lblPeriod.AutoSize = true;
             lblPeriod.BorderStyle = BorderStyle.Fixed3D;
             lblPeriod.Font = new Font("Segoe UI", 11F);
-            lblPeriod.Location = new Point(698, 192);
+            lblPeriod.Location = new Point(740, 192);
             lblPeriod.Name = "lblPeriod";
             lblPeriod.Size = new Size(2, 32);
             lblPeriod.TabIndex = 16;
@@ -261,7 +261,7 @@
             lblJob.AutoSize = true;
             lblJob.BorderStyle = BorderStyle.Fixed3D;
             lblJob.Font = new Font("Segoe UI", 11F);
-            lblJob.Location = new Point(698, 98);
+            lblJob.Location = new Point(740, 98);
             lblJob.Name = "lblJob";
             lblJob.Size = new Size(2, 32);
             lblJob.TabIndex = 17;
@@ -270,7 +270,7 @@
             // 
             label16.AutoSize = true;
             label16.Font = new Font("Segoe UI", 11F);
-            label16.Location = new Point(615, 603);
+            label16.Location = new Point(669, 603);
             label16.Name = "label16";
             label16.Size = new Size(196, 30);
             label16.TabIndex = 18;
@@ -281,7 +281,7 @@
             lblNet.AutoSize = true;
             lblNet.BorderStyle = BorderStyle.Fixed3D;
             lblNet.Font = new Font("Segoe UI", 11F);
-            lblNet.Location = new Point(817, 603);
+            lblNet.Location = new Point(871, 603);
             lblNet.Name = "lblNet";
             lblNet.Size = new Size(2, 32);
             lblNet.TabIndex = 19;
@@ -302,7 +302,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(978, 699);
+            ClientSize = new Size(1072, 699);
             Controls.Add(lblBack);
             Controls.Add(lblNet);
             Controls.Add(label16);

@@ -35,7 +35,7 @@
             stuName = new DataGridViewTextBoxColumn();
             courseName = new DataGridViewTextBoxColumn();
             level = new DataGridViewTextBoxColumn();
-            label2 = new Label();
+            lblBack = new Label();
             label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataRequest).BeginInit();
             SuspendLayout();
@@ -59,6 +59,7 @@
             btnApprove.TabIndex = 1;
             btnApprove.Text = "Approve Request";
             btnApprove.UseVisualStyleBackColor = true;
+            btnApprove.Click += btnApprove_Click;
             // 
             // btnReject
             // 
@@ -102,16 +103,16 @@
             level.Name = "level";
             level.Width = 150;
             // 
-            // label2
+            // lblBack
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 11F);
-            label2.Location = new Point(15, 392);
-            label2.Name = "label2";
-            label2.Size = new Size(252, 30);
-            label2.TabIndex = 4;
-            label2.Text = "< Back to Lecturer Menu";
-            label2.Click += label2_Click;
+            lblBack.AutoSize = true;
+            lblBack.Font = new Font("Segoe UI", 11F);
+            lblBack.Location = new Point(15, 392);
+            lblBack.Name = "lblBack";
+            lblBack.Size = new Size(252, 30);
+            lblBack.TabIndex = 4;
+            lblBack.Text = "< Back to Lecturer Menu";
+            lblBack.Click += label2_Click;
             // 
             // label1
             // 
@@ -129,7 +130,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(902, 445);
             Controls.Add(label1);
-            Controls.Add(label2);
+            Controls.Add(lblBack);
             Controls.Add(dataRequest);
             Controls.Add(btnReject);
             Controls.Add(btnApprove);
@@ -147,7 +148,7 @@
         private Button btnApprove;
         private Button btnReject;
         private DataGridView dataRequest;
-        private Label label2;
+        private Label lblBack;
         private DataGridViewTextBoxColumn stuName;
         private DataGridViewTextBoxColumn courseName;
         private DataGridViewTextBoxColumn level;

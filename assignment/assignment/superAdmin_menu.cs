@@ -19,7 +19,7 @@ namespace assignment
 
         private void btnManageAdmin_Click(object sender, EventArgs e)
         {
-            superAdmin_manageAdmin manageAdmin = new superAdmin_manageAdmin();
+            superAdmin_manageAdmin1 manageAdmin = new superAdmin_manageAdmin1();
             manageAdmin.Show();
             this.Hide();
         }
@@ -49,6 +49,13 @@ namespace assignment
         {
             main_loginPage loginPage = new main_loginPage();
             loginPage.Show();
+            this.Hide();
+        }
+
+        private void btnManageLecturer_Click(object sender, EventArgs e)
+        {
+            admin_manageLec manageLec = new admin_manageLec();
+            manageLec.Show();
             this.Hide();
         }
     }

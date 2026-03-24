@@ -10,17 +10,17 @@ using System.Windows.Forms;
 
 namespace assignment
 {
-    public partial class superAdmin_addAdmin : Form
+    public partial class admin_addLec : Form
     {
-        public superAdmin_addAdmin()
+        public admin_addLec()
         {
             InitializeComponent();
         }
 
         private void lblBack_Click(object sender, EventArgs e)
         {
-            superAdmin_manageAdmin1 manageAdmin = new superAdmin_manageAdmin1();
-            manageAdmin.Show();
+            admin_manageLec manageLec = new admin_manageLec();
+            manageLec.Show();
             this.Hide();
         }
     }

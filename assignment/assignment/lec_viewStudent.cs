@@ -30,5 +30,19 @@ namespace assignment
             lecMenu.Show();
             this.Hide();
         }
+
+        private void btnAssignClass_Click(object sender, EventArgs e)
+        {
+            lec_assignStudent assignStudent = new lec_assignStudent();
+            assignStudent.Show();
+            this.Hide();
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            lec_editClass editClass = new lec_editClass();
+            editClass.Show();
+            this.Hide();
+        }
     }
 }
