@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace assignment
 {
-    public partial class admin_selectTrainer : Form
+    public partial class trainer_menu : Form
     {
-        public admin_selectTrainer()
+        public trainer_menu()
         {
             InitializeComponent();
         }

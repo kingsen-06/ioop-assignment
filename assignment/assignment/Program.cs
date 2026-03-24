@@ -11,7 +11,7 @@ namespace assignment
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new administrator_selectTrainer());
+            Application.Run(new trainer_addClass());
         }
     }
 }

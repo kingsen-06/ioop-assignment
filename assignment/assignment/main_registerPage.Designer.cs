@@ -1,6 +1,6 @@
 ﻿namespace assignment
 {
-    partial class registerPage1
+    partial class main_registerPage
     {
         /// <summary>
         /// Required designer variable.
@@ -209,7 +209,7 @@
             lblNext.TabIndex = 25;
             lblNext.Text = "Next >";
             // 
-            // registerPage1
+            // main_registerPage
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -232,8 +232,8 @@
             Controls.Add(txtUsername);
             Controls.Add(lblUsername);
             Margin = new Padding(4);
-            Name = "registerPage1";
-            Text = "registerPage1";
+            Name = "main_registerPage";
+            Text = "registerPage";
             ResumeLayout(false);
             PerformLayout();
         }

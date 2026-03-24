@@ -1,6 +1,6 @@
 ﻿namespace assignment
 {
-    partial class admin_selectTrainer
+    partial class admin_manageTrainer
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +31,7 @@
             dataGridView1 = new DataGridView();
             triainer = new DataGridViewTextBoxColumn();
             income = new DataGridViewTextBoxColumn();
-            btnAddTrainer = new Button();
+            btnRegister = new Button();
             btnRemove = new Button();
             btnEdit = new Button();
             lblBack = new Label();
@@ -43,7 +43,7 @@
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { triainer, income });
             dataGridView1.Location = new Point(154, 70);
-            dataGridView1.Margin = new Padding(2, 2, 2, 2);
+            dataGridView1.Margin = new Padding(2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
             dataGridView1.Size = new Size(364, 180);
@@ -63,22 +63,22 @@
             income.Name = "income";
             income.Width = 150;
             // 
-            // btnAddTrainer
+            // btnRegister
             // 
-            btnAddTrainer.Font = new Font("Segoe UI", 11F);
-            btnAddTrainer.Location = new Point(11, 293);
-            btnAddTrainer.Margin = new Padding(2, 2, 2, 2);
-            btnAddTrainer.Name = "btnAddTrainer";
-            btnAddTrainer.Size = new Size(204, 34);
-            btnAddTrainer.TabIndex = 1;
-            btnAddTrainer.Text = "Register New Trainer";
-            btnAddTrainer.UseVisualStyleBackColor = true;
+            btnRegister.Font = new Font("Segoe UI", 11F);
+            btnRegister.Location = new Point(13, 293);
+            btnRegister.Margin = new Padding(2);
+            btnRegister.Name = "btnRegister";
+            btnRegister.Size = new Size(204, 34);
+            btnRegister.TabIndex = 1;
+            btnRegister.Text = "Register New Trainer";
+            btnRegister.UseVisualStyleBackColor = true;
             // 
             // btnRemove
             // 
             btnRemove.Font = new Font("Segoe UI", 11F);
-            btnRemove.Location = new Point(228, 293);
-            btnRemove.Margin = new Padding(2, 2, 2, 2);
+            btnRemove.Location = new Point(230, 293);
+            btnRemove.Margin = new Padding(2);
             btnRemove.Name = "btnRemove";
             btnRemove.Size = new Size(204, 34);
             btnRemove.TabIndex = 2;
@@ -88,8 +88,8 @@
             // btnEdit
             // 
             btnEdit.Font = new Font("Segoe UI", 11F);
-            btnEdit.Location = new Point(445, 293);
-            btnEdit.Margin = new Padding(2, 2, 2, 2);
+            btnEdit.Location = new Point(447, 293);
+            btnEdit.Margin = new Padding(2);
             btnEdit.Name = "btnEdit";
             btnEdit.Size = new Size(204, 34);
             btnEdit.TabIndex = 3;
@@ -107,7 +107,7 @@
             lblBack.TabIndex = 5;
             lblBack.Text = "< Back to Menu";
             // 
-            // admin_selectTrainer
+            // admin_manageTrainer
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -115,11 +115,11 @@
             Controls.Add(lblBack);
             Controls.Add(btnEdit);
             Controls.Add(btnRemove);
-            Controls.Add(btnAddTrainer);
+            Controls.Add(btnRegister);
             Controls.Add(dataGridView1);
-            Margin = new Padding(2, 2, 2, 2);
-            Name = "admin_selectTrainer";
-            Text = "selectTrainer";
+            Margin = new Padding(2);
+            Name = "admin_manageTrainer";
+            Text = "manageTrainer";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -128,7 +128,7 @@
         #endregion
 
         private DataGridView dataGridView1;
-        private Button btnAddTrainer;
+        private Button btnRegister;
         private Button btnRemove;
         private Button btnEdit;
         private Label lblBack;
