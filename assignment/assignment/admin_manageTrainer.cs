@@ -40,9 +40,18 @@ namespace assignment
 
         private void btnViewReport_Click(object sender, EventArgs e)
         {
-            admin_monthChoice monthChoice = new admin_monthChoice();
-            monthChoice.Show();
-            this.Hide();
+            if (lstTrainer.SelectedValue != null)
+            {
+                string selectedID = lstTrainer.SelectedValue.ToString();
+
+                admin_monthChoice monthChoice = new admin_monthChoice(selectedID);
+                monthChoice.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Please select a trainer from the list first.");
+            }
         }
 
         private void btnViewDetail_Click(object sender, EventArgs e)

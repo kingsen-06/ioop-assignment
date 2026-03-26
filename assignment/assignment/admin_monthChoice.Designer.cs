@@ -37,42 +37,47 @@
             // 
             lstMonth.Font = new Font("Segoe UI", 11F);
             lstMonth.FormattingEnabled = true;
-            lstMonth.ItemHeight = 30;
+            lstMonth.ItemHeight = 25;
             lstMonth.Items.AddRange(new object[] { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" });
-            lstMonth.Location = new Point(98, 52);
+            lstMonth.Location = new Point(78, 42);
+            lstMonth.Margin = new Padding(2, 2, 2, 2);
             lstMonth.Name = "lstMonth";
-            lstMonth.Size = new Size(548, 244);
+            lstMonth.Size = new Size(439, 179);
             lstMonth.TabIndex = 0;
             // 
             // btnConfirm
             // 
             btnConfirm.Font = new Font("Segoe UI", 11F);
-            btnConfirm.Location = new Point(300, 319);
+            btnConfirm.Location = new Point(240, 255);
+            btnConfirm.Margin = new Padding(2, 2, 2, 2);
             btnConfirm.Name = "btnConfirm";
-            btnConfirm.Size = new Size(112, 38);
+            btnConfirm.Size = new Size(90, 30);
             btnConfirm.TabIndex = 1;
             btnConfirm.Text = "Confirm";
             btnConfirm.UseVisualStyleBackColor = true;
+            btnConfirm.Click += btnConfirm_Click;
             // 
             // lblBack
             // 
             lblBack.AutoSize = true;
             lblBack.Font = new Font("Segoe UI", 11F);
-            lblBack.Location = new Point(35, 345);
+            lblBack.Location = new Point(28, 276);
+            lblBack.Margin = new Padding(2, 0, 2, 0);
             lblBack.Name = "lblBack";
-            lblBack.Size = new Size(79, 30);
+            lblBack.Size = new Size(69, 25);
             lblBack.TabIndex = 2;
             lblBack.Text = "< Back";
             lblBack.Click += lblBack_Click;
             // 
             // admin_monthChoice
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(743, 394);
+            ClientSize = new Size(594, 315);
             Controls.Add(lblBack);
             Controls.Add(btnConfirm);
             Controls.Add(lstMonth);
+            Margin = new Padding(2, 2, 2, 2);
             Name = "admin_monthChoice";
             Text = "monthChoice";
             ResumeLayout(false);
