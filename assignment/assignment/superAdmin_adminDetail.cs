@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace assignment
 {
-    public partial class admin_assignTrainer : Form
+    public partial class superAdmin_adminDetail : Form
     {
-        public admin_assignTrainer()
+        public superAdmin_adminDetail()
         {
             InitializeComponent();
+        }
+
+        private void lblBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }

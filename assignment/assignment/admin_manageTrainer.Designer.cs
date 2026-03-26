@@ -28,111 +28,125 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridView1 = new DataGridView();
-            triainer = new DataGridViewTextBoxColumn();
-            income = new DataGridViewTextBoxColumn();
-            btnRegister = new Button();
+            btnAddTrainer = new Button();
             btnRemove = new Button();
-            btnEdit = new Button();
+            btnViewDetail = new Button();
             lblBack = new Label();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            btnViewReport = new Button();
+            lstTrainer = new ListBox();
+            label1 = new Label();
             SuspendLayout();
             // 
-            // dataGridView1
+            // btnAddTrainer
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { triainer, income });
-            dataGridView1.Location = new Point(154, 70);
-            dataGridView1.Margin = new Padding(2);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(364, 180);
-            dataGridView1.TabIndex = 0;
-            // 
-            // triainer
-            // 
-            triainer.HeaderText = "Trainer";
-            triainer.MinimumWidth = 8;
-            triainer.Name = "triainer";
-            triainer.Width = 150;
-            // 
-            // income
-            // 
-            income.HeaderText = "Monthly Income";
-            income.MinimumWidth = 8;
-            income.Name = "income";
-            income.Width = 150;
-            // 
-            // btnRegister
-            // 
-            btnRegister.Font = new Font("Segoe UI", 11F);
-            btnRegister.Location = new Point(13, 293);
-            btnRegister.Margin = new Padding(2);
-            btnRegister.Name = "btnRegister";
-            btnRegister.Size = new Size(204, 34);
-            btnRegister.TabIndex = 1;
-            btnRegister.Text = "Register New Trainer";
-            btnRegister.UseVisualStyleBackColor = true;
+            btnAddTrainer.Font = new Font("Segoe UI", 11F);
+            btnAddTrainer.Location = new Point(404, 175);
+            btnAddTrainer.Margin = new Padding(2, 2, 2, 2);
+            btnAddTrainer.Name = "btnAddTrainer";
+            btnAddTrainer.Size = new Size(187, 34);
+            btnAddTrainer.TabIndex = 1;
+            btnAddTrainer.Text = "Register New Trainer";
+            btnAddTrainer.UseVisualStyleBackColor = true;
+            btnAddTrainer.Click += btnAddTrainer_Click;
             // 
             // btnRemove
             // 
+            btnRemove.BackColor = SystemColors.Window;
             btnRemove.Font = new Font("Segoe UI", 11F);
-            btnRemove.Location = new Point(230, 293);
-            btnRemove.Margin = new Padding(2);
+            btnRemove.ForeColor = Color.Red;
+            btnRemove.Location = new Point(218, 298);
+            btnRemove.Margin = new Padding(2, 2, 2, 2);
             btnRemove.Name = "btnRemove";
-            btnRemove.Size = new Size(204, 34);
+            btnRemove.Size = new Size(187, 34);
             btnRemove.TabIndex = 2;
             btnRemove.Text = "Remove Trainer";
-            btnRemove.UseVisualStyleBackColor = true;
+            btnRemove.UseVisualStyleBackColor = false;
             // 
-            // btnEdit
+            // btnViewDetail
             // 
-            btnEdit.Font = new Font("Segoe UI", 11F);
-            btnEdit.Location = new Point(447, 293);
-            btnEdit.Margin = new Padding(2);
-            btnEdit.Name = "btnEdit";
-            btnEdit.Size = new Size(204, 34);
-            btnEdit.TabIndex = 3;
-            btnEdit.Text = "Edit Trainer Detail";
-            btnEdit.UseVisualStyleBackColor = true;
+            btnViewDetail.Font = new Font("Segoe UI", 11F);
+            btnViewDetail.Location = new Point(335, 246);
+            btnViewDetail.Margin = new Padding(2, 2, 2, 2);
+            btnViewDetail.Name = "btnViewDetail";
+            btnViewDetail.Size = new Size(271, 34);
+            btnViewDetail.TabIndex = 3;
+            btnViewDetail.Text = "View Trainer Detail";
+            btnViewDetail.UseVisualStyleBackColor = true;
+            btnViewDetail.Click += btnViewDetail_Click;
             // 
             // lblBack
             // 
             lblBack.AutoSize = true;
             lblBack.Font = new Font("Segoe UI", 11F);
-            lblBack.Location = new Point(11, 9);
+            lblBack.Location = new Point(10, 350);
             lblBack.Margin = new Padding(2, 0, 2, 0);
             lblBack.Name = "lblBack";
-            lblBack.Size = new Size(145, 25);
+            lblBack.Size = new Size(265, 25);
             lblBack.TabIndex = 5;
-            lblBack.Text = "< Back to Menu";
+            lblBack.Text = "< Back to Administrator Menu";
+            lblBack.Click += lblBack_Click;
+            // 
+            // btnViewReport
+            // 
+            btnViewReport.Font = new Font("Segoe UI", 11F);
+            btnViewReport.Location = new Point(28, 246);
+            btnViewReport.Margin = new Padding(2, 2, 2, 2);
+            btnViewReport.Name = "btnViewReport";
+            btnViewReport.Size = new Size(271, 34);
+            btnViewReport.TabIndex = 6;
+            btnViewReport.Text = "View Monthly Income Report";
+            btnViewReport.UseVisualStyleBackColor = true;
+            btnViewReport.Click += btnViewReport_Click;
+            // 
+            // lstTrainer
+            // 
+            lstTrainer.Font = new Font("Segoe UI", 11F);
+            lstTrainer.FormattingEnabled = true;
+            lstTrainer.ItemHeight = 25;
+            lstTrainer.Location = new Point(58, 49);
+            lstTrainer.Margin = new Padding(2, 2, 2, 2);
+            lstTrainer.Name = "lstTrainer";
+            lstTrainer.Size = new Size(337, 154);
+            lstTrainer.TabIndex = 7;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 11F);
+            label1.Location = new Point(62, 18);
+            label1.Margin = new Padding(2, 0, 2, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(132, 25);
+            label1.TabIndex = 8;
+            label1.Text = "Select trainer :";
             // 
             // admin_manageTrainer
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(667, 366);
+            ClientSize = new Size(640, 390);
+            Controls.Add(label1);
+            Controls.Add(lstTrainer);
+            Controls.Add(btnViewReport);
             Controls.Add(lblBack);
-            Controls.Add(btnEdit);
+            Controls.Add(btnViewDetail);
             Controls.Add(btnRemove);
-            Controls.Add(btnRegister);
-            Controls.Add(dataGridView1);
-            Margin = new Padding(2);
+            Controls.Add(btnAddTrainer);
+            Margin = new Padding(2, 2, 2, 2);
             Name = "admin_manageTrainer";
             Text = "manageTrainer";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            Load += admin_manageTrainer_Load;
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private DataGridView dataGridView1;
-        private Button btnRegister;
+        private Button btnAddTrainer;
         private Button btnRemove;
-        private Button btnEdit;
+        private Button btnViewDetail;
         private Label lblBack;
-        private DataGridViewTextBoxColumn triainer;
-        private DataGridViewTextBoxColumn income;
+        private Button btnViewReport;
+        private ListBox lstTrainer;
+        private Label label1;
     }
 }

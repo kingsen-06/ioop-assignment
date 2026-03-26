@@ -1,6 +1,6 @@
 ﻿namespace assignment
 {
-    partial class admin_assignTrainer
+    partial class admin_assignModule
     {
         /// <summary>
         /// Required designer variable.
@@ -40,19 +40,21 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 11F);
-            label1.Location = new Point(155, 51);
+            label1.Location = new Point(124, 41);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(204, 30);
+            label1.Size = new Size(112, 25);
             label1.TabIndex = 0;
-            label1.Text = "Coding Class Level: ";
+            label1.Text = "Class Level: ";
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 11F);
-            label2.Location = new Point(155, 142);
+            label2.Location = new Point(124, 114);
+            label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(163, 30);
+            label2.Size = new Size(141, 25);
             label2.TabIndex = 1;
             label2.Text = "Module Name: ";
             // 
@@ -61,52 +63,59 @@
             cmbLevel.Font = new Font("Segoe UI", 11F);
             cmbLevel.FormattingEnabled = true;
             cmbLevel.Items.AddRange(new object[] { "Beginner", "Intermediate", "Advance" });
-            cmbLevel.Location = new Point(383, 48);
+            cmbLevel.Location = new Point(306, 38);
+            cmbLevel.Margin = new Padding(2, 2, 2, 2);
             cmbLevel.Name = "cmbLevel";
-            cmbLevel.Size = new Size(259, 38);
+            cmbLevel.Size = new Size(208, 33);
             cmbLevel.TabIndex = 2;
             // 
             // cmbModule
             // 
             cmbModule.Font = new Font("Segoe UI", 11F);
             cmbModule.FormattingEnabled = true;
-            cmbModule.Location = new Point(383, 139);
+            cmbModule.Location = new Point(306, 111);
+            cmbModule.Margin = new Padding(2, 2, 2, 2);
             cmbModule.Name = "cmbModule";
-            cmbModule.Size = new Size(259, 38);
+            cmbModule.Size = new Size(208, 33);
             cmbModule.TabIndex = 3;
             // 
             // btnAssign
             // 
             btnAssign.Font = new Font("Segoe UI", 11F);
-            btnAssign.Location = new Point(222, 235);
+            btnAssign.Location = new Point(178, 188);
+            btnAssign.Margin = new Padding(2, 2, 2, 2);
             btnAssign.Name = "btnAssign";
-            btnAssign.Size = new Size(321, 41);
+            btnAssign.Size = new Size(257, 33);
             btnAssign.TabIndex = 4;
             btnAssign.Text = "Assign Trainer to Module";
             btnAssign.UseVisualStyleBackColor = true;
+            btnAssign.Click += this.btnAssign_Click;
             // 
             // lblBack
             // 
             lblBack.AutoSize = true;
             lblBack.Font = new Font("Segoe UI", 11F);
-            lblBack.Location = new Point(9, 313);
+            lblBack.Location = new Point(7, 247);
+            lblBack.Margin = new Padding(2, 0, 2, 0);
             lblBack.Name = "lblBack";
-            lblBack.Size = new Size(304, 30);
+            lblBack.Size = new Size(69, 25);
             lblBack.TabIndex = 6;
-            lblBack.Text = "< Back to Administrator Menu";
+            lblBack.Text = "< Back";
+            lblBack.Click += lblBack_Click;
             // 
-            // admin_assignTrainer
+            // admin_assignModule
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 353);
+            ClientSize = new Size(640, 282);
             Controls.Add(lblBack);
             Controls.Add(btnAssign);
             Controls.Add(cmbModule);
             Controls.Add(cmbLevel);
             Controls.Add(label2);
             Controls.Add(label1);
-            Name = "admin_assignTrainer";
+            Margin = new Padding(2, 2, 2, 2);
+            Name = "admin_assignModule";
             Text = "assignTrainer";
             ResumeLayout(false);
             PerformLayout();

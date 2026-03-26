@@ -28,102 +28,83 @@
         /// </summary>
         private void InitializeComponent()
         {
-            lblUsername = new Label();
-            txtUsername = new TextBox();
+            lblEmail = new Label();
+            txtEmail = new TextBox();
             txtPassword = new TextBox();
             lblPassword = new Label();
             btnLogin = new Button();
-            btnRegister = new Button();
             SuspendLayout();
             // 
-            // lblUsername
+            // lblEmail
             // 
-            lblUsername.AutoSize = true;
-            lblUsername.Font = new Font("Segoe UI", 11F);
-            lblUsername.Location = new Point(143, 74);
-            lblUsername.Margin = new Padding(4, 0, 4, 0);
-            lblUsername.Name = "lblUsername";
-            lblUsername.Size = new Size(122, 30);
-            lblUsername.TabIndex = 0;
-            lblUsername.Text = "Username :";
+            lblEmail.AutoSize = true;
+            lblEmail.Font = new Font("Segoe UI", 11F);
+            lblEmail.Location = new Point(114, 59);
+            lblEmail.Name = "lblEmail";
+            lblEmail.Size = new Size(72, 25);
+            lblEmail.TabIndex = 0;
+            lblEmail.Text = "Email : ";
             // 
-            // txtUsername
+            // txtEmail
             // 
-            txtUsername.Font = new Font("Segoe UI", 11F);
-            txtUsername.Location = new Point(356, 71);
-            txtUsername.Margin = new Padding(4);
-            txtUsername.Name = "txtUsername";
-            txtUsername.Size = new Size(180, 37);
-            txtUsername.TabIndex = 2;
+            txtEmail.Font = new Font("Segoe UI", 11F);
+            txtEmail.Location = new Point(256, 57);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(174, 32);
+            txtEmail.TabIndex = 2;
             // 
             // txtPassword
             // 
             txtPassword.Font = new Font("Segoe UI", 11F);
-            txtPassword.Location = new Point(356, 126);
-            txtPassword.Margin = new Padding(4);
+            txtPassword.Location = new Point(256, 101);
             txtPassword.Name = "txtPassword";
-            txtPassword.Size = new Size(180, 37);
+            txtPassword.Size = new Size(174, 32);
             txtPassword.TabIndex = 4;
             // 
             // lblPassword
             // 
             lblPassword.AutoSize = true;
             lblPassword.Font = new Font("Segoe UI", 11F);
-            lblPassword.Location = new Point(143, 129);
-            lblPassword.Margin = new Padding(4, 0, 4, 0);
+            lblPassword.Location = new Point(114, 103);
             lblPassword.Name = "lblPassword";
-            lblPassword.Size = new Size(114, 30);
+            lblPassword.Size = new Size(100, 25);
             lblPassword.TabIndex = 3;
             lblPassword.Text = "Password :";
             // 
             // btnLogin
             // 
             btnLogin.Font = new Font("Segoe UI", 11F);
-            btnLogin.Location = new Point(343, 233);
-            btnLogin.Margin = new Padding(4);
+            btnLogin.Location = new Point(194, 163);
             btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(164, 54);
+            btnLogin.Size = new Size(131, 33);
             btnLogin.TabIndex = 5;
             btnLogin.Text = "Login";
             btnLogin.UseVisualStyleBackColor = true;
-            // 
-            // btnRegister
-            // 
-            btnRegister.Font = new Font("Segoe UI", 11F);
-            btnRegister.Location = new Point(169, 233);
-            btnRegister.Margin = new Padding(4);
-            btnRegister.Name = "btnRegister";
-            btnRegister.Size = new Size(164, 54);
-            btnRegister.TabIndex = 6;
-            btnRegister.Text = "Register";
-            btnRegister.UseVisualStyleBackColor = true;
-            btnRegister.Click += btnRegister_Click;
+            btnLogin.Click += btnLogin_Click;
             // 
             // main_loginPage
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(679, 348);
-            Controls.Add(btnRegister);
+            ClientSize = new Size(543, 254);
             Controls.Add(btnLogin);
             Controls.Add(txtPassword);
             Controls.Add(lblPassword);
-            Controls.Add(txtUsername);
-            Controls.Add(lblUsername);
-            Margin = new Padding(4);
+            Controls.Add(txtEmail);
+            Controls.Add(lblEmail);
             Name = "main_loginPage";
             Text = "loginPage";
+            FormClosed += main_loginPage_FormClosed;
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Label lblUsername;
-        private TextBox txtUsername;
+        private Label lblEmail;
+        private TextBox txtEmail;
         private TextBox txtPassword;
         private Label lblPassword;
         private Button btnLogin;
-        private Button btnRegister;
     }
 }

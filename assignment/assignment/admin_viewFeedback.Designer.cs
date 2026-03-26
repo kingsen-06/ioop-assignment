@@ -28,23 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridView1 = new DataGridView();
+            dataFeedback = new DataGridView();
             feedback = new DataGridViewTextBoxColumn();
             trainer = new DataGridViewTextBoxColumn();
             date = new DataGridViewTextBoxColumn();
             lblBack = new Label();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            btnView = new Button();
+            ((System.ComponentModel.ISupportInitialize)dataFeedback).BeginInit();
             SuspendLayout();
             // 
-            // dataGridView1
+            // dataFeedback
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { feedback, trainer, date });
-            dataGridView1.Location = new Point(32, 30);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(733, 317);
-            dataGridView1.TabIndex = 0;
+            dataFeedback.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataFeedback.Columns.AddRange(new DataGridViewColumn[] { feedback, trainer, date });
+            dataFeedback.Location = new Point(32, 38);
+            dataFeedback.Name = "dataFeedback";
+            dataFeedback.RowHeadersWidth = 62;
+            dataFeedback.Size = new Size(733, 317);
+            dataFeedback.TabIndex = 0;
             // 
             // feedback
             // 
@@ -71,32 +72,46 @@
             // 
             lblBack.AutoSize = true;
             lblBack.Font = new Font("Segoe UI", 11F);
-            lblBack.Location = new Point(12, 376);
+            lblBack.Location = new Point(12, 423);
             lblBack.Name = "lblBack";
-            lblBack.Size = new Size(167, 30);
+            lblBack.Size = new Size(304, 30);
             lblBack.TabIndex = 1;
-            lblBack.Text = "< Back to Menu";
+            lblBack.Text = "< Back to Administrator Menu";
+            lblBack.Click += lblBack_Click_1;
+            // 
+            // btnView
+            // 
+            btnView.Font = new Font("Segoe UI", 11F);
+            btnView.Location = new Point(254, 374);
+            btnView.Name = "btnView";
+            btnView.Size = new Size(255, 38);
+            btnView.TabIndex = 2;
+            btnView.Text = "View Feedback Detail";
+            btnView.UseVisualStyleBackColor = true;
+            btnView.Click += btnView_Click;
             // 
             // admin_viewFeedback
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 424);
+            ClientSize = new Size(800, 468);
+            Controls.Add(btnView);
             Controls.Add(lblBack);
-            Controls.Add(dataGridView1);
+            Controls.Add(dataFeedback);
             Name = "admin_viewFeedback";
             Text = "viewFeedback";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataFeedback).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private DataGridView dataGridView1;
+        private DataGridView dataFeedback;
         private DataGridViewTextBoxColumn feedback;
         private DataGridViewTextBoxColumn trainer;
         private DataGridViewTextBoxColumn date;
         private Label lblBack;
+        private Button btnView;
     }
 }
