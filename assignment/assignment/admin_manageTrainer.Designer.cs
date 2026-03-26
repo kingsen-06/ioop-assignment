@@ -41,7 +41,7 @@
             // 
             btnAddTrainer.Font = new Font("Segoe UI", 11F);
             btnAddTrainer.Location = new Point(404, 175);
-            btnAddTrainer.Margin = new Padding(2, 2, 2, 2);
+            btnAddTrainer.Margin = new Padding(2);
             btnAddTrainer.Name = "btnAddTrainer";
             btnAddTrainer.Size = new Size(187, 34);
             btnAddTrainer.TabIndex = 1;
@@ -55,18 +55,19 @@
             btnRemove.Font = new Font("Segoe UI", 11F);
             btnRemove.ForeColor = Color.Red;
             btnRemove.Location = new Point(218, 298);
-            btnRemove.Margin = new Padding(2, 2, 2, 2);
+            btnRemove.Margin = new Padding(2);
             btnRemove.Name = "btnRemove";
             btnRemove.Size = new Size(187, 34);
             btnRemove.TabIndex = 2;
             btnRemove.Text = "Remove Trainer";
             btnRemove.UseVisualStyleBackColor = false;
+            btnRemove.Click += btnRemove_Click;
             // 
             // btnViewDetail
             // 
             btnViewDetail.Font = new Font("Segoe UI", 11F);
             btnViewDetail.Location = new Point(335, 246);
-            btnViewDetail.Margin = new Padding(2, 2, 2, 2);
+            btnViewDetail.Margin = new Padding(2);
             btnViewDetail.Name = "btnViewDetail";
             btnViewDetail.Size = new Size(271, 34);
             btnViewDetail.TabIndex = 3;
@@ -90,7 +91,7 @@
             // 
             btnViewReport.Font = new Font("Segoe UI", 11F);
             btnViewReport.Location = new Point(28, 246);
-            btnViewReport.Margin = new Padding(2, 2, 2, 2);
+            btnViewReport.Margin = new Padding(2);
             btnViewReport.Name = "btnViewReport";
             btnViewReport.Size = new Size(271, 34);
             btnViewReport.TabIndex = 6;
@@ -104,7 +105,7 @@
             lstTrainer.FormattingEnabled = true;
             lstTrainer.ItemHeight = 25;
             lstTrainer.Location = new Point(58, 49);
-            lstTrainer.Margin = new Padding(2, 2, 2, 2);
+            lstTrainer.Margin = new Padding(2);
             lstTrainer.Name = "lstTrainer";
             lstTrainer.Size = new Size(337, 154);
             lstTrainer.TabIndex = 7;
@@ -132,7 +133,7 @@
             Controls.Add(btnViewDetail);
             Controls.Add(btnRemove);
             Controls.Add(btnAddTrainer);
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "admin_manageTrainer";
             Text = "manageTrainer";
             Load += admin_manageTrainer_Load;

@@ -35,10 +35,18 @@ namespace assignment
             loadTrainerModules();
         }
 
+
         private void btnNew_Click(object sender, EventArgs e)
         {
             admin_assignModule assignClass = new admin_assignModule(currentTrainerID);
             assignClass.Show();
+            this.Hide();
+        }
+
+        private void lblBack_Click(object sender, EventArgs e)
+        {
+            admin_manageTrainer managePage = new admin_manageTrainer();
+            managePage.Show();
             this.Hide();
         }
 
@@ -81,7 +89,7 @@ namespace assignment
             {
                 try
                 {
-                    string query = "select ModuleName as 'Module Name', ClassLevel as 'Class Level' from TrainerModules where UserID = @UserID";
+                    string query = "select m.ModuleName as 'Module Name', m.ClassLevel as 'Class Level' from TrainerAssignedModules tam join Modules m on tam.ModuleID = m.ModuleID where tam.UserID = @UserID";
 
                     using (SqlDataAdapter adapter = new SqlDataAdapter(query, connection))
                     {

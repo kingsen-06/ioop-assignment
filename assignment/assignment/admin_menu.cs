@@ -52,6 +52,8 @@ namespace assignment
 
         private void lblBack_Click(object sender, EventArgs e)
         {
+            User.CurrentUser = null;
+
             main_loginPage loginPage = new main_loginPage();
             loginPage.Show();
             this.Hide();

@@ -28,53 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
             label2 = new Label();
-            cmbLevel = new ComboBox();
             cmbModule = new ComboBox();
             btnAssign = new Button();
             lblBack = new Label();
+            label3 = new Label();
+            lblLevel = new Label();
             SuspendLayout();
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 11F);
-            label1.Location = new Point(124, 41);
-            label1.Margin = new Padding(2, 0, 2, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(112, 25);
-            label1.TabIndex = 0;
-            label1.Text = "Class Level: ";
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 11F);
-            label2.Location = new Point(124, 114);
+            label2.Location = new Point(124, 45);
             label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
             label2.Size = new Size(141, 25);
             label2.TabIndex = 1;
             label2.Text = "Module Name: ";
             // 
-            // cmbLevel
-            // 
-            cmbLevel.Font = new Font("Segoe UI", 11F);
-            cmbLevel.FormattingEnabled = true;
-            cmbLevel.Items.AddRange(new object[] { "Beginner", "Intermediate", "Advance" });
-            cmbLevel.Location = new Point(306, 38);
-            cmbLevel.Margin = new Padding(2, 2, 2, 2);
-            cmbLevel.Name = "cmbLevel";
-            cmbLevel.Size = new Size(208, 33);
-            cmbLevel.TabIndex = 2;
-            // 
             // cmbModule
             // 
             cmbModule.Font = new Font("Segoe UI", 11F);
             cmbModule.FormattingEnabled = true;
-            cmbModule.Location = new Point(306, 111);
-            cmbModule.Margin = new Padding(2, 2, 2, 2);
+            cmbModule.Location = new Point(306, 42);
+            cmbModule.Margin = new Padding(2);
             cmbModule.Name = "cmbModule";
             cmbModule.Size = new Size(208, 33);
             cmbModule.TabIndex = 3;
@@ -83,7 +61,7 @@
             // 
             btnAssign.Font = new Font("Segoe UI", 11F);
             btnAssign.Location = new Point(178, 188);
-            btnAssign.Margin = new Padding(2, 2, 2, 2);
+            btnAssign.Margin = new Padding(2);
             btnAssign.Name = "btnAssign";
             btnAssign.Size = new Size(257, 33);
             btnAssign.TabIndex = 4;
@@ -101,20 +79,40 @@
             lblBack.Size = new Size(69, 25);
             lblBack.TabIndex = 6;
             lblBack.Text = "< Back";
-            lblBack.Click += lblBack_Click;
+            lblBack.Click += this.lblBack_Click;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 11F);
+            label3.Location = new Point(124, 123);
+            label3.Margin = new Padding(2, 0, 2, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(112, 25);
+            label3.TabIndex = 0;
+            label3.Text = "Class Level: ";
+            // 
+            // lblLevel
+            // 
+            lblLevel.AutoSize = true;
+            lblLevel.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblLevel.Location = new Point(306, 123);
+            lblLevel.Name = "lblLevel";
+            lblLevel.Size = new Size(0, 25);
+            lblLevel.TabIndex = 7;
             // 
             // admin_assignModule
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(640, 282);
+            Controls.Add(lblLevel);
             Controls.Add(lblBack);
             Controls.Add(btnAssign);
             Controls.Add(cmbModule);
-            Controls.Add(cmbLevel);
+            Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(label1);
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "admin_assignModule";
             Text = "assignTrainer";
             ResumeLayout(false);
@@ -122,12 +120,11 @@
         }
 
         #endregion
-
-        private Label label1;
         private Label label2;
-        private ComboBox cmbLevel;
         private ComboBox cmbModule;
         private Button btnAssign;
         private Label lblBack;
+        private Label label3;
+        private Label lblLevel;
     }
 }

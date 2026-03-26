@@ -40,7 +40,7 @@
             dataClass = new DataGridView();
             name = new DataGridViewTextBoxColumn();
             level = new DataGridViewTextBoxColumn();
-            label9 = new Label();
+            lblBack = new Label();
             ((System.ComponentModel.ISupportInitialize)dataClass).BeginInit();
             SuspendLayout();
             // 
@@ -48,7 +48,7 @@
             // 
             btnNew.Font = new Font("Segoe UI", 11F);
             btnNew.Location = new Point(212, 386);
-            btnNew.Margin = new Padding(2, 2, 2, 2);
+            btnNew.Margin = new Padding(2);
             btnNew.Name = "btnNew";
             btnNew.Size = new Size(185, 35);
             btnNew.TabIndex = 0;
@@ -149,7 +149,7 @@
             dataClass.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataClass.Columns.AddRange(new DataGridViewColumn[] { name, level });
             dataClass.Location = new Point(88, 230);
-            dataClass.Margin = new Padding(2, 2, 2, 2);
+            dataClass.Margin = new Padding(2);
             dataClass.Name = "dataClass";
             dataClass.RowHeadersWidth = 62;
             dataClass.Size = new Size(451, 137);
@@ -169,23 +169,24 @@
             level.Name = "level";
             level.Width = 250;
             // 
-            // label9
+            // lblBack
             // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Segoe UI", 11F);
-            label9.Location = new Point(25, 423);
-            label9.Margin = new Padding(2, 0, 2, 0);
-            label9.Name = "label9";
-            label9.Size = new Size(69, 25);
-            label9.TabIndex = 10;
-            label9.Text = "< Back";
+            lblBack.AutoSize = true;
+            lblBack.Font = new Font("Segoe UI", 11F);
+            lblBack.Location = new Point(25, 423);
+            lblBack.Margin = new Padding(2, 0, 2, 0);
+            lblBack.Name = "lblBack";
+            lblBack.Size = new Size(69, 25);
+            lblBack.TabIndex = 10;
+            lblBack.Text = "< Back";
+            lblBack.Click += lblBack_Click;
             // 
             // admin_trainerDetail
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(622, 462);
-            Controls.Add(label9);
+            Controls.Add(lblBack);
             Controls.Add(dataClass);
             Controls.Add(lblAddress);
             Controls.Add(label7);
@@ -196,7 +197,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(btnNew);
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "admin_trainerDetail";
             Text = "trainerDetail";
             ((System.ComponentModel.ISupportInitialize)dataClass).EndInit();
@@ -218,6 +219,6 @@
         private DataGridView dataClass;
         private DataGridViewTextBoxColumn name;
         private DataGridViewTextBoxColumn level;
-        private Label label9;
+        private Label lblBack;
     }
 }
