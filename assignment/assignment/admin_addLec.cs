@@ -23,5 +23,14 @@ namespace assignment
             manageLec.Show();
             this.Hide();
         }
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            string name = txtName.Text;
+            DateTime date = dateDOB.Value;
+            string email = txtEmail.Text;
+            string contact = txtContact.Text;
+            string address = txtAddress.Text;
+        }
     }
 }

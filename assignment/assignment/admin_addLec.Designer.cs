@@ -34,13 +34,13 @@
             txtAddress = new TextBox();
             txtContact = new TextBox();
             txtEmail = new TextBox();
-            txtDOB = new TextBox();
             txtName = new TextBox();
             label5 = new Label();
             label4 = new Label();
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
+            dateDOB = new DateTimePicker();
             SuspendLayout();
             // 
             // btnRegister
@@ -52,6 +52,7 @@
             btnRegister.TabIndex = 32;
             btnRegister.Text = "Register New Lecturer";
             btnRegister.UseVisualStyleBackColor = true;
+            btnRegister.Click += btnRegister_Click;
             // 
             // lblBack
             // 
@@ -97,14 +98,6 @@
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(295, 37);
             txtEmail.TabIndex = 27;
-            // 
-            // txtDOB
-            // 
-            txtDOB.Font = new Font("Segoe UI", 11F);
-            txtDOB.Location = new Point(301, 167);
-            txtDOB.Name = "txtDOB";
-            txtDOB.Size = new Size(295, 37);
-            txtDOB.TabIndex = 26;
             // 
             // txtName
             // 
@@ -164,18 +157,26 @@
             label1.TabIndex = 20;
             label1.Text = "Full Name: ";
             // 
+            // dateDOB
+            // 
+            dateDOB.Font = new Font("Segoe UI", 11F);
+            dateDOB.Location = new Point(301, 165);
+            dateDOB.Name = "dateDOB";
+            dateDOB.Size = new Size(295, 37);
+            dateDOB.TabIndex = 33;
+            // 
             // admin_addLec
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(715, 529);
+            Controls.Add(dateDOB);
             Controls.Add(btnRegister);
             Controls.Add(lblBack);
             Controls.Add(label6);
             Controls.Add(txtAddress);
             Controls.Add(txtContact);
             Controls.Add(txtEmail);
-            Controls.Add(txtDOB);
             Controls.Add(txtName);
             Controls.Add(label5);
             Controls.Add(label4);
@@ -196,12 +197,12 @@
         private TextBox txtAddress;
         private TextBox txtContact;
         private TextBox txtEmail;
-        private TextBox txtDOB;
         private TextBox txtName;
         private Label label5;
         private Label label4;
         private Label label3;
         private Label label2;
         private Label label1;
+        private DateTimePicker dateDOB;
     }
 }

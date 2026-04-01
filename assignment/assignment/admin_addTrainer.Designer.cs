@@ -44,15 +44,14 @@
             label8 = new Label();
             cmbLevel = new ComboBox();
             cmbModule = new ComboBox();
-            dtpDOB = new DateTimePicker();
+            dateDOB = new DateTimePicker();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 11F);
-            label1.Location = new Point(66, 82);
-            label1.Margin = new Padding(2, 0, 2, 0);
+            label1.Location = new Point(83, 97);
             label1.Name = "label1";
             label1.Size = new Size(106, 25);
             label1.TabIndex = 0;
@@ -105,8 +104,7 @@
             // txtName
             // 
             txtName.Font = new Font("Segoe UI", 11F);
-            txtName.Location = new Point(218, 79);
-            txtName.Margin = new Padding(2);
+            txtName.Location = new Point(273, 94);
             txtName.Name = "txtName";
             txtName.Size = new Size(237, 32);
             txtName.TabIndex = 5;
@@ -164,8 +162,7 @@
             // btnRegister
             // 
             btnRegister.Font = new Font("Segoe UI", 11F);
-            btnRegister.Location = new Point(237, 423);
-            btnRegister.Margin = new Padding(2);
+            btnRegister.Location = new Point(296, 528);
             btnRegister.Name = "btnRegister";
             btnRegister.Size = new Size(189, 34);
             btnRegister.TabIndex = 14;
@@ -216,19 +213,21 @@
             cmbModule.Size = new Size(237, 33);
             cmbModule.TabIndex = 19;
             // 
-            // dtpDOB
+            // dateDOB
             // 
-            dtpDOB.Location = new Point(218, 125);
-            dtpDOB.Name = "dtpDOB";
-            dtpDOB.Size = new Size(237, 27);
-            dtpDOB.TabIndex = 20;
+            dateDOB.CalendarFont = new Font("Segoe UI", 11F);
+            dateDOB.Font = new Font("Segoe UI", 11F);
+            dateDOB.Location = new Point(273, 153);
+            dateDOB.Name = "dateDOB";
+            dateDOB.Size = new Size(295, 37);
+            dateDOB.TabIndex = 20;
             // 
             // admin_addTrainer
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(534, 491);
-            Controls.Add(dtpDOB);
+            ClientSize = new Size(667, 614);
+            Controls.Add(dateDOB);
             Controls.Add(cmbModule);
             Controls.Add(cmbLevel);
             Controls.Add(label8);
@@ -271,6 +270,6 @@
         private Label label8;
         private ComboBox cmbLevel;
         private ComboBox cmbModule;
-        private DateTimePicker dtpDOB;
+        private DateTimePicker dateDOB;
     }
 }
