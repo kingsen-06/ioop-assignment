@@ -53,6 +53,7 @@
             btnConfirm.TabIndex = 1;
             btnConfirm.Text = "Confirm";
             btnConfirm.UseVisualStyleBackColor = true;
+            btnConfirm.Click += btnConfirm_Click;
             // 
             // lblBack
             // 

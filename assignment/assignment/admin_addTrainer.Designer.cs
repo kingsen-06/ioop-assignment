@@ -34,7 +34,6 @@
             label4 = new Label();
             label5 = new Label();
             txtName = new TextBox();
-            txtDOB = new TextBox();
             txtEmail = new TextBox();
             txtContact = new TextBox();
             txtAddress = new TextBox();
@@ -45,13 +44,14 @@
             label8 = new Label();
             cmbLevel = new ComboBox();
             cmbModule = new ComboBox();
+            dateDOB = new DateTimePicker();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 11F);
-            label1.Location = new Point(83, 102);
+            label1.Location = new Point(83, 97);
             label1.Name = "label1";
             label1.Size = new Size(121, 30);
             label1.TabIndex = 0;
@@ -100,18 +100,10 @@
             // txtName
             // 
             txtName.Font = new Font("Segoe UI", 11F);
-            txtName.Location = new Point(273, 99);
+            txtName.Location = new Point(273, 94);
             txtName.Name = "txtName";
             txtName.Size = new Size(295, 37);
             txtName.TabIndex = 5;
-            // 
-            // txtDOB
-            // 
-            txtDOB.Font = new Font("Segoe UI", 11F);
-            txtDOB.Location = new Point(273, 155);
-            txtDOB.Name = "txtDOB";
-            txtDOB.Size = new Size(295, 37);
-            txtDOB.TabIndex = 6;
             // 
             // txtEmail
             // 
@@ -161,7 +153,7 @@
             // btnRegister
             // 
             btnRegister.Font = new Font("Segoe UI", 11F);
-            btnRegister.Location = new Point(296, 529);
+            btnRegister.Location = new Point(296, 528);
             btnRegister.Name = "btnRegister";
             btnRegister.Size = new Size(236, 43);
             btnRegister.TabIndex = 14;
@@ -207,11 +199,21 @@
             cmbModule.Size = new Size(295, 38);
             cmbModule.TabIndex = 19;
             // 
+            // dateDOB
+            // 
+            dateDOB.CalendarFont = new Font("Segoe UI", 11F);
+            dateDOB.Font = new Font("Segoe UI", 11F);
+            dateDOB.Location = new Point(273, 153);
+            dateDOB.Name = "dateDOB";
+            dateDOB.Size = new Size(295, 37);
+            dateDOB.TabIndex = 20;
+            // 
             // admin_addTrainer
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(667, 614);
+            Controls.Add(dateDOB);
             Controls.Add(cmbModule);
             Controls.Add(cmbLevel);
             Controls.Add(label8);
@@ -222,7 +224,6 @@
             Controls.Add(txtAddress);
             Controls.Add(txtContact);
             Controls.Add(txtEmail);
-            Controls.Add(txtDOB);
             Controls.Add(txtName);
             Controls.Add(label5);
             Controls.Add(label4);
@@ -243,7 +244,6 @@
         private Label label4;
         private Label label5;
         private TextBox txtName;
-        private TextBox txtDOB;
         private TextBox txtEmail;
         private TextBox txtContact;
         private TextBox txtAddress;
@@ -254,5 +254,6 @@
         private Label label8;
         private ComboBox cmbLevel;
         private ComboBox cmbModule;
+        private DateTimePicker dateDOB;
     }
 }
