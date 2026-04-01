@@ -200,6 +200,8 @@
             Margin = new Padding(2);
             Name = "admin_trainerDetail";
             Text = "trainerDetail";
+            FormClosed += admin_trainerDetail_FormClosed;
+            Load += admin_trainerDetail_Load;
             ((System.ComponentModel.ISupportInitialize)dataClass).EndInit();
             ResumeLayout(false);
             PerformLayout();

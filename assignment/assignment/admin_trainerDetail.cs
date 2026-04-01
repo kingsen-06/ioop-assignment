@@ -97,6 +97,7 @@ namespace assignment
 
                         DataTable moduleTable = new DataTable();
                         adapter.Fill(moduleTable);
+                        dataClass.Columns.Clear();
 
                         dataClass.DataSource = moduleTable;
                     }

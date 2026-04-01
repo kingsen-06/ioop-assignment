@@ -38,11 +38,14 @@ namespace assignment
             if (lstMonth.SelectedIndex != -1)
             {
                 string month = lstMonth.GetItemText(lstMonth.SelectedIndex);
-                admin_incomeReport incomeReport = new admin_incomeReport();
+                admin_incomeReport incomeReport = new admin_incomeReport(currentTrainerID, month);
                 incomeReport.Show();
                 this.Hide();
             }
-            else MessageBox.Show("Please select a month before proceeding to the next page. ");
+            else
+            {
+                MessageBox.Show("Please select a month before proceeding to the next page.");
+            }
         }
     }
 }
