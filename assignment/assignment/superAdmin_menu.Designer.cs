@@ -41,9 +41,10 @@
             // 
             lblBack.AutoSize = true;
             lblBack.Font = new Font("Segoe UI", 11F);
-            lblBack.Location = new Point(48, 487);
+            lblBack.Location = new Point(38, 390);
+            lblBack.Margin = new Padding(2, 0, 2, 0);
             lblBack.Name = "lblBack";
-            lblBack.Size = new Size(217, 30);
+            lblBack.Size = new Size(189, 25);
             lblBack.TabIndex = 17;
             lblBack.Text = "< Back to Login Page";
             lblBack.Click += lblBack_Click;
@@ -51,9 +52,10 @@
             // btnUpdate
             // 
             btnUpdate.Font = new Font("Segoe UI", 11F);
-            btnUpdate.Location = new Point(247, 423);
+            btnUpdate.Location = new Point(198, 336);
+            btnUpdate.Margin = new Padding(2);
             btnUpdate.Name = "btnUpdate";
-            btnUpdate.Size = new Size(290, 42);
+            btnUpdate.Size = new Size(232, 34);
             btnUpdate.TabIndex = 16;
             btnUpdate.Text = "Update Account Profile";
             btnUpdate.UseVisualStyleBackColor = true;
@@ -63,18 +65,20 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 18F);
-            label1.Location = new Point(63, 47);
+            label1.Location = new Point(50, 38);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(657, 48);
+            label1.Size = new Size(548, 41);
             label1.TabIndex = 15;
             label1.Text = "Super Administrator Functional Features";
             // 
             // btnViewFeedback
             // 
             btnViewFeedback.Font = new Font("Segoe UI", 11F);
-            btnViewFeedback.Location = new Point(247, 344);
+            btnViewFeedback.Location = new Point(198, 275);
+            btnViewFeedback.Margin = new Padding(2);
             btnViewFeedback.Name = "btnViewFeedback";
-            btnViewFeedback.Size = new Size(290, 42);
+            btnViewFeedback.Size = new Size(232, 34);
             btnViewFeedback.TabIndex = 14;
             btnViewFeedback.Text = "View Feedback";
             btnViewFeedback.UseVisualStyleBackColor = true;
@@ -83,9 +87,10 @@
             // btnManageTrainer
             // 
             btnManageTrainer.Font = new Font("Segoe UI", 11F);
-            btnManageTrainer.Location = new Point(247, 270);
+            btnManageTrainer.Location = new Point(198, 216);
+            btnManageTrainer.Margin = new Padding(2);
             btnManageTrainer.Name = "btnManageTrainer";
-            btnManageTrainer.Size = new Size(290, 42);
+            btnManageTrainer.Size = new Size(232, 34);
             btnManageTrainer.TabIndex = 13;
             btnManageTrainer.Text = "Manage Trainer ";
             btnManageTrainer.UseVisualStyleBackColor = true;
@@ -94,9 +99,10 @@
             // btnManageAdmin
             // 
             btnManageAdmin.Font = new Font("Segoe UI", 11F);
-            btnManageAdmin.Location = new Point(247, 121);
+            btnManageAdmin.Location = new Point(198, 97);
+            btnManageAdmin.Margin = new Padding(2);
             btnManageAdmin.Name = "btnManageAdmin";
-            btnManageAdmin.Size = new Size(290, 42);
+            btnManageAdmin.Size = new Size(232, 34);
             btnManageAdmin.TabIndex = 18;
             btnManageAdmin.Text = "Manage Administrator";
             btnManageAdmin.UseVisualStyleBackColor = true;
@@ -105,9 +111,10 @@
             // btnManageLecturer
             // 
             btnManageLecturer.Font = new Font("Segoe UI", 11F);
-            btnManageLecturer.Location = new Point(247, 194);
+            btnManageLecturer.Location = new Point(198, 155);
+            btnManageLecturer.Margin = new Padding(2);
             btnManageLecturer.Name = "btnManageLecturer";
-            btnManageLecturer.Size = new Size(290, 42);
+            btnManageLecturer.Size = new Size(232, 34);
             btnManageLecturer.TabIndex = 19;
             btnManageLecturer.Text = "Manage Lecturer";
             btnManageLecturer.UseVisualStyleBackColor = true;
@@ -115,9 +122,9 @@
             // 
             // superAdmin_menu
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(774, 541);
+            ClientSize = new Size(619, 433);
             Controls.Add(btnManageLecturer);
             Controls.Add(btnManageAdmin);
             Controls.Add(lblBack);
@@ -125,8 +132,10 @@
             Controls.Add(label1);
             Controls.Add(btnViewFeedback);
             Controls.Add(btnManageTrainer);
+            Margin = new Padding(2);
             Name = "superAdmin_menu";
             Text = "superAdminMenu";
+            FormClosed += superAdmin_menu_FormClosed;
             ResumeLayout(false);
             PerformLayout();
         }

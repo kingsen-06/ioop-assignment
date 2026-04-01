@@ -40,9 +40,10 @@
             // btnAddTrainer
             // 
             btnAddTrainer.Font = new Font("Segoe UI", 11F);
-            btnAddTrainer.Location = new Point(505, 219);
+            btnAddTrainer.Location = new Point(404, 175);
+            btnAddTrainer.Margin = new Padding(2);
             btnAddTrainer.Name = "btnAddTrainer";
-            btnAddTrainer.Size = new Size(234, 43);
+            btnAddTrainer.Size = new Size(187, 34);
             btnAddTrainer.TabIndex = 1;
             btnAddTrainer.Text = "Register New Trainer";
             btnAddTrainer.UseVisualStyleBackColor = true;
@@ -53,19 +54,22 @@
             btnRemove.BackColor = SystemColors.Window;
             btnRemove.Font = new Font("Segoe UI", 11F);
             btnRemove.ForeColor = Color.Red;
-            btnRemove.Location = new Point(272, 372);
+            btnRemove.Location = new Point(218, 298);
+            btnRemove.Margin = new Padding(2);
             btnRemove.Name = "btnRemove";
-            btnRemove.Size = new Size(234, 43);
+            btnRemove.Size = new Size(187, 34);
             btnRemove.TabIndex = 2;
             btnRemove.Text = "Remove Trainer";
             btnRemove.UseVisualStyleBackColor = false;
+            btnRemove.Click += btnRemove_Click;
             // 
             // btnViewDetail
             // 
             btnViewDetail.Font = new Font("Segoe UI", 11F);
-            btnViewDetail.Location = new Point(419, 308);
+            btnViewDetail.Location = new Point(335, 246);
+            btnViewDetail.Margin = new Padding(2);
             btnViewDetail.Name = "btnViewDetail";
-            btnViewDetail.Size = new Size(339, 43);
+            btnViewDetail.Size = new Size(271, 34);
             btnViewDetail.TabIndex = 3;
             btnViewDetail.Text = "View Trainer Detail";
             btnViewDetail.UseVisualStyleBackColor = true;
@@ -75,9 +79,10 @@
             // 
             lblBack.AutoSize = true;
             lblBack.Font = new Font("Segoe UI", 11F);
-            lblBack.Location = new Point(12, 438);
+            lblBack.Location = new Point(10, 350);
+            lblBack.Margin = new Padding(2, 0, 2, 0);
             lblBack.Name = "lblBack";
-            lblBack.Size = new Size(304, 30);
+            lblBack.Size = new Size(265, 25);
             lblBack.TabIndex = 5;
             lblBack.Text = "< Back to Administrator Menu";
             lblBack.Click += lblBack_Click;
@@ -85,9 +90,10 @@
             // btnViewReport
             // 
             btnViewReport.Font = new Font("Segoe UI", 11F);
-            btnViewReport.Location = new Point(35, 308);
+            btnViewReport.Location = new Point(28, 246);
+            btnViewReport.Margin = new Padding(2);
             btnViewReport.Name = "btnViewReport";
-            btnViewReport.Size = new Size(339, 43);
+            btnViewReport.Size = new Size(271, 34);
             btnViewReport.TabIndex = 6;
             btnViewReport.Text = "View Monthly Income Report";
             btnViewReport.UseVisualStyleBackColor = true;
@@ -97,27 +103,29 @@
             // 
             lstTrainer.Font = new Font("Segoe UI", 11F);
             lstTrainer.FormattingEnabled = true;
-            lstTrainer.ItemHeight = 30;
-            lstTrainer.Location = new Point(72, 61);
+            lstTrainer.ItemHeight = 25;
+            lstTrainer.Location = new Point(58, 49);
+            lstTrainer.Margin = new Padding(2);
             lstTrainer.Name = "lstTrainer";
-            lstTrainer.Size = new Size(420, 214);
+            lstTrainer.Size = new Size(337, 154);
             lstTrainer.TabIndex = 7;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 11F);
-            label1.Location = new Point(77, 22);
+            label1.Location = new Point(62, 18);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(151, 30);
+            label1.Size = new Size(132, 25);
             label1.TabIndex = 8;
             label1.Text = "Select trainer :";
             // 
             // admin_manageTrainer
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 487);
+            ClientSize = new Size(640, 390);
             Controls.Add(label1);
             Controls.Add(lstTrainer);
             Controls.Add(btnViewReport);
@@ -125,8 +133,10 @@
             Controls.Add(btnViewDetail);
             Controls.Add(btnRemove);
             Controls.Add(btnAddTrainer);
+            Margin = new Padding(2);
             Name = "admin_manageTrainer";
             Text = "manageTrainer";
+            Load += admin_manageTrainer_Load;
             ResumeLayout(false);
             PerformLayout();
         }

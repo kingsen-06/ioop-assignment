@@ -53,7 +53,7 @@
             label1.Font = new Font("Segoe UI", 11F);
             label1.Location = new Point(83, 97);
             label1.Name = "label1";
-            label1.Size = new Size(121, 30);
+            label1.Size = new Size(106, 25);
             label1.TabIndex = 0;
             label1.Text = "Full Name: ";
             // 
@@ -61,9 +61,10 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 11F);
-            label2.Location = new Point(83, 158);
+            label2.Location = new Point(66, 126);
+            label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(146, 30);
+            label2.Size = new Size(127, 25);
             label2.TabIndex = 1;
             label2.Text = "Date of Birth: ";
             // 
@@ -71,9 +72,10 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 11F);
-            label3.Location = new Point(83, 217);
+            label3.Location = new Point(66, 174);
+            label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
-            label3.Size = new Size(75, 30);
+            label3.Size = new Size(67, 25);
             label3.TabIndex = 2;
             label3.Text = "Email: ";
             // 
@@ -81,9 +83,10 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 11F);
-            label4.Location = new Point(83, 277);
+            label4.Location = new Point(66, 222);
+            label4.Margin = new Padding(2, 0, 2, 0);
             label4.Name = "label4";
-            label4.Size = new Size(184, 30);
+            label4.Size = new Size(160, 25);
             label4.TabIndex = 3;
             label4.Text = "Contact Number: ";
             // 
@@ -91,9 +94,10 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 11F);
-            label5.Location = new Point(83, 339);
+            label5.Location = new Point(66, 271);
+            label5.Margin = new Padding(2, 0, 2, 0);
             label5.Name = "label5";
-            label5.Size = new Size(102, 30);
+            label5.Size = new Size(88, 25);
             label5.TabIndex = 4;
             label5.Text = "Address: ";
             // 
@@ -102,40 +106,44 @@
             txtName.Font = new Font("Segoe UI", 11F);
             txtName.Location = new Point(273, 94);
             txtName.Name = "txtName";
-            txtName.Size = new Size(295, 37);
+            txtName.Size = new Size(237, 32);
             txtName.TabIndex = 5;
             // 
             // txtEmail
             // 
             txtEmail.Font = new Font("Segoe UI", 11F);
-            txtEmail.Location = new Point(273, 214);
+            txtEmail.Location = new Point(218, 171);
+            txtEmail.Margin = new Padding(2);
             txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(295, 37);
+            txtEmail.Size = new Size(237, 32);
             txtEmail.TabIndex = 7;
             // 
             // txtContact
             // 
             txtContact.Font = new Font("Segoe UI", 11F);
-            txtContact.Location = new Point(273, 274);
+            txtContact.Location = new Point(218, 219);
+            txtContact.Margin = new Padding(2);
             txtContact.Name = "txtContact";
-            txtContact.Size = new Size(295, 37);
+            txtContact.Size = new Size(237, 32);
             txtContact.TabIndex = 8;
             // 
             // txtAddress
             // 
             txtAddress.Font = new Font("Segoe UI", 11F);
-            txtAddress.Location = new Point(273, 336);
+            txtAddress.Location = new Point(218, 269);
+            txtAddress.Margin = new Padding(2);
             txtAddress.Name = "txtAddress";
-            txtAddress.Size = new Size(295, 37);
+            txtAddress.Size = new Size(237, 32);
             txtAddress.TabIndex = 9;
             // 
             // label6
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 18F);
-            label6.Location = new Point(126, 23);
+            label6.Location = new Point(101, 18);
+            label6.Margin = new Padding(2, 0, 2, 0);
             label6.Name = "label6";
-            label6.Size = new Size(406, 48);
+            label6.Size = new Size(337, 41);
             label6.TabIndex = 10;
             label6.Text = "New Trainer Information";
             // 
@@ -143,9 +151,10 @@
             // 
             lblBack.AutoSize = true;
             lblBack.Font = new Font("Segoe UI", 11F);
-            lblBack.Location = new Point(29, 557);
+            lblBack.Location = new Point(23, 446);
+            lblBack.Margin = new Padding(2, 0, 2, 0);
             lblBack.Name = "lblBack";
-            lblBack.Size = new Size(79, 30);
+            lblBack.Size = new Size(69, 25);
             lblBack.TabIndex = 13;
             lblBack.Text = "< Back";
             lblBack.Click += lblBack_Click;
@@ -155,18 +164,20 @@
             btnRegister.Font = new Font("Segoe UI", 11F);
             btnRegister.Location = new Point(296, 528);
             btnRegister.Name = "btnRegister";
-            btnRegister.Size = new Size(236, 43);
+            btnRegister.Size = new Size(189, 34);
             btnRegister.TabIndex = 14;
             btnRegister.Text = "Register New Trainer";
             btnRegister.UseVisualStyleBackColor = true;
+            btnRegister.Click += btnRegister_Click;
             // 
             // label7
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 11F);
-            label7.Location = new Point(83, 408);
+            label7.Location = new Point(66, 326);
+            label7.Margin = new Padding(2, 0, 2, 0);
             label7.Name = "label7";
-            label7.Size = new Size(157, 30);
+            label7.Size = new Size(136, 25);
             label7.TabIndex = 15;
             label7.Text = "Module Name:";
             // 
@@ -174,9 +185,10 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 11F);
-            label8.Location = new Point(83, 469);
+            label8.Location = new Point(66, 375);
+            label8.Margin = new Padding(2, 0, 2, 0);
             label8.Name = "label8";
-            label8.Size = new Size(122, 30);
+            label8.Size = new Size(107, 25);
             label8.TabIndex = 17;
             label8.Text = "Class Level:";
             // 
@@ -185,18 +197,20 @@
             cmbLevel.Font = new Font("Segoe UI", 11F);
             cmbLevel.FormattingEnabled = true;
             cmbLevel.Items.AddRange(new object[] { "Beginner", "Intermediate", "Advance" });
-            cmbLevel.Location = new Point(273, 466);
+            cmbLevel.Location = new Point(218, 373);
+            cmbLevel.Margin = new Padding(2);
             cmbLevel.Name = "cmbLevel";
-            cmbLevel.Size = new Size(295, 38);
+            cmbLevel.Size = new Size(237, 33);
             cmbLevel.TabIndex = 18;
             // 
             // cmbModule
             // 
             cmbModule.Font = new Font("Segoe UI", 11F);
             cmbModule.FormattingEnabled = true;
-            cmbModule.Location = new Point(273, 405);
+            cmbModule.Location = new Point(218, 324);
+            cmbModule.Margin = new Padding(2);
             cmbModule.Name = "cmbModule";
-            cmbModule.Size = new Size(295, 38);
+            cmbModule.Size = new Size(237, 33);
             cmbModule.TabIndex = 19;
             // 
             // dateDOB
@@ -210,7 +224,7 @@
             // 
             // admin_addTrainer
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(667, 614);
             Controls.Add(dateDOB);
@@ -230,8 +244,10 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
+            Margin = new Padding(2);
             Name = "admin_addTrainer";
             Text = "addTrainer";
+            FormClosed += admin_addTrainer_FormClosed;
             ResumeLayout(false);
             PerformLayout();
         }

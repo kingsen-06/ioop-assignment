@@ -12,9 +12,18 @@ namespace assignment
 {
     public partial class admin_monthChoice : Form
     {
-        public admin_monthChoice()
+        string currentTrainerID;
+
+        public admin_monthChoice(string selectedID)
         {
             InitializeComponent();
+
+            currentTrainerID = selectedID;
+        }
+
+        private void admin_monthChoice_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
 
         private void lblBack_Click(object sender, EventArgs e)

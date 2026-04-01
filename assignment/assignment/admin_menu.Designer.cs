@@ -39,9 +39,10 @@
             // btnManageTrainer
             // 
             btnManageTrainer.Font = new Font("Segoe UI", 11F);
-            btnManageTrainer.Location = new Point(177, 200);
+            btnManageTrainer.Location = new Point(142, 160);
+            btnManageTrainer.Margin = new Padding(2, 2, 2, 2);
             btnManageTrainer.Name = "btnManageTrainer";
-            btnManageTrainer.Size = new Size(290, 42);
+            btnManageTrainer.Size = new Size(232, 34);
             btnManageTrainer.TabIndex = 0;
             btnManageTrainer.Text = "Manage Trainer ";
             btnManageTrainer.UseVisualStyleBackColor = true;
@@ -50,9 +51,10 @@
             // btnViewFeedback
             // 
             btnViewFeedback.Font = new Font("Segoe UI", 11F);
-            btnViewFeedback.Location = new Point(177, 274);
+            btnViewFeedback.Location = new Point(142, 219);
+            btnViewFeedback.Margin = new Padding(2, 2, 2, 2);
             btnViewFeedback.Name = "btnViewFeedback";
-            btnViewFeedback.Size = new Size(290, 42);
+            btnViewFeedback.Size = new Size(232, 34);
             btnViewFeedback.TabIndex = 3;
             btnViewFeedback.Text = "View Feedback";
             btnViewFeedback.UseVisualStyleBackColor = true;
@@ -62,18 +64,20 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 18F);
-            label1.Location = new Point(56, 38);
+            label1.Location = new Point(45, 30);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(555, 48);
+            label1.Size = new Size(463, 41);
             label1.TabIndex = 7;
             label1.Text = "Administrator Functional Features";
             // 
             // btnUpdateProfile
             // 
             btnUpdateProfile.Font = new Font("Segoe UI", 11F);
-            btnUpdateProfile.Location = new Point(177, 346);
+            btnUpdateProfile.Location = new Point(142, 277);
+            btnUpdateProfile.Margin = new Padding(2, 2, 2, 2);
             btnUpdateProfile.Name = "btnUpdateProfile";
-            btnUpdateProfile.Size = new Size(290, 42);
+            btnUpdateProfile.Size = new Size(232, 34);
             btnUpdateProfile.TabIndex = 10;
             btnUpdateProfile.Text = "Update Account Profile";
             btnUpdateProfile.UseVisualStyleBackColor = true;
@@ -83,9 +87,10 @@
             // 
             lblBack.AutoSize = true;
             lblBack.Font = new Font("Segoe UI", 11F);
-            lblBack.Location = new Point(17, 416);
+            lblBack.Location = new Point(14, 333);
+            lblBack.Margin = new Padding(2, 0, 2, 0);
             lblBack.Name = "lblBack";
-            lblBack.Size = new Size(217, 30);
+            lblBack.Size = new Size(189, 25);
             lblBack.TabIndex = 12;
             lblBack.Text = "< Back to Login Page";
             lblBack.Click += lblBack_Click;
@@ -93,9 +98,10 @@
             // btnManageLecturer
             // 
             btnManageLecturer.Font = new Font("Segoe UI", 11F);
-            btnManageLecturer.Location = new Point(177, 128);
+            btnManageLecturer.Location = new Point(142, 102);
+            btnManageLecturer.Margin = new Padding(2, 2, 2, 2);
             btnManageLecturer.Name = "btnManageLecturer";
-            btnManageLecturer.Size = new Size(290, 42);
+            btnManageLecturer.Size = new Size(232, 34);
             btnManageLecturer.TabIndex = 13;
             btnManageLecturer.Text = "Manage Lecturer";
             btnManageLecturer.UseVisualStyleBackColor = true;
@@ -103,17 +109,19 @@
             // 
             // admin_menu
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(672, 462);
+            ClientSize = new Size(538, 370);
             Controls.Add(btnManageLecturer);
             Controls.Add(lblBack);
             Controls.Add(btnUpdateProfile);
             Controls.Add(label1);
             Controls.Add(btnViewFeedback);
             Controls.Add(btnManageTrainer);
+            Margin = new Padding(2, 2, 2, 2);
             Name = "admin_menu";
             Text = "administratorMenu";
+            FormClosed += admin_menu_FormClosed;
             ResumeLayout(false);
             PerformLayout();
         }

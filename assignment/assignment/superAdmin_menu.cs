@@ -17,10 +17,20 @@ namespace assignment
             InitializeComponent();
         }
 
+        private void superAdmin_menu_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
         private void btnManageAdmin_Click(object sender, EventArgs e)
         {
-            superAdmin_manageAdmin1 manageAdmin = new superAdmin_manageAdmin1();
-            manageAdmin.Show();
+            this.Hide();
+        }
+
+        private void btnManageLecturer_Click(object sender, EventArgs e)
+        {
+            admin_manageLec manageLec = new admin_manageLec();
+            manageLec.Show();
             this.Hide();
         }
 
@@ -47,15 +57,10 @@ namespace assignment
 
         private void lblBack_Click(object sender, EventArgs e)
         {
+            User.CurrentUser = null;
+
             main_loginPage loginPage = new main_loginPage();
             loginPage.Show();
-            this.Hide();
-        }
-
-        private void btnManageLecturer_Click(object sender, EventArgs e)
-        {
-            admin_manageLec manageLec = new admin_manageLec();
-            manageLec.Show();
             this.Hide();
         }
     }

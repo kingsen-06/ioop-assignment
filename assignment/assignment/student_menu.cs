@@ -17,6 +17,11 @@ namespace assignment
             InitializeComponent();
         }
 
+        private void student_menu_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
         private void btnSchedule_Click(object sender, EventArgs e)
         {
             student_viewSchedule viewSchedule = new student_viewSchedule();
@@ -47,6 +52,8 @@ namespace assignment
 
         private void lblBack_Click(object sender, EventArgs e)
         {
+            User.CurrentUser = null;
+
             main_loginPage loginPage = new main_loginPage();
             loginPage.Show();
             this.Hide();
