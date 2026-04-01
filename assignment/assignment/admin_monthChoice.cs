@@ -35,11 +35,14 @@ namespace assignment
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            string selectedMonth = lstMonth.SelectedValue.ToString();
-
-            admin_incomeReport reportPage = new admin_incomeReport(currentTrainerID, selectedMonth);
-            reportPage.Show();
-            this.Close();
+            if (lstMonth.SelectedIndex != -1)
+            {
+                string month = lstMonth.GetItemText(lstMonth.SelectedIndex);
+                admin_incomeReport incomeReport = new admin_incomeReport();
+                incomeReport.Show();
+                this.Hide();
+            }
+            else MessageBox.Show("Please select a month before proceeding to the next page. ");
         }
     }
 }
