@@ -34,6 +34,7 @@
             btnUpdateProfile = new Button();
             lblBack = new Label();
             btnManageLecturer = new Button();
+            btnAddModule = new Button();
             SuspendLayout();
             // 
             // btnManageTrainer
@@ -50,7 +51,7 @@
             // btnViewFeedback
             // 
             btnViewFeedback.Font = new Font("Segoe UI", 11F);
-            btnViewFeedback.Location = new Point(177, 274);
+            btnViewFeedback.Location = new Point(177, 340);
             btnViewFeedback.Name = "btnViewFeedback";
             btnViewFeedback.Size = new Size(290, 42);
             btnViewFeedback.TabIndex = 3;
@@ -71,7 +72,7 @@
             // btnUpdateProfile
             // 
             btnUpdateProfile.Font = new Font("Segoe UI", 11F);
-            btnUpdateProfile.Location = new Point(177, 346);
+            btnUpdateProfile.Location = new Point(177, 412);
             btnUpdateProfile.Name = "btnUpdateProfile";
             btnUpdateProfile.Size = new Size(290, 42);
             btnUpdateProfile.TabIndex = 10;
@@ -83,7 +84,7 @@
             // 
             lblBack.AutoSize = true;
             lblBack.Font = new Font("Segoe UI", 11F);
-            lblBack.Location = new Point(17, 416);
+            lblBack.Location = new Point(19, 477);
             lblBack.Name = "lblBack";
             lblBack.Size = new Size(217, 30);
             lblBack.TabIndex = 12;
@@ -101,11 +102,22 @@
             btnManageLecturer.UseVisualStyleBackColor = true;
             btnManageLecturer.Click += btnManageLecturer_Click;
             // 
+            // btnAddModule
+            // 
+            btnAddModule.Font = new Font("Segoe UI", 11F);
+            btnAddModule.Location = new Point(177, 269);
+            btnAddModule.Name = "btnAddModule";
+            btnAddModule.Size = new Size(290, 42);
+            btnAddModule.TabIndex = 14;
+            btnAddModule.Text = "Add Module";
+            btnAddModule.UseVisualStyleBackColor = true;
+            // 
             // admin_menu
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(672, 462);
+            ClientSize = new Size(672, 533);
+            Controls.Add(btnAddModule);
             Controls.Add(btnManageLecturer);
             Controls.Add(lblBack);
             Controls.Add(btnUpdateProfile);
@@ -126,5 +138,6 @@
         private Button btnUpdateProfile;
         private Label lblBack;
         private Button btnManageLecturer;
+        private Button btnAddModule;
     }
 }
