@@ -12,7 +12,7 @@ namespace assignment
 {
     public partial class admin_lecDetail : Form
     {
-        public admin_lecDetail()
+        public admin_lecDetail(string selectedLec)
         {
             InitializeComponent();
         }

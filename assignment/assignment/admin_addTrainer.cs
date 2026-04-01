@@ -40,21 +40,20 @@ namespace assignment
         private void btnRegister_Click(object sender, EventArgs e)
         {
             string fullName = txtName.Text.Trim();
-            string dob = dtpDOB.Value.ToString("yyyy-MM-dd");
+            string dob = dateDOB.Value.ToString("yyyy-MM-dd");
             string email = txtEmail.Text.Trim();
             string contact = txtContact.Text.Trim();
             string address = txtAddress.Text.Trim();
-            string module = cmbModule.Text;
-            string level = cmbLevel.Text;
 
-            if (string.IsNullOrEmpty(fullName) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(contact) || string.IsNullOrEmpty(address) || string.IsNullOrEmpty(module) || string.IsNullOrEmpty(level))
+            if (string.IsNullOrEmpty(fullName) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(contact) || string.IsNullOrEmpty(address) || cmbModule.SelectedValue == null)
             {
                 MessageBox.Show("Please fill in all fields.");
                 return;
             }
 
             string emailPattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
-            if (!Regex.IsMatch(email, emailPattern)) {
+            if (!Regex.IsMatch(email, emailPattern))
+            {
                 MessageBox.Show("Please enter a valid email format. (e.g.user@mail.apu.edu.my)");
                 return;
             }
@@ -69,10 +68,9 @@ namespace assignment
                 try
                 {
                     string defaultPassword = "trainer123";
+                    string generatedUserID = "";
 
                     string userQuery = @"insert into Users output inserted.UserID values (@email, @password, 'Trainer')";
-
-                    string generatedUserID = "";
 
                     using (SqlCommand userCommand = new SqlCommand(userQuery, connection, transaction))
                     {
@@ -82,7 +80,7 @@ namespace assignment
                         generatedUserID = userCommand.ExecuteScalar().ToString(); // Run the user insert and returns the output value
                     }
 
-                    string trainerQuery = @"insert into Trainer values (@UserID, @email, @name, @DOB, @contact, @address, @module, @level";
+                    string trainerQuery = @"insert into Trainer values (@UserID, @email, @name, @DOB, @contact, @address)";
 
                     using (SqlCommand trainerCommand = new SqlCommand(trainerQuery, connection, transaction))
                     {
@@ -92,10 +90,18 @@ namespace assignment
                         trainerCommand.Parameters.AddWithValue("@DOB", dob);
                         trainerCommand.Parameters.AddWithValue("@contact", contact);
                         trainerCommand.Parameters.AddWithValue("@address", address);
-                        trainerCommand.Parameters.AddWithValue("@module", module);
-                        trainerCommand.Parameters.AddWithValue("@level", level);
 
                         trainerCommand.ExecuteNonQuery(); // Run the trainer insert
+                    }
+
+                    string assignQuery = @"insert into TrainerAssignedModules values (@UserID, @ModuleID)";
+
+                    using (SqlCommand assignCommand = new SqlCommand(assignQuery, connection, transaction))
+                    {
+                        assignCommand.Parameters.AddWithValue("@UserID", generatedUserID);
+                        assignCommand.Parameters.AddWithValue("@ModuleID", cmbModule.SelectedValue.ToString());
+
+                        assignCommand.ExecuteNonQuery();
                     }
 
                     transaction.Commit();
@@ -107,13 +113,54 @@ namespace assignment
                     txtContact.Clear();
                     txtAddress.Clear();
                     cmbModule.SelectedIndex = -1;
-                    cmbLevel.SelectedIndex = -1;
+                    lblLevel.Text = "";
                 }
                 catch (Exception ex)
                 {
                     transaction.Rollback();
                     MessageBox.Show("Error registering trainer: " + ex.Message);
                 }
+            }
+        }
+
+        private void admin_addTrainer_Load(object sender, EventArgs e)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                try
+                {
+                    string query = "select ModuleID, ModuleName, ClassLevel from Modules";
+
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(query, connection))
+                    {
+                        DataTable modules = new DataTable();
+                        adapter.Fill(modules);
+
+                        cmbModule.DataSource = modules;
+                        cmbModule.DisplayMember = "ModuleName";
+                        cmbModule.ValueMember = "ModuleID";
+                        cmbModule.SelectedIndex = -1;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error loading modules: " + ex.Message);
+                }
+            }
+        }
+
+        private void cmbModule_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbModule.SelectedItem != null)
+            {
+                DataRowView selectedRow = (DataRowView)cmbModule.SelectedItem;
+                lblLevel.Text = selectedRow["ClassLevel"].ToString();
+            }
+            else
+            {
+                lblLevel.Text = "";
             }
         }
     }

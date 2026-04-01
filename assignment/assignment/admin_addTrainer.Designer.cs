@@ -42,16 +42,16 @@
             btnRegister = new Button();
             label7 = new Label();
             label8 = new Label();
-            cmbLevel = new ComboBox();
             cmbModule = new ComboBox();
             dateDOB = new DateTimePicker();
+            lblLevel = new Label();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 11F);
-            label1.Location = new Point(83, 97);
+            label1.Location = new Point(67, 80);
             label1.Name = "label1";
             label1.Size = new Size(106, 25);
             label1.TabIndex = 0;
@@ -104,7 +104,7 @@
             // txtName
             // 
             txtName.Font = new Font("Segoe UI", 11F);
-            txtName.Location = new Point(273, 94);
+            txtName.Location = new Point(218, 77);
             txtName.Name = "txtName";
             txtName.Size = new Size(237, 32);
             txtName.TabIndex = 5;
@@ -151,7 +151,7 @@
             // 
             lblBack.AutoSize = true;
             lblBack.Font = new Font("Segoe UI", 11F);
-            lblBack.Location = new Point(23, 446);
+            lblBack.Location = new Point(24, 459);
             lblBack.Margin = new Padding(2, 0, 2, 0);
             lblBack.Name = "lblBack";
             lblBack.Size = new Size(69, 25);
@@ -162,7 +162,7 @@
             // btnRegister
             // 
             btnRegister.Font = new Font("Segoe UI", 11F);
-            btnRegister.Location = new Point(296, 528);
+            btnRegister.Location = new Point(242, 424);
             btnRegister.Name = "btnRegister";
             btnRegister.Size = new Size(189, 34);
             btnRegister.TabIndex = 14;
@@ -174,7 +174,7 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 11F);
-            label7.Location = new Point(66, 326);
+            label7.Location = new Point(66, 324);
             label7.Margin = new Padding(2, 0, 2, 0);
             label7.Name = "label7";
             label7.Size = new Size(136, 25);
@@ -192,44 +192,43 @@
             label8.TabIndex = 17;
             label8.Text = "Class Level:";
             // 
-            // cmbLevel
-            // 
-            cmbLevel.Font = new Font("Segoe UI", 11F);
-            cmbLevel.FormattingEnabled = true;
-            cmbLevel.Items.AddRange(new object[] { "Beginner", "Intermediate", "Advance" });
-            cmbLevel.Location = new Point(218, 373);
-            cmbLevel.Margin = new Padding(2);
-            cmbLevel.Name = "cmbLevel";
-            cmbLevel.Size = new Size(237, 33);
-            cmbLevel.TabIndex = 18;
-            // 
             // cmbModule
             // 
             cmbModule.Font = new Font("Segoe UI", 11F);
             cmbModule.FormattingEnabled = true;
-            cmbModule.Location = new Point(218, 324);
+            cmbModule.Location = new Point(218, 322);
             cmbModule.Margin = new Padding(2);
             cmbModule.Name = "cmbModule";
             cmbModule.Size = new Size(237, 33);
             cmbModule.TabIndex = 19;
+            cmbModule.SelectedIndexChanged += cmbModule_SelectedIndexChanged;
             // 
             // dateDOB
             // 
             dateDOB.CalendarFont = new Font("Segoe UI", 11F);
             dateDOB.Font = new Font("Segoe UI", 11F);
-            dateDOB.Location = new Point(273, 153);
+            dateDOB.Location = new Point(218, 126);
             dateDOB.Name = "dateDOB";
-            dateDOB.Size = new Size(295, 37);
+            dateDOB.Size = new Size(237, 32);
             dateDOB.TabIndex = 20;
+            // 
+            // lblLevel
+            // 
+            lblLevel.AutoSize = true;
+            lblLevel.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblLevel.Location = new Point(218, 375);
+            lblLevel.Name = "lblLevel";
+            lblLevel.Size = new Size(0, 25);
+            lblLevel.TabIndex = 21;
             // 
             // admin_addTrainer
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(667, 614);
+            ClientSize = new Size(531, 510);
+            Controls.Add(lblLevel);
             Controls.Add(dateDOB);
             Controls.Add(cmbModule);
-            Controls.Add(cmbLevel);
             Controls.Add(label8);
             Controls.Add(label7);
             Controls.Add(btnRegister);
@@ -248,6 +247,7 @@
             Name = "admin_addTrainer";
             Text = "addTrainer";
             FormClosed += admin_addTrainer_FormClosed;
+            Load += admin_addTrainer_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -268,8 +268,8 @@
         private Button btnRegister;
         private Label label7;
         private Label label8;
-        private ComboBox cmbLevel;
         private ComboBox cmbModule;
         private DateTimePicker dateDOB;
+        private Label lblLevel;
     }
 }
