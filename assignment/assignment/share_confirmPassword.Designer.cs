@@ -72,6 +72,7 @@
             lblNext.Size = new Size(79, 30);
             lblNext.TabIndex = 3;
             lblNext.Text = "Next >";
+            lblNext.Click += lblNext_Click;
             // 
             // share_confirmPassword
             // 

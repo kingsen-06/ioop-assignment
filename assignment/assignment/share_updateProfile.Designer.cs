@@ -112,6 +112,7 @@
             txtPassword.Name = "txtPassword";
             txtPassword.Size = new Size(395, 37);
             txtPassword.TabIndex = 31;
+            txtPassword.TextChanged += txtPassword_TextChanged;
             // 
             // txtEmail
             // 
@@ -120,6 +121,7 @@
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(395, 37);
             txtEmail.TabIndex = 32;
+            txtEmail.TextChanged += txtEmail_TextChanged;
             // 
             // txtContact
             // 
@@ -128,6 +130,7 @@
             txtContact.Name = "txtContact";
             txtContact.Size = new Size(395, 37);
             txtContact.TabIndex = 33;
+            txtContact.TextChanged += txtContact_TextChanged;
             // 
             // txtAddress
             // 
@@ -136,6 +139,7 @@
             txtAddress.Name = "txtAddress";
             txtAddress.Size = new Size(395, 37);
             txtAddress.TabIndex = 34;
+            txtAddress.TextChanged += txtAddress_TextChanged;
             // 
             // btnSave
             // 
@@ -146,6 +150,7 @@
             btnSave.TabIndex = 35;
             btnSave.Text = "Save Change";
             btnSave.UseVisualStyleBackColor = true;
+            btnSave.Click += btnSave_Click;
             // 
             // btnShow
             // 
@@ -175,6 +180,7 @@
             txtName.Name = "txtName";
             txtName.Size = new Size(395, 37);
             txtName.TabIndex = 39;
+            txtName.TextChanged += txtName_TextChanged;
             // 
             // label1
             // 
