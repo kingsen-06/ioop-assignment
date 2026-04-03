@@ -19,7 +19,7 @@ namespace assignment
 
         private void lblBack_Click(object sender, EventArgs e)
         {
-            superAdmin_manageAdmin1 manageAdmin = new superAdmin_manageAdmin1();
+            superAdmin_manageAdmin manageAdmin = new superAdmin_manageAdmin();
             manageAdmin.Show();
             this.Hide();
         }

@@ -34,7 +34,11 @@ namespace assignment
         {
             string password = txtPassword.Text.Trim();
 
-            if (string.IsNullOrEmpty(password)) MessageBox.Show("Password cannot be empty! ");
+            if (string.IsNullOrEmpty(password)) 
+            { 
+                MessageBox.Show("Password cannot be empty! "); 
+                return;
+            }
 
             string query = "select Password from Users where Email = @email";
 
@@ -50,7 +54,7 @@ namespace assignment
                 {
                     if (reader.Read())
                     {
-                        correctPassword = reader["UserID"].ToString();
+                        correctPassword = reader["Password"].ToString();
                     }
                 }
             }
