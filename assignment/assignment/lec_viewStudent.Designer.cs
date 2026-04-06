@@ -37,11 +37,11 @@
             btnDel = new Button();
             btnAdd = new Button();
             lblName = new Label();
-            lblLevel = new Label();
+            lblLvl = new Label();
             cmbName = new ComboBox();
-            cmbLevel = new ComboBox();
             btnAssignClass = new Button();
             btnEdit = new Button();
+            lblLevel = new Label();
             ((System.ComponentModel.ISupportInitialize)dataStudent).BeginInit();
             SuspendLayout();
             // 
@@ -119,21 +119,21 @@
             // 
             lblName.AutoSize = true;
             lblName.Font = new Font("Segoe UI", 11F);
-            lblName.Location = new Point(174, 46);
+            lblName.Location = new Point(182, 46);
             lblName.Name = "lblName";
             lblName.Size = new Size(169, 30);
             lblName.TabIndex = 8;
             lblName.Text = "Module Name : ";
             // 
-            // lblLevel
+            // lblLvl
             // 
-            lblLevel.AutoSize = true;
-            lblLevel.Font = new Font("Segoe UI", 11F);
-            lblLevel.Location = new Point(174, 97);
-            lblLevel.Name = "lblLevel";
-            lblLevel.Size = new Size(134, 30);
-            lblLevel.TabIndex = 9;
-            lblLevel.Text = "Class Level : ";
+            lblLvl.AutoSize = true;
+            lblLvl.Font = new Font("Segoe UI", 11F);
+            lblLvl.Location = new Point(182, 97);
+            lblLvl.Name = "lblLvl";
+            lblLvl.Size = new Size(134, 30);
+            lblLvl.TabIndex = 9;
+            lblLvl.Text = "Class Level : ";
             // 
             // cmbName
             // 
@@ -143,16 +143,7 @@
             cmbName.Name = "cmbName";
             cmbName.Size = new Size(418, 38);
             cmbName.TabIndex = 10;
-            // 
-            // cmbLevel
-            // 
-            cmbLevel.Font = new Font("Segoe UI", 11F);
-            cmbLevel.FormattingEnabled = true;
-            cmbLevel.Items.AddRange(new object[] { "Beginner", "Intermediate", "Advance" });
-            cmbLevel.Location = new Point(374, 94);
-            cmbLevel.Name = "cmbLevel";
-            cmbLevel.Size = new Size(418, 38);
-            cmbLevel.TabIndex = 11;
+            cmbName.SelectedIndexChanged += cmbName_SelectedIndexChanged;
             // 
             // btnAssignClass
             // 
@@ -176,16 +167,26 @@
             btnEdit.UseVisualStyleBackColor = true;
             btnEdit.Click += btnEdit_Click;
             // 
+            // lblLevel
+            // 
+            lblLevel.AutoSize = true;
+            lblLevel.BorderStyle = BorderStyle.Fixed3D;
+            lblLevel.Font = new Font("Segoe UI", 11F);
+            lblLevel.Location = new Point(374, 97);
+            lblLevel.Name = "lblLevel";
+            lblLevel.Size = new Size(2, 32);
+            lblLevel.TabIndex = 14;
+            // 
             // lec_viewStudent
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(979, 537);
+            Controls.Add(lblLevel);
             Controls.Add(btnEdit);
             Controls.Add(btnAssignClass);
-            Controls.Add(cmbLevel);
             Controls.Add(cmbName);
-            Controls.Add(lblLevel);
+            Controls.Add(lblLvl);
             Controls.Add(lblName);
             Controls.Add(btnAdd);
             Controls.Add(btnDel);
@@ -209,10 +210,10 @@
         private Button btnDel;
         private Button btnAdd;
         private Label lblName;
-        private Label lblLevel;
+        private Label lblLvl;
         private ComboBox cmbName;
-        private ComboBox cmbLevel;
         private Button btnAssignClass;
         private Button btnEdit;
+        private Label lblLevel;
     }
 }

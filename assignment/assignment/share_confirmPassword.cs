@@ -43,18 +43,19 @@ namespace assignment
             string query = "select Password from Users where Email = @email";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
-
-            using (SqlCommand cmd = new SqlCommand(query, connection))
             {
-                cmd.Parameters.AddWithValue("@email", User.CurrentUser.Email);
-
-                connection.Open();
-
-                using (SqlDataReader reader = cmd.ExecuteReader())
+                using (SqlCommand cmd = new SqlCommand(query, connection))
                 {
-                    if (reader.Read())
+                    cmd.Parameters.AddWithValue("@email", User.CurrentUser.Email);
+
+                    connection.Open();
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())
                     {
-                        correctPassword = reader["Password"].ToString();
+                        if (reader.Read())
+                        {
+                            correctPassword = reader["Password"].ToString();
+                        }
                     }
                 }
             }

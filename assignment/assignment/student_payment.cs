@@ -16,5 +16,13 @@ namespace assignment
         {
             InitializeComponent();
         }
+
+        private void btnProceed_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Payment has done, redirecting back to the student menu... ");
+            student_menu Menu = new student_menu();
+            Menu.Show();
+            this.Hide();
+        }
     }
 }

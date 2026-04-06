@@ -38,19 +38,20 @@ namespace assignment
             string password = "";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
-
-            using (SqlCommand cmdRole = new SqlCommand(queryRole, connection))
             {
-                cmdRole.Parameters.AddWithValue("@email", User.CurrentUser.Email);
-
-                connection.Open();
-
-                using (SqlDataReader reader = cmdRole.ExecuteReader())
+                using (SqlCommand cmdRole = new SqlCommand(queryRole, connection))
                 {
-                    if (reader.Read())
+                    cmdRole.Parameters.AddWithValue("@email", User.CurrentUser.Email);
+
+                    connection.Open();
+
+                    using (SqlDataReader reader = cmdRole.ExecuteReader())
                     {
-                        role = reader["Role"].ToString();
-                        password = reader["Password"].ToString();
+                        if (reader.Read())
+                        {
+                            role = reader["Role"].ToString();
+                            password = reader["Password"].ToString();
+                        }
                     }
                 }
             }
@@ -70,20 +71,21 @@ namespace assignment
             string address = "";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
-
-            using (SqlCommand cmdTable = new SqlCommand(queryTable, connection))
             {
-                cmdTable.Parameters.AddWithValue("@email", User.CurrentUser.Email);
-
-                connection.Open();
-
-                using (SqlDataReader reader = cmdTable.ExecuteReader())
+                using (SqlCommand cmdTable = new SqlCommand(queryTable, connection))
                 {
-                    if (reader.Read())
+                    cmdTable.Parameters.AddWithValue("@email", User.CurrentUser.Email);
+
+                    connection.Open();
+
+                    using (SqlDataReader reader = cmdTable.ExecuteReader())
                     {
-                        name = reader["Name"].ToString();
-                        contact = reader["ContactNumber"].ToString();
-                        address = reader["Address"].ToString();
+                        if (reader.Read())
+                        {
+                            name = reader["Name"].ToString();
+                            contact = reader["ContactNumber"].ToString();
+                            address = reader["Address"].ToString();
+                        }
                     }
                 }
             }
@@ -131,14 +133,15 @@ namespace assignment
             string queryChange = $"update {table} set {columnName} = @value where Email = @email";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
-
-            using (SqlCommand cmdChange = new SqlCommand(queryChange, connection))
             {
-                cmdChange.Parameters.AddWithValue("@value", newValue);
-                cmdChange.Parameters.AddWithValue("@email", User.CurrentUser.Email);
+                using (SqlCommand cmdChange = new SqlCommand(queryChange, connection))
+                {
+                    cmdChange.Parameters.AddWithValue("@value", newValue);
+                    cmdChange.Parameters.AddWithValue("@email", User.CurrentUser.Email);
 
-                connection.Open();
-                cmdChange.ExecuteNonQuery();
+                    connection.Open();
+                    cmdChange.ExecuteNonQuery();
+                }
             }
         }
         
