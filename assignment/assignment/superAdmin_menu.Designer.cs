@@ -35,13 +35,14 @@
             btnManageTrainer = new Button();
             btnManageAdmin = new Button();
             btnManageLecturer = new Button();
+            btnAddModule = new Button();
             SuspendLayout();
             // 
             // lblBack
             // 
             lblBack.AutoSize = true;
             lblBack.Font = new Font("Segoe UI", 11F);
-            lblBack.Location = new Point(38, 390);
+            lblBack.Location = new Point(30, 421);
             lblBack.Margin = new Padding(2, 0, 2, 0);
             lblBack.Name = "lblBack";
             lblBack.Size = new Size(189, 25);
@@ -52,8 +53,8 @@
             // btnUpdate
             // 
             btnUpdate.Font = new Font("Segoe UI", 11F);
-            btnUpdate.Location = new Point(198, 336);
-            btnUpdate.Margin = new Padding(2);
+            btnUpdate.Location = new Point(198, 370);
+            btnUpdate.Margin = new Padding(2, 2, 2, 2);
             btnUpdate.Name = "btnUpdate";
             btnUpdate.Size = new Size(232, 34);
             btnUpdate.TabIndex = 16;
@@ -65,7 +66,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 18F);
-            label1.Location = new Point(50, 38);
+            label1.Location = new Point(50, 18);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
             label1.Size = new Size(548, 41);
@@ -75,8 +76,8 @@
             // btnViewFeedback
             // 
             btnViewFeedback.Font = new Font("Segoe UI", 11F);
-            btnViewFeedback.Location = new Point(198, 275);
-            btnViewFeedback.Margin = new Padding(2);
+            btnViewFeedback.Location = new Point(198, 310);
+            btnViewFeedback.Margin = new Padding(2, 2, 2, 2);
             btnViewFeedback.Name = "btnViewFeedback";
             btnViewFeedback.Size = new Size(232, 34);
             btnViewFeedback.TabIndex = 14;
@@ -87,8 +88,8 @@
             // btnManageTrainer
             // 
             btnManageTrainer.Font = new Font("Segoe UI", 11F);
-            btnManageTrainer.Location = new Point(198, 216);
-            btnManageTrainer.Margin = new Padding(2);
+            btnManageTrainer.Location = new Point(198, 191);
+            btnManageTrainer.Margin = new Padding(2, 2, 2, 2);
             btnManageTrainer.Name = "btnManageTrainer";
             btnManageTrainer.Size = new Size(232, 34);
             btnManageTrainer.TabIndex = 13;
@@ -99,8 +100,8 @@
             // btnManageAdmin
             // 
             btnManageAdmin.Font = new Font("Segoe UI", 11F);
-            btnManageAdmin.Location = new Point(198, 97);
-            btnManageAdmin.Margin = new Padding(2);
+            btnManageAdmin.Location = new Point(198, 78);
+            btnManageAdmin.Margin = new Padding(2, 2, 2, 2);
             btnManageAdmin.Name = "btnManageAdmin";
             btnManageAdmin.Size = new Size(232, 34);
             btnManageAdmin.TabIndex = 18;
@@ -111,8 +112,8 @@
             // btnManageLecturer
             // 
             btnManageLecturer.Font = new Font("Segoe UI", 11F);
-            btnManageLecturer.Location = new Point(198, 155);
-            btnManageLecturer.Margin = new Padding(2);
+            btnManageLecturer.Location = new Point(198, 133);
+            btnManageLecturer.Margin = new Padding(2, 2, 2, 2);
             btnManageLecturer.Name = "btnManageLecturer";
             btnManageLecturer.Size = new Size(232, 34);
             btnManageLecturer.TabIndex = 19;
@@ -120,11 +121,24 @@
             btnManageLecturer.UseVisualStyleBackColor = true;
             btnManageLecturer.Click += btnManageLecturer_Click;
             // 
+            // btnAddModule
+            // 
+            btnAddModule.Font = new Font("Segoe UI", 11F);
+            btnAddModule.Location = new Point(198, 250);
+            btnAddModule.Margin = new Padding(2, 2, 2, 2);
+            btnAddModule.Name = "btnAddModule";
+            btnAddModule.Size = new Size(232, 34);
+            btnAddModule.TabIndex = 20;
+            btnAddModule.Text = "Add Module";
+            btnAddModule.UseVisualStyleBackColor = true;
+            btnAddModule.Click += btnAddModule_Click;
+            // 
             // superAdmin_menu
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(619, 433);
+            ClientSize = new Size(619, 464);
+            Controls.Add(btnAddModule);
             Controls.Add(btnManageLecturer);
             Controls.Add(btnManageAdmin);
             Controls.Add(lblBack);
@@ -132,10 +146,9 @@
             Controls.Add(label1);
             Controls.Add(btnViewFeedback);
             Controls.Add(btnManageTrainer);
-            Margin = new Padding(2);
+            Margin = new Padding(2, 2, 2, 2);
             Name = "superAdmin_menu";
             Text = "superAdminMenu";
-            FormClosed += superAdmin_menu_FormClosed;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -149,5 +162,6 @@
         private Button btnManageTrainer;
         private Button btnManageAdmin;
         private Button btnManageLecturer;
+        private Button btnAddModule;
     }
 }

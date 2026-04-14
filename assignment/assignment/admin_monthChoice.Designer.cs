@@ -40,7 +40,7 @@
             lstMonth.ItemHeight = 25;
             lstMonth.Items.AddRange(new object[] { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" });
             lstMonth.Location = new Point(78, 42);
-            lstMonth.Margin = new Padding(2, 2, 2, 2);
+            lstMonth.Margin = new Padding(2);
             lstMonth.Name = "lstMonth";
             lstMonth.Size = new Size(439, 179);
             lstMonth.TabIndex = 0;
@@ -49,7 +49,7 @@
             // 
             btnConfirm.Font = new Font("Segoe UI", 11F);
             btnConfirm.Location = new Point(240, 255);
-            btnConfirm.Margin = new Padding(2, 2, 2, 2);
+            btnConfirm.Margin = new Padding(2);
             btnConfirm.Name = "btnConfirm";
             btnConfirm.Size = new Size(90, 30);
             btnConfirm.TabIndex = 1;
@@ -77,9 +77,10 @@
             Controls.Add(lblBack);
             Controls.Add(btnConfirm);
             Controls.Add(lstMonth);
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "admin_monthChoice";
             Text = "monthChoice";
+            FormClosed += admin_monthChoice_FormClosed;
             ResumeLayout(false);
             PerformLayout();
         }

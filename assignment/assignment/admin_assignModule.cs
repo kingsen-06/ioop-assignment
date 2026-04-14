@@ -104,6 +104,8 @@ namespace assignment
                         cmbModule.DataSource = Modules;
                         cmbModule.DisplayMember = "ModuleName";
                         cmbModule.ValueMember = "ModuleID";
+
+                        cmbModule.SelectedIndex = -1;
                     }
                 }
                 catch (Exception ex)
@@ -120,6 +122,10 @@ namespace assignment
                 DataRowView selectedRow = (DataRowView)cmbModule.SelectedItem;
 
                 lblLevel.Text = selectedRow["ClassLevel"].ToString();
+            }
+            else
+            {
+                lblLevel.Text = "";
             }
         }
     }

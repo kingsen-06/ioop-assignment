@@ -35,7 +35,6 @@ namespace assignment
             loadTrainerModules();
         }
 
-
         private void btnNew_Click(object sender, EventArgs e)
         {
             admin_assignModule assignClass = new admin_assignModule(currentTrainerID);
@@ -56,13 +55,12 @@ namespace assignment
             {
                 try
                 {
-                    string query = "select Name, Email, ContactNumber, Address from Trainer where UserID = @UserID";
+                    connection.Open();
 
+                    string query = "select Name, Email, ContactNumber, Address from Trainer where UserID = @UserID";
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
                         command.Parameters.AddWithValue("@UserID", currentTrainerID);
-
-                        connection.Open();
 
                         using (SqlDataReader reader = command.ExecuteReader())
                         {
@@ -89,8 +87,9 @@ namespace assignment
             {
                 try
                 {
-                    string query = "select m.ModuleName as 'Module Name', m.ClassLevel as 'Class Level' from TrainerAssignedModules tam join Modules m on tam.ModuleID = m.ModuleID where tam.UserID = @UserID";
+                    connection.Open();
 
+                    string query = "select m.ModuleID, m.ModuleName as 'Module Name', m.ClassLevel as 'Class Level' from TrainerAssignedModules tam join Modules m on tam.ModuleID = m.ModuleID where tam.UserID = @UserID";
                     using (SqlDataAdapter adapter = new SqlDataAdapter(query, connection))
                     {
                         adapter.SelectCommand.Parameters.AddWithValue("@UserID", currentTrainerID);
@@ -106,6 +105,49 @@ namespace assignment
                 {
                     MessageBox.Show("Error loading modules: " + ex.Message);
                 }
+            }
+        }
+
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+            if (dataClass.CurrentRow != null && dataClass.CurrentRow.Index != -1)
+            {
+                string selectedModuleID = dataClass.CurrentRow.Cells["ModuleID"].Value.ToString();
+                string selectedModuleName = dataClass.CurrentRow.Cells["Module Name"].Value.ToString();
+
+                DialogResult confirm = MessageBox.Show($"Are you sure you want to remove '{selectedModuleName}' from this trainer?\nThis action cannot be redone!", "Confirm Removal", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (confirm == DialogResult.Yes)
+                {
+                    using (SqlConnection connection = new SqlConnection(connectionString))
+                    {
+                        try
+                        {
+                            connection.Open();
+
+                            string deleteQuery = "delete from TrainerAssignedModules where UserID = @UserID and ModuleID = @ModuleID";
+                            using (SqlCommand command = new SqlCommand(deleteQuery, connection))
+                            {
+                                command.Parameters.AddWithValue("@UserID", currentTrainerID);
+                                command.Parameters.AddWithValue("@ModuleID", selectedModuleID);
+
+                                command.ExecuteNonQuery();
+                            }
+
+                            MessageBox.Show($"{selectedModuleName} has been removed successfully!");
+
+                            loadTrainerModules();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error removing module: " + ex.Message);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select a module from the list to remove.");
             }
         }
     }

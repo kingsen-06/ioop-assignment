@@ -45,7 +45,7 @@ namespace assignment
             else
             {
                 MessageBox.Show("Please select a month before proceeding to the next page.");
-            }
+            } 
         }
     }
 }

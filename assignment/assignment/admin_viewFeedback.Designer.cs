@@ -41,10 +41,11 @@
             // 
             dataFeedback.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataFeedback.Columns.AddRange(new DataGridViewColumn[] { feedback, trainer, date });
-            dataFeedback.Location = new Point(32, 38);
+            dataFeedback.Location = new Point(26, 30);
+            dataFeedback.Margin = new Padding(2);
             dataFeedback.Name = "dataFeedback";
             dataFeedback.RowHeadersWidth = 62;
-            dataFeedback.Size = new Size(733, 317);
+            dataFeedback.Size = new Size(586, 254);
             dataFeedback.TabIndex = 0;
             // 
             // feedback
@@ -72,34 +73,39 @@
             // 
             lblBack.AutoSize = true;
             lblBack.Font = new Font("Segoe UI", 11F);
-            lblBack.Location = new Point(12, 423);
+            lblBack.Location = new Point(10, 338);
+            lblBack.Margin = new Padding(2, 0, 2, 0);
             lblBack.Name = "lblBack";
-            lblBack.Size = new Size(304, 30);
+            lblBack.Size = new Size(265, 25);
             lblBack.TabIndex = 1;
             lblBack.Text = "< Back to Administrator Menu";
-            lblBack.Click += lblBack_Click_1;
+            lblBack.Click += lblBack_Click;
             // 
             // btnView
             // 
             btnView.Font = new Font("Segoe UI", 11F);
-            btnView.Location = new Point(254, 374);
+            btnView.Location = new Point(211, 299);
+            btnView.Margin = new Padding(2);
             btnView.Name = "btnView";
-            btnView.Size = new Size(255, 38);
+            btnView.Size = new Size(220, 30);
             btnView.TabIndex = 2;
-            btnView.Text = "View Feedback Detail";
+            btnView.Text = "View Feedback Details";
             btnView.UseVisualStyleBackColor = true;
             btnView.Click += btnView_Click;
             // 
             // admin_viewFeedback
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 468);
+            ClientSize = new Size(640, 374);
             Controls.Add(btnView);
             Controls.Add(lblBack);
             Controls.Add(dataFeedback);
+            Margin = new Padding(2);
             Name = "admin_viewFeedback";
             Text = "viewFeedback";
+            FormClosed += admin_viewFeedback_FormClosed;
+            Load += admin_viewFeedback_Load;
             ((System.ComponentModel.ISupportInitialize)dataFeedback).EndInit();
             ResumeLayout(false);
             PerformLayout();

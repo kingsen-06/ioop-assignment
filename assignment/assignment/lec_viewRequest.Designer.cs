@@ -45,17 +45,19 @@
             lblStudent.AutoSize = true;
             lblStudent.BorderStyle = BorderStyle.Fixed3D;
             lblStudent.Font = new Font("Segoe UI", 11F);
-            lblStudent.Location = new Point(150, 54);
+            lblStudent.Location = new Point(120, 43);
+            lblStudent.Margin = new Padding(2, 0, 2, 0);
             lblStudent.Name = "lblStudent";
-            lblStudent.Size = new Size(2, 32);
+            lblStudent.Size = new Size(2, 27);
             lblStudent.TabIndex = 0;
             // 
             // btnApprove
             // 
             btnApprove.Font = new Font("Segoe UI", 11F);
-            btnApprove.Location = new Point(432, 50);
+            btnApprove.Location = new Point(346, 40);
+            btnApprove.Margin = new Padding(2);
             btnApprove.Name = "btnApprove";
-            btnApprove.Size = new Size(204, 39);
+            btnApprove.Size = new Size(163, 31);
             btnApprove.TabIndex = 1;
             btnApprove.Text = "Approve Request";
             btnApprove.UseVisualStyleBackColor = true;
@@ -64,9 +66,10 @@
             // btnReject
             // 
             btnReject.Font = new Font("Segoe UI", 11F);
-            btnReject.Location = new Point(659, 50);
+            btnReject.Location = new Point(527, 40);
+            btnReject.Margin = new Padding(2);
             btnReject.Name = "btnReject";
-            btnReject.Size = new Size(204, 39);
+            btnReject.Size = new Size(163, 31);
             btnReject.TabIndex = 2;
             btnReject.Text = "Reject Request";
             btnReject.UseVisualStyleBackColor = true;
@@ -76,11 +79,13 @@
             // 
             dataRequest.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataRequest.Columns.AddRange(new DataGridViewColumn[] { stuName, courseName, level });
-            dataRequest.Location = new Point(115, 121);
+            dataRequest.Location = new Point(92, 97);
+            dataRequest.Margin = new Padding(2);
             dataRequest.Name = "dataRequest";
             dataRequest.RowHeadersWidth = 62;
-            dataRequest.Size = new Size(662, 246);
+            dataRequest.Size = new Size(530, 197);
             dataRequest.TabIndex = 3;
+            dataRequest.SelectionChanged += dataRequest_SelectionChanged;
             // 
             // stuName
             // 
@@ -107,36 +112,41 @@
             // 
             lblBack.AutoSize = true;
             lblBack.Font = new Font("Segoe UI", 11F);
-            lblBack.Location = new Point(15, 392);
+            lblBack.Location = new Point(12, 314);
+            lblBack.Margin = new Padding(2, 0, 2, 0);
             lblBack.Name = "lblBack";
-            lblBack.Size = new Size(252, 30);
+            lblBack.Size = new Size(219, 25);
             lblBack.TabIndex = 4;
             lblBack.Text = "< Back to Lecturer Menu";
-            lblBack.Click += label2_Click;
+            lblBack.Click += lblBack_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 11F);
-            label1.Location = new Point(40, 54);
+            label1.Location = new Point(32, 43);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(104, 30);
+            label1.Size = new Size(90, 25);
             label1.TabIndex = 5;
             label1.Text = "Student : ";
             // 
             // lec_viewRequest
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(902, 445);
+            ClientSize = new Size(722, 356);
             Controls.Add(label1);
             Controls.Add(lblBack);
             Controls.Add(dataRequest);
             Controls.Add(btnReject);
             Controls.Add(btnApprove);
             Controls.Add(lblStudent);
+            Margin = new Padding(2);
             Name = "lec_viewRequest";
             Text = "viewRequest";
+            FormClosed += lec_viewRequest_FormClosed;
+            Load += lec_viewRequest_Load;
             ((System.ComponentModel.ISupportInitialize)dataRequest).EndInit();
             ResumeLayout(false);
             PerformLayout();

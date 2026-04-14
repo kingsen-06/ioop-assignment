@@ -54,8 +54,14 @@ namespace assignment
             string emailPattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
             if (!Regex.IsMatch(email, emailPattern))
             {
-                MessageBox.Show("Please enter a valid email format. (e.g.user@mail.apu.edu.my)");
+                MessageBox.Show("Please enter a valid email format. (e.g. user@mail.apu.edu.my)");
                 return;
+            }
+
+            string contactPattern = @"^01\d-\d{7,8}$";
+            if (!Regex.IsMatch(contact, contactPattern))
+            {
+                MessageBox.Show("Please enter a valid contact number format. (e.g. 012-3456789)");
             }
 
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -67,11 +73,12 @@ namespace assignment
 
                 try
                 {
+                    
+
                     string defaultPassword = "trainer123";
                     string generatedUserID = "";
 
                     string userQuery = @"insert into Users output inserted.UserID values (@email, @password, 'Trainer')";
-
                     using (SqlCommand userCommand = new SqlCommand(userQuery, connection, transaction))
                     {
                         userCommand.Parameters.AddWithValue("@email", email);
@@ -81,7 +88,6 @@ namespace assignment
                     }
 
                     string trainerQuery = @"insert into Trainer values (@UserID, @email, @name, @DOB, @contact, @address)";
-
                     using (SqlCommand trainerCommand = new SqlCommand(trainerQuery, connection, transaction))
                     {
                         trainerCommand.Parameters.AddWithValue("@UserID", generatedUserID);
@@ -95,7 +101,6 @@ namespace assignment
                     }
 
                     string assignQuery = @"insert into TrainerAssignedModules values (@UserID, @ModuleID)";
-
                     using (SqlCommand assignCommand = new SqlCommand(assignQuery, connection, transaction))
                     {
                         assignCommand.Parameters.AddWithValue("@UserID", generatedUserID);
@@ -106,14 +111,11 @@ namespace assignment
 
                     transaction.Commit();
 
-                    MessageBox.Show($"Successfully registered Trainer: {fullName}!\nTemporary password: trainer123");
+                    MessageBox.Show($"Successfully registered Trainer: {fullName}!\nTemporary password: {defaultPassword}");
 
-                    txtName.Clear();
-                    txtEmail.Clear();
-                    txtContact.Clear();
-                    txtAddress.Clear();
-                    cmbModule.SelectedIndex = -1;
-                    lblLevel.Text = "";
+                    admin_manageTrainer manageTrainer = new admin_manageTrainer();
+                    manageTrainer.Show();
+                    this.Hide();
                 }
                 catch (Exception ex)
                 {
@@ -127,12 +129,11 @@ namespace assignment
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                connection.Open();
-
                 try
                 {
-                    string query = "select ModuleID, ModuleName, ClassLevel from Modules";
+                    connection.Open();
 
+                    string query = "select ModuleID, ModuleName, ClassLevel from Modules";
                     using (SqlDataAdapter adapter = new SqlDataAdapter(query, connection))
                     {
                         DataTable modules = new DataTable();

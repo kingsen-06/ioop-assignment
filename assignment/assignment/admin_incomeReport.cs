@@ -37,6 +37,10 @@ namespace assignment
             lblJob.Text = "CodeCamp Trainer";
             lblDate.Text = DateTime.Now.ToString("dd MM yyyy");
 
+            dataReport.AllowUserToAddRows = false;
+            dataReport.RowHeadersVisible = false;
+            dataReport.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
             loadTrainerDetails();
             generateFinancialReport();
         }
@@ -54,11 +58,12 @@ namespace assignment
             {
                 try
                 {
+                    connection.Open();
+
                     string query = "select Name, Address from Trainer where UserID = @UserID";
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
                         command.Parameters.AddWithValue("@UserID", currentTrainerID);
-                        connection.Open();
                         using (SqlDataReader reader = command.ExecuteReader())
                         {
                             if (reader.Read())
@@ -82,13 +87,14 @@ namespace assignment
             {
                 try
                 {
+                    connection.Open();
+
                     string countQuery = "select count(*) from TrainerAssignedModules where UserID = @UserID";
                     int moduleCount = 0;
 
                     using (SqlCommand command = new SqlCommand(countQuery, connection))
                     {
                         command.Parameters.AddWithValue("@UserID", currentTrainerID);
-                        connection.Open();
                         moduleCount = (int)command.ExecuteScalar();
                     }
 
@@ -100,11 +106,7 @@ namespace assignment
 
                     decimal netIncome = totalEarnings - totalDeductions;
 
-                    DataTable Report = new DataTable();
-                    Report.Rows.Clear();
-                    Report.Rows.Add($"{moduleCount} Assigned Modules", totalEarnings.ToString("0.00"), "Tax (5%)", totalDeductions.ToString("0.00"));
-
-                    dataReport.DataSource = Report;
+                    dataReport.Rows.Add($"{moduleCount} Assigned Modules", totalEarnings.ToString("0.00"), "Tax (5%)", totalDeductions.ToString("0.00"));
 
                     lblTotal.Text = totalEarnings.ToString("0.00");
                     lblTotal2.Text = totalDeductions.ToString("0.00");

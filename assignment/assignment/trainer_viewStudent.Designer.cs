@@ -31,13 +31,13 @@
             label1 = new Label();
             label2 = new Label();
             cmbName = new ComboBox();
-            cmbLevel = new ComboBox();
             dataStudent = new DataGridView();
             name = new DataGridViewTextBoxColumn();
             schedule = new DataGridViewTextBoxColumn();
             venue = new DataGridViewTextBoxColumn();
             status = new DataGridViewTextBoxColumn();
             lblBack = new Label();
+            lblLevel = new Label();
             ((System.ComponentModel.ISupportInitialize)dataStudent).BeginInit();
             SuspendLayout();
             // 
@@ -45,9 +45,10 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 11F);
-            label1.Location = new Point(116, 30);
+            label1.Location = new Point(93, 24);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(169, 30);
+            label1.Size = new Size(146, 25);
             label1.TabIndex = 0;
             label1.Text = "Module Name : ";
             // 
@@ -55,9 +56,10 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 11F);
-            label2.Location = new Point(116, 80);
+            label2.Location = new Point(93, 64);
+            label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(128, 30);
+            label2.Size = new Size(112, 25);
             label2.TabIndex = 1;
             label2.Text = "Class Level :";
             // 
@@ -65,28 +67,22 @@
             // 
             cmbName.Font = new Font("Segoe UI", 11F);
             cmbName.FormattingEnabled = true;
-            cmbName.Location = new Point(304, 27);
+            cmbName.Location = new Point(243, 22);
+            cmbName.Margin = new Padding(2);
             cmbName.Name = "cmbName";
-            cmbName.Size = new Size(339, 38);
+            cmbName.Size = new Size(272, 33);
             cmbName.TabIndex = 2;
-            // 
-            // cmbLevel
-            // 
-            cmbLevel.Font = new Font("Segoe UI", 11F);
-            cmbLevel.FormattingEnabled = true;
-            cmbLevel.Location = new Point(304, 77);
-            cmbLevel.Name = "cmbLevel";
-            cmbLevel.Size = new Size(339, 38);
-            cmbLevel.TabIndex = 3;
+            cmbName.SelectedIndexChanged += cmbName_SelectedIndexChanged;
             // 
             // dataStudent
             // 
             dataStudent.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataStudent.Columns.AddRange(new DataGridViewColumn[] { name, schedule, venue, status });
-            dataStudent.Location = new Point(63, 145);
+            dataStudent.Location = new Point(50, 116);
+            dataStudent.Margin = new Padding(2);
             dataStudent.Name = "dataStudent";
             dataStudent.RowHeadersWidth = 62;
-            dataStudent.Size = new Size(663, 285);
+            dataStudent.Size = new Size(530, 228);
             dataStudent.TabIndex = 4;
             // 
             // name
@@ -121,26 +117,38 @@
             // 
             lblBack.AutoSize = true;
             lblBack.Font = new Font("Segoe UI", 11F);
-            lblBack.Location = new Point(12, 454);
+            lblBack.Location = new Point(10, 363);
+            lblBack.Margin = new Padding(2, 0, 2, 0);
             lblBack.Name = "lblBack";
-            lblBack.Size = new Size(239, 30);
+            lblBack.Size = new Size(208, 25);
             lblBack.TabIndex = 5;
             lblBack.Text = "< Back to Trainer Menu";
             lblBack.Click += lblBack_Click;
             // 
+            // lblLevel
+            // 
+            lblLevel.AutoSize = true;
+            lblLevel.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblLevel.Location = new Point(243, 64);
+            lblLevel.Name = "lblLevel";
+            lblLevel.Size = new Size(0, 25);
+            lblLevel.TabIndex = 6;
+            // 
             // trainer_viewStudent
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(789, 504);
+            ClientSize = new Size(631, 403);
+            Controls.Add(lblLevel);
             Controls.Add(lblBack);
             Controls.Add(dataStudent);
-            Controls.Add(cmbLevel);
             Controls.Add(cmbName);
             Controls.Add(label2);
             Controls.Add(label1);
+            Margin = new Padding(2);
             Name = "trainer_viewStudent";
             Text = "viewStudent";
+            Load += trainer_viewStudent_Load;
             ((System.ComponentModel.ISupportInitialize)dataStudent).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -151,12 +159,12 @@
         private Label label1;
         private Label label2;
         private ComboBox cmbName;
-        private ComboBox cmbLevel;
         private DataGridView dataStudent;
         private Label lblBack;
         private DataGridViewTextBoxColumn name;
         private DataGridViewTextBoxColumn schedule;
         private DataGridViewTextBoxColumn venue;
         private DataGridViewTextBoxColumn status;
+        private Label lblLevel;
     }
 }

@@ -56,6 +56,7 @@
             cmbModule.Name = "cmbModule";
             cmbModule.Size = new Size(208, 33);
             cmbModule.TabIndex = 3;
+            cmbModule.SelectedIndexChanged += cmbModule_SelectedIndexChanged;
             // 
             // btnAssign
             // 
@@ -67,7 +68,7 @@
             btnAssign.TabIndex = 4;
             btnAssign.Text = "Assign Trainer to Module";
             btnAssign.UseVisualStyleBackColor = true;
-            btnAssign.Click += this.btnAssign_Click;
+            btnAssign.Click += btnAssign_Click;
             // 
             // lblBack
             // 
@@ -79,7 +80,7 @@
             lblBack.Size = new Size(69, 25);
             lblBack.TabIndex = 6;
             lblBack.Text = "< Back";
-            lblBack.Click += this.lblBack_Click;
+            lblBack.Click += lblBack_Click;
             // 
             // label3
             // 
@@ -115,6 +116,8 @@
             Margin = new Padding(2);
             Name = "admin_assignModule";
             Text = "assignTrainer";
+            FormClosed += admin_assignModule_FormClosed;
+            Load += admin_assignModule_Load;
             ResumeLayout(false);
             PerformLayout();
         }

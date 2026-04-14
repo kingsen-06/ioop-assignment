@@ -45,9 +45,10 @@
             // 
             lblBack.AutoSize = true;
             lblBack.Font = new Font("Segoe UI", 11F);
-            lblBack.Location = new Point(12, 413);
+            lblBack.Location = new Point(10, 330);
+            lblBack.Margin = new Padding(2, 0, 2, 0);
             lblBack.Name = "lblBack";
-            lblBack.Size = new Size(247, 30);
+            lblBack.Size = new Size(214, 25);
             lblBack.TabIndex = 0;
             lblBack.Text = "< Back to Student Menu";
             lblBack.Click += lblBack_Click;
@@ -55,9 +56,10 @@
             // btnInvoice
             // 
             btnInvoice.Font = new Font("Segoe UI", 11F);
-            btnInvoice.Location = new Point(208, 354);
+            btnInvoice.Location = new Point(166, 283);
+            btnInvoice.Margin = new Padding(2, 2, 2, 2);
             btnInvoice.Name = "btnInvoice";
-            btnInvoice.Size = new Size(215, 43);
+            btnInvoice.Size = new Size(172, 34);
             btnInvoice.TabIndex = 1;
             btnInvoice.Text = "View Invoice";
             btnInvoice.UseVisualStyleBackColor = true;
@@ -66,9 +68,10 @@
             // btnPay
             // 
             btnPay.Font = new Font("Segoe UI", 11F);
-            btnPay.Location = new Point(512, 354);
+            btnPay.Location = new Point(410, 283);
+            btnPay.Margin = new Padding(2, 2, 2, 2);
             btnPay.Name = "btnPay";
-            btnPay.Size = new Size(215, 43);
+            btnPay.Size = new Size(172, 34);
             btnPay.TabIndex = 2;
             btnPay.Text = "Make Payment";
             btnPay.UseVisualStyleBackColor = true;
@@ -77,10 +80,11 @@
             // 
             dataPayment.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataPayment.Columns.AddRange(new DataGridViewColumn[] { id, description, receiver, amount, date, status });
-            dataPayment.Location = new Point(48, 42);
+            dataPayment.Location = new Point(38, 34);
+            dataPayment.Margin = new Padding(2, 2, 2, 2);
             dataPayment.Name = "dataPayment";
             dataPayment.RowHeadersWidth = 62;
-            dataPayment.Size = new Size(836, 279);
+            dataPayment.Size = new Size(669, 223);
             dataPayment.TabIndex = 3;
             // 
             // id
@@ -127,15 +131,17 @@
             // 
             // student_paymentList
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(931, 467);
+            ClientSize = new Size(745, 374);
             Controls.Add(dataPayment);
             Controls.Add(btnPay);
             Controls.Add(btnInvoice);
             Controls.Add(lblBack);
+            Margin = new Padding(2, 2, 2, 2);
             Name = "student_paymentList";
             Text = "paymentList";
+            Load += student_paymentList_Load;
             ((System.ComponentModel.ISupportInitialize)dataPayment).EndInit();
             ResumeLayout(false);
             PerformLayout();

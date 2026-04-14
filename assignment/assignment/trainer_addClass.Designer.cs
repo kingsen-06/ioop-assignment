@@ -34,13 +34,13 @@
             label4 = new Label();
             label5 = new Label();
             cmbName = new ComboBox();
-            cmbLevel = new ComboBox();
             dateSchedule = new DateTimePicker();
             txtVenue = new TextBox();
             label6 = new Label();
             lblBack = new Label();
             btnAdd = new Button();
             numFee = new NumericUpDown();
+            lblLevel = new Label();
             ((System.ComponentModel.ISupportInitialize)numFee).BeginInit();
             SuspendLayout();
             // 
@@ -48,9 +48,10 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 11F);
-            label1.Location = new Point(84, 96);
+            label1.Location = new Point(67, 77);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(163, 30);
+            label1.Size = new Size(141, 25);
             label1.TabIndex = 0;
             label1.Text = "Module Name: ";
             // 
@@ -58,9 +59,10 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 11F);
-            label2.Location = new Point(84, 150);
+            label2.Location = new Point(67, 120);
+            label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(128, 30);
+            label2.Size = new Size(112, 25);
             label2.TabIndex = 1;
             label2.Text = "Class Level: ";
             // 
@@ -68,9 +70,10 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 11F);
-            label3.Location = new Point(84, 205);
+            label3.Location = new Point(67, 164);
+            label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
-            label3.Size = new Size(166, 30);
+            label3.Size = new Size(146, 25);
             label3.TabIndex = 2;
             label3.Text = "Class Schedule: ";
             // 
@@ -78,9 +81,10 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 11F);
-            label4.Location = new Point(84, 255);
+            label4.Location = new Point(67, 204);
+            label4.Margin = new Padding(2, 0, 2, 0);
             label4.Name = "label4";
-            label4.Size = new Size(139, 30);
+            label4.Size = new Size(122, 25);
             label4.TabIndex = 3;
             label4.Text = "Class Venue: ";
             // 
@@ -88,9 +92,10 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 11F);
-            label5.Location = new Point(84, 310);
+            label5.Location = new Point(67, 248);
+            label5.Margin = new Padding(2, 0, 2, 0);
             label5.Name = "label5";
-            label5.Size = new Size(113, 30);
+            label5.Size = new Size(98, 25);
             label5.TabIndex = 4;
             label5.Text = "Class Fee: ";
             // 
@@ -98,45 +103,40 @@
             // 
             cmbName.Font = new Font("Segoe UI", 11F);
             cmbName.FormattingEnabled = true;
-            cmbName.Location = new Point(273, 93);
+            cmbName.Location = new Point(218, 74);
+            cmbName.Margin = new Padding(2);
             cmbName.Name = "cmbName";
-            cmbName.Size = new Size(324, 38);
+            cmbName.Size = new Size(260, 33);
             cmbName.TabIndex = 5;
-            // 
-            // cmbLevel
-            // 
-            cmbLevel.Font = new Font("Segoe UI", 11F);
-            cmbLevel.FormattingEnabled = true;
-            cmbLevel.Items.AddRange(new object[] { "Beginner", "Intermediate", "Advance" });
-            cmbLevel.Location = new Point(273, 147);
-            cmbLevel.Name = "cmbLevel";
-            cmbLevel.Size = new Size(324, 38);
-            cmbLevel.TabIndex = 6;
+            cmbName.SelectedIndexChanged += cmbName_SelectedIndexChanged;
             // 
             // dateSchedule
             // 
             dateSchedule.Font = new Font("Segoe UI", 11F);
-            dateSchedule.Location = new Point(273, 200);
+            dateSchedule.Location = new Point(218, 160);
+            dateSchedule.Margin = new Padding(2);
             dateSchedule.Name = "dateSchedule";
-            dateSchedule.Size = new Size(324, 37);
+            dateSchedule.Size = new Size(260, 32);
             dateSchedule.TabIndex = 7;
             // 
             // txtVenue
             // 
             txtVenue.BorderStyle = BorderStyle.FixedSingle;
             txtVenue.Font = new Font("Segoe UI", 11F);
-            txtVenue.Location = new Point(273, 252);
+            txtVenue.Location = new Point(218, 202);
+            txtVenue.Margin = new Padding(2);
             txtVenue.Name = "txtVenue";
-            txtVenue.Size = new Size(324, 37);
+            txtVenue.Size = new Size(260, 32);
             txtVenue.TabIndex = 8;
             // 
             // label6
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 18F);
-            label6.Location = new Point(145, 21);
+            label6.Location = new Point(116, 17);
+            label6.Margin = new Padding(2, 0, 2, 0);
             label6.Name = "label6";
-            label6.Size = new Size(377, 48);
+            label6.Size = new Size(316, 41);
             label6.TabIndex = 10;
             label6.Text = "New Class Information";
             // 
@@ -144,9 +144,10 @@
             // 
             lblBack.AutoSize = true;
             lblBack.Font = new Font("Segoe UI", 11F);
-            lblBack.Location = new Point(26, 389);
+            lblBack.Location = new Point(21, 311);
+            lblBack.Margin = new Padding(2, 0, 2, 0);
             lblBack.Name = "lblBack";
-            lblBack.Size = new Size(85, 30);
+            lblBack.Size = new Size(74, 25);
             lblBack.TabIndex = 11;
             lblBack.Text = "< Back ";
             lblBack.Click += lblBack_Click;
@@ -154,41 +155,56 @@
             // btnAdd
             // 
             btnAdd.Font = new Font("Segoe UI", 11F);
-            btnAdd.Location = new Point(351, 365);
+            btnAdd.Location = new Point(281, 292);
+            btnAdd.Margin = new Padding(2);
             btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(171, 46);
+            btnAdd.Size = new Size(137, 37);
             btnAdd.TabIndex = 12;
             btnAdd.Text = "Add New Class";
             btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.Click += btnAdd_Click;
             // 
             // numFee
             // 
             numFee.Font = new Font("Segoe UI", 11F);
-            numFee.Location = new Point(273, 308);
+            numFee.Location = new Point(218, 246);
+            numFee.Margin = new Padding(2);
             numFee.Name = "numFee";
-            numFee.Size = new Size(324, 37);
+            numFee.Size = new Size(259, 32);
             numFee.TabIndex = 13;
+            // 
+            // lblLevel
+            // 
+            lblLevel.AutoSize = true;
+            lblLevel.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblLevel.Location = new Point(218, 120);
+            lblLevel.Name = "lblLevel";
+            lblLevel.Size = new Size(0, 25);
+            lblLevel.TabIndex = 14;
             // 
             // trainer_addClass
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(688, 439);
+            ClientSize = new Size(550, 351);
+            Controls.Add(lblLevel);
             Controls.Add(numFee);
             Controls.Add(btnAdd);
             Controls.Add(lblBack);
             Controls.Add(label6);
             Controls.Add(txtVenue);
             Controls.Add(dateSchedule);
-            Controls.Add(cmbLevel);
             Controls.Add(cmbName);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
+            Margin = new Padding(2);
             Name = "trainer_addClass";
             Text = "addClass";
+            FormClosed += trainer_addClass_FormClosed;
+            Load += trainer_addClass_Load;
             ((System.ComponentModel.ISupportInitialize)numFee).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -202,12 +218,12 @@
         private Label label4;
         private Label label5;
         private ComboBox cmbName;
-        private ComboBox cmbLevel;
         private DateTimePicker dateSchedule;
         private TextBox txtVenue;
         private Label label6;
         private Label lblBack;
         private Button btnAdd;
         private NumericUpDown numFee;
+        private Label lblLevel;
     }
 }

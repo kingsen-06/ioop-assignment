@@ -38,9 +38,10 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 11F);
-            label1.Location = new Point(73, 33);
+            label1.Location = new Point(58, 26);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(123, 30);
+            label1.Size = new Size(105, 25);
             label1.TabIndex = 0;
             label1.Text = "Feedback : ";
             // 
@@ -48,44 +49,50 @@
             // 
             txtFeedback.BorderStyle = BorderStyle.None;
             txtFeedback.Font = new Font("Segoe UI", 11F);
-            txtFeedback.Location = new Point(73, 72);
+            txtFeedback.Location = new Point(58, 58);
+            txtFeedback.Margin = new Padding(2);
             txtFeedback.Name = "txtFeedback";
-            txtFeedback.Size = new Size(487, 247);
+            txtFeedback.Size = new Size(390, 198);
             txtFeedback.TabIndex = 1;
             txtFeedback.Text = "";
             // 
             // btnSend
             // 
             btnSend.Font = new Font("Segoe UI", 11F);
-            btnSend.Location = new Point(202, 347);
+            btnSend.Location = new Point(162, 278);
+            btnSend.Margin = new Padding(2);
             btnSend.Name = "btnSend";
-            btnSend.Size = new Size(216, 39);
+            btnSend.Size = new Size(173, 31);
             btnSend.TabIndex = 2;
             btnSend.Text = "Send Feedback";
             btnSend.UseVisualStyleBackColor = true;
+            btnSend.Click += btnSend_Click;
             // 
             // lblBack
             // 
             lblBack.AutoSize = true;
             lblBack.Font = new Font("Segoe UI", 11F);
-            lblBack.Location = new Point(12, 402);
+            lblBack.Location = new Point(10, 322);
+            lblBack.Margin = new Padding(2, 0, 2, 0);
             lblBack.Name = "lblBack";
-            lblBack.Size = new Size(239, 30);
+            lblBack.Size = new Size(208, 25);
             lblBack.TabIndex = 3;
             lblBack.Text = "< Back to Trainer Menu";
             lblBack.Click += lblBack_Click;
             // 
             // trainer_feedback
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(641, 447);
+            ClientSize = new Size(513, 358);
             Controls.Add(lblBack);
             Controls.Add(btnSend);
             Controls.Add(txtFeedback);
             Controls.Add(label1);
+            Margin = new Padding(2);
             Name = "trainer_feedback";
             Text = "feedback";
+            FormClosed += trainer_feedback_FormClosed;
             ResumeLayout(false);
             PerformLayout();
         }

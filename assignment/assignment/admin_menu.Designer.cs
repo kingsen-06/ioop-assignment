@@ -34,13 +34,14 @@
             btnUpdateProfile = new Button();
             lblBack = new Label();
             btnManageLecturer = new Button();
+            btnAddModule = new Button();
             SuspendLayout();
             // 
             // btnManageTrainer
             // 
             btnManageTrainer.Font = new Font("Segoe UI", 11F);
             btnManageTrainer.Location = new Point(142, 160);
-            btnManageTrainer.Margin = new Padding(2, 2, 2, 2);
+            btnManageTrainer.Margin = new Padding(2);
             btnManageTrainer.Name = "btnManageTrainer";
             btnManageTrainer.Size = new Size(232, 34);
             btnManageTrainer.TabIndex = 0;
@@ -51,8 +52,8 @@
             // btnViewFeedback
             // 
             btnViewFeedback.Font = new Font("Segoe UI", 11F);
-            btnViewFeedback.Location = new Point(142, 219);
-            btnViewFeedback.Margin = new Padding(2, 2, 2, 2);
+            btnViewFeedback.Location = new Point(142, 283);
+            btnViewFeedback.Margin = new Padding(2);
             btnViewFeedback.Name = "btnViewFeedback";
             btnViewFeedback.Size = new Size(232, 34);
             btnViewFeedback.TabIndex = 3;
@@ -74,8 +75,8 @@
             // btnUpdateProfile
             // 
             btnUpdateProfile.Font = new Font("Segoe UI", 11F);
-            btnUpdateProfile.Location = new Point(142, 277);
-            btnUpdateProfile.Margin = new Padding(2, 2, 2, 2);
+            btnUpdateProfile.Location = new Point(142, 341);
+            btnUpdateProfile.Margin = new Padding(2);
             btnUpdateProfile.Name = "btnUpdateProfile";
             btnUpdateProfile.Size = new Size(232, 34);
             btnUpdateProfile.TabIndex = 10;
@@ -87,7 +88,7 @@
             // 
             lblBack.AutoSize = true;
             lblBack.Font = new Font("Segoe UI", 11F);
-            lblBack.Location = new Point(14, 333);
+            lblBack.Location = new Point(14, 397);
             lblBack.Margin = new Padding(2, 0, 2, 0);
             lblBack.Name = "lblBack";
             lblBack.Size = new Size(189, 25);
@@ -99,7 +100,7 @@
             // 
             btnManageLecturer.Font = new Font("Segoe UI", 11F);
             btnManageLecturer.Location = new Point(142, 102);
-            btnManageLecturer.Margin = new Padding(2, 2, 2, 2);
+            btnManageLecturer.Margin = new Padding(2);
             btnManageLecturer.Name = "btnManageLecturer";
             btnManageLecturer.Size = new Size(232, 34);
             btnManageLecturer.TabIndex = 13;
@@ -107,18 +108,31 @@
             btnManageLecturer.UseVisualStyleBackColor = true;
             btnManageLecturer.Click += btnManageLecturer_Click;
             // 
+            // btnAddModule
+            // 
+            btnAddModule.Font = new Font("Segoe UI", 11F);
+            btnAddModule.Location = new Point(142, 223);
+            btnAddModule.Margin = new Padding(2);
+            btnAddModule.Name = "btnAddModule";
+            btnAddModule.Size = new Size(232, 34);
+            btnAddModule.TabIndex = 21;
+            btnAddModule.Text = "Add Module";
+            btnAddModule.UseVisualStyleBackColor = true;
+            btnAddModule.Click += btnAddModule_Click;
+            // 
             // admin_menu
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(538, 370);
+            ClientSize = new Size(538, 439);
+            Controls.Add(btnAddModule);
             Controls.Add(btnManageLecturer);
             Controls.Add(lblBack);
             Controls.Add(btnUpdateProfile);
             Controls.Add(label1);
             Controls.Add(btnViewFeedback);
             Controls.Add(btnManageTrainer);
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "admin_menu";
             Text = "administratorMenu";
             FormClosed += admin_menu_FormClosed;
@@ -134,5 +148,6 @@
         private Button btnUpdateProfile;
         private Label lblBack;
         private Button btnManageLecturer;
+        private Button btnAddModule;
     }
 }

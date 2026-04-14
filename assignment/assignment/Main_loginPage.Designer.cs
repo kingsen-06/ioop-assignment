@@ -33,6 +33,7 @@
             txtPassword = new TextBox();
             lblPassword = new Label();
             btnLogin = new Button();
+            btnRegister = new Button();
             SuspendLayout();
             // 
             // lblEmail
@@ -74,19 +75,31 @@
             // btnLogin
             // 
             btnLogin.Font = new Font("Segoe UI", 11F);
-            btnLogin.Location = new Point(194, 163);
+            btnLogin.Location = new Point(281, 163);
             btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(131, 33);
+            btnLogin.Size = new Size(149, 33);
             btnLogin.TabIndex = 5;
             btnLogin.Text = "Login";
             btnLogin.UseVisualStyleBackColor = true;
             btnLogin.Click += btnLogin_Click;
+            // 
+            // btnRegister
+            // 
+            btnRegister.Font = new Font("Segoe UI", 11F);
+            btnRegister.Location = new Point(114, 163);
+            btnRegister.Name = "btnRegister";
+            btnRegister.Size = new Size(149, 33);
+            btnRegister.TabIndex = 6;
+            btnRegister.Text = "Register";
+            btnRegister.UseVisualStyleBackColor = true;
+            btnRegister.Click += btnRegister_Click;
             // 
             // main_loginPage
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(543, 254);
+            Controls.Add(btnRegister);
             Controls.Add(btnLogin);
             Controls.Add(txtPassword);
             Controls.Add(lblPassword);
@@ -106,5 +119,6 @@
         private TextBox txtPassword;
         private Label lblPassword;
         private Button btnLogin;
+        private Button btnRegister;
     }
 }

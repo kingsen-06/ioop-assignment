@@ -31,7 +31,7 @@ namespace assignment
                 return;
             }
 
-            if (string.IsNullOrEmpty (password))
+            if (string.IsNullOrEmpty(password))
             {
                 MessageBox.Show("Password cannot be empty!");
                 return;
@@ -49,14 +49,13 @@ namespace assignment
             {
                 try
                 {
-                    string query = "select UserID, Role from Users where Email = @email and Password = @password";
+                    connection.Open();
 
+                    string query = "select UserID, Role from Users where Email = @email and Password = @password";
                     using (SqlCommand cmd = new SqlCommand(query, connection))
                     {
                         cmd.Parameters.AddWithValue("@email", email);
                         cmd.Parameters.AddWithValue("@password", password);
-
-                        connection.Open();
 
                         string id = "";
                         string role = "";
@@ -157,6 +156,13 @@ namespace assignment
                     MessageBox.Show("Database connection error: " + ex.Message);
                 }
             }
+        }
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            student_registerPage registerPage = new student_registerPage();
+            registerPage.Show();
+            this.Hide();
         }
     }
 }

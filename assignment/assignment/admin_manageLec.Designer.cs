@@ -73,12 +73,12 @@
             // btnViewDetail
             // 
             btnViewDetail.Font = new Font("Segoe UI", 11F);
-            btnViewDetail.Location = new Point(315, 261);
+            btnViewDetail.Location = new Point(298, 262);
             btnViewDetail.Margin = new Padding(2);
             btnViewDetail.Name = "btnViewDetail";
-            btnViewDetail.Size = new Size(187, 34);
+            btnViewDetail.Size = new Size(217, 34);
             btnViewDetail.TabIndex = 11;
-            btnViewDetail.Text = "View Lecturer Detail";
+            btnViewDetail.Text = "View Lecturer Details";
             btnViewDetail.UseVisualStyleBackColor = true;
             btnViewDetail.Click += btnViewDetail_Click;
             // 
@@ -99,10 +99,10 @@
             // btnAddLec
             // 
             btnAddLec.Font = new Font("Segoe UI", 11F);
-            btnAddLec.Location = new Point(46, 261);
+            btnAddLec.Location = new Point(29, 262);
             btnAddLec.Margin = new Padding(2);
             btnAddLec.Name = "btnAddLec";
-            btnAddLec.Size = new Size(187, 34);
+            btnAddLec.Size = new Size(217, 34);
             btnAddLec.TabIndex = 9;
             btnAddLec.Text = "Register New Lecturer";
             btnAddLec.UseVisualStyleBackColor = true;
@@ -122,6 +122,8 @@
             Margin = new Padding(2);
             Name = "admin_manageLec";
             Text = "manageLecturer";
+            FormClosed += admin_manageLec_FormClosed;
+            Load += admin_manageLec_Load;
             ResumeLayout(false);
             PerformLayout();
         }

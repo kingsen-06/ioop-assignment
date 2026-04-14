@@ -41,13 +41,14 @@
             name = new DataGridViewTextBoxColumn();
             level = new DataGridViewTextBoxColumn();
             lblBack = new Label();
+            btnRemove = new Button();
             ((System.ComponentModel.ISupportInitialize)dataClass).BeginInit();
             SuspendLayout();
             // 
             // btnNew
             // 
             btnNew.Font = new Font("Segoe UI", 11F);
-            btnNew.Location = new Point(212, 386);
+            btnNew.Location = new Point(122, 386);
             btnNew.Margin = new Padding(2);
             btnNew.Name = "btnNew";
             btnNew.Size = new Size(185, 35);
@@ -181,11 +182,25 @@
             lblBack.Text = "< Back";
             lblBack.Click += lblBack_Click;
             // 
+            // btnRemove
+            // 
+            btnRemove.Font = new Font("Segoe UI", 11F);
+            btnRemove.ForeColor = Color.Red;
+            btnRemove.Location = new Point(325, 386);
+            btnRemove.Margin = new Padding(2);
+            btnRemove.Name = "btnRemove";
+            btnRemove.Size = new Size(185, 35);
+            btnRemove.TabIndex = 11;
+            btnRemove.Text = "Remove Module";
+            btnRemove.UseVisualStyleBackColor = true;
+            btnRemove.Click += btnRemove_Click;
+            // 
             // admin_trainerDetail
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(622, 462);
+            Controls.Add(btnRemove);
             Controls.Add(lblBack);
             Controls.Add(dataClass);
             Controls.Add(lblAddress);
@@ -222,5 +237,6 @@
         private DataGridViewTextBoxColumn name;
         private DataGridViewTextBoxColumn level;
         private Label lblBack;
+        private Button btnRemove;
     }
 }

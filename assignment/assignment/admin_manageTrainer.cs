@@ -83,8 +83,9 @@ namespace assignment
             {
                 try
                 {
-                    string query = "select UserID, Name from Trainer";
+                    connection.Open();
 
+                    string query = "select UserID, Name from Trainer";
                     using (SqlDataAdapter adapter = new SqlDataAdapter(query, connection))
                     {
                         DataTable trainerTable = new DataTable();
@@ -113,7 +114,7 @@ namespace assignment
             string selectedID = lstTrainer.SelectedValue.ToString();
             string trainerName = lstTrainer.Text;
 
-            DialogResult confirm = MessageBox.Show($"Are you sure you want to remove {trainerName}?\nThis action cannot be redone!", "Confirm Removal", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult confirm = MessageBox.Show($"Are you sure you want to remove {trainerName}?\nThis action cannot be undone!", "Confirm Removal", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
             if (confirm == DialogResult.Yes)
             {

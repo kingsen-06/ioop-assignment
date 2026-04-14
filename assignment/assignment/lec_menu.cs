@@ -17,6 +17,11 @@ namespace assignment
             InitializeComponent();
         }
 
+        private void lec_menu_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
         private void btnManage_Click(object sender, EventArgs e)
         {
             lec_viewStudent viewStudent = new lec_viewStudent();

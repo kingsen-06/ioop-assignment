@@ -51,5 +51,10 @@ namespace assignment
             loginPage.Show();
             this.Hide();
         }
+
+        private void trainer_menu_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

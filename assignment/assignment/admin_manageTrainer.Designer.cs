@@ -71,7 +71,7 @@
             btnViewDetail.Name = "btnViewDetail";
             btnViewDetail.Size = new Size(271, 34);
             btnViewDetail.TabIndex = 3;
-            btnViewDetail.Text = "View Trainer Detail";
+            btnViewDetail.Text = "View Trainer Details";
             btnViewDetail.UseVisualStyleBackColor = true;
             btnViewDetail.Click += btnViewDetail_Click;
             // 
@@ -136,6 +136,7 @@
             Margin = new Padding(2);
             Name = "admin_manageTrainer";
             Text = "manageTrainer";
+            FormClosed += amind_manageTrainer_FormClosed;
             Load += admin_manageTrainer_Load;
             ResumeLayout(false);
             PerformLayout();

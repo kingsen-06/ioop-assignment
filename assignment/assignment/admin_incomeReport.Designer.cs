@@ -60,9 +60,10 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 11F);
-            label1.Location = new Point(106, 98);
+            label1.Location = new Point(85, 78);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(88, 30);
+            label1.Size = new Size(76, 25);
             label1.TabIndex = 0;
             label1.Text = "Name : ";
             // 
@@ -70,9 +71,10 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 11F);
-            label2.Location = new Point(570, 98);
+            label2.Location = new Point(456, 78);
+            label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(111, 30);
+            label2.Size = new Size(96, 25);
             label2.TabIndex = 1;
             label2.Text = "Job Title : ";
             // 
@@ -80,9 +82,10 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 11F);
-            label3.Location = new Point(106, 144);
+            label3.Location = new Point(85, 115);
+            label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
-            label3.Size = new Size(102, 30);
+            label3.Size = new Size(88, 25);
             label3.TabIndex = 2;
             label3.Text = "Address :";
             // 
@@ -90,10 +93,11 @@
             // 
             dataReport.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataReport.Columns.AddRange(new DataGridViewColumn[] { earn, rmEarn, deduct, rmDeduct });
-            dataReport.Location = new Point(53, 292);
+            dataReport.Location = new Point(42, 234);
+            dataReport.Margin = new Padding(2, 2, 2, 2);
             dataReport.Name = "dataReport";
             dataReport.RowHeadersWidth = 62;
-            dataReport.Size = new Size(961, 235);
+            dataReport.Size = new Size(769, 188);
             dataReport.TabIndex = 3;
             // 
             // earn
@@ -128,9 +132,10 @@
             // 
             lblTotal.AutoSize = true;
             lblTotal.Font = new Font("Segoe UI", 11F);
-            lblTotal.Location = new Point(280, 542);
+            lblTotal.Location = new Point(224, 434);
+            lblTotal.Margin = new Padding(2, 0, 2, 0);
             lblTotal.Name = "lblTotal";
-            lblTotal.Size = new Size(129, 30);
+            lblTotal.Size = new Size(111, 25);
             lblTotal.TabIndex = 4;
             lblTotal.Text = "Total (RM) : ";
             // 
@@ -138,9 +143,10 @@
             // 
             lblTotal2.AutoSize = true;
             lblTotal2.Font = new Font("Segoe UI", 11F);
-            lblTotal2.Location = new Point(736, 542);
+            lblTotal2.Location = new Point(589, 434);
+            lblTotal2.Margin = new Padding(2, 0, 2, 0);
             lblTotal2.Name = "lblTotal2";
-            lblTotal2.Size = new Size(129, 30);
+            lblTotal2.Size = new Size(111, 25);
             lblTotal2.TabIndex = 5;
             lblTotal2.Text = "Total (RM) : ";
             // 
@@ -149,9 +155,10 @@
             lblTotalEarn.AutoSize = true;
             lblTotalEarn.BorderStyle = BorderStyle.Fixed3D;
             lblTotalEarn.Font = new Font("Segoe UI", 11F);
-            lblTotalEarn.Location = new Point(415, 542);
+            lblTotalEarn.Location = new Point(332, 434);
+            lblTotalEarn.Margin = new Padding(2, 0, 2, 0);
             lblTotalEarn.Name = "lblTotalEarn";
-            lblTotalEarn.Size = new Size(2, 32);
+            lblTotalEarn.Size = new Size(2, 27);
             lblTotalEarn.TabIndex = 6;
             lblTotalEarn.TextAlign = ContentAlignment.MiddleRight;
             // 
@@ -160,9 +167,10 @@
             lblTotalDeduct.AutoSize = true;
             lblTotalDeduct.BorderStyle = BorderStyle.Fixed3D;
             lblTotalDeduct.Font = new Font("Segoe UI", 11F);
-            lblTotalDeduct.Location = new Point(871, 542);
+            lblTotalDeduct.Location = new Point(697, 434);
+            lblTotalDeduct.Margin = new Padding(2, 0, 2, 0);
             lblTotalDeduct.Name = "lblTotalDeduct";
-            lblTotalDeduct.Size = new Size(2, 32);
+            lblTotalDeduct.Size = new Size(2, 27);
             lblTotalDeduct.TabIndex = 7;
             lblTotalDeduct.TextAlign = ContentAlignment.MiddleRight;
             // 
@@ -170,9 +178,10 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 18F);
-            label6.Location = new Point(308, 24);
+            label6.Location = new Point(246, 19);
+            label6.Margin = new Padding(2, 0, 2, 0);
             label6.Name = "label6";
-            label6.Size = new Size(373, 48);
+            label6.Size = new Size(310, 41);
             label6.TabIndex = 8;
             label6.Text = "Trainer Income Report";
             // 
@@ -180,9 +189,10 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 11F);
-            label7.Location = new Point(570, 192);
+            label7.Location = new Point(456, 154);
+            label7.Margin = new Padding(2, 0, 2, 0);
             label7.Name = "label7";
-            label7.Size = new Size(131, 30);
+            label7.Size = new Size(114, 25);
             label7.TabIndex = 9;
             label7.Text = "Pay Period : ";
             // 
@@ -190,9 +200,10 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 11F);
-            label8.Location = new Point(570, 240);
+            label8.Location = new Point(456, 192);
+            label8.Margin = new Padding(2, 0, 2, 0);
             label8.Name = "label8";
-            label8.Size = new Size(164, 30);
+            label8.Size = new Size(142, 25);
             label8.TabIndex = 10;
             label8.Text = "Payment Date : ";
             // 
@@ -201,9 +212,10 @@
             lblAddress1.AutoSize = true;
             lblAddress1.BorderStyle = BorderStyle.Fixed3D;
             lblAddress1.Font = new Font("Segoe UI", 11F);
-            lblAddress1.Location = new Point(214, 144);
+            lblAddress1.Location = new Point(171, 115);
+            lblAddress1.Margin = new Padding(2, 0, 2, 0);
             lblAddress1.Name = "lblAddress1";
-            lblAddress1.Size = new Size(2, 32);
+            lblAddress1.Size = new Size(2, 27);
             lblAddress1.TabIndex = 11;
             // 
             // lblAddress2
@@ -211,9 +223,10 @@
             lblAddress2.AutoSize = true;
             lblAddress2.BorderStyle = BorderStyle.Fixed3D;
             lblAddress2.Font = new Font("Segoe UI", 11F);
-            lblAddress2.Location = new Point(214, 192);
+            lblAddress2.Location = new Point(171, 154);
+            lblAddress2.Margin = new Padding(2, 0, 2, 0);
             lblAddress2.Name = "lblAddress2";
-            lblAddress2.Size = new Size(2, 32);
+            lblAddress2.Size = new Size(2, 27);
             lblAddress2.TabIndex = 12;
             // 
             // lblAddress3
@@ -221,9 +234,10 @@
             lblAddress3.AutoSize = true;
             lblAddress3.BorderStyle = BorderStyle.Fixed3D;
             lblAddress3.Font = new Font("Segoe UI", 11F);
-            lblAddress3.Location = new Point(214, 238);
+            lblAddress3.Location = new Point(171, 190);
+            lblAddress3.Margin = new Padding(2, 0, 2, 0);
             lblAddress3.Name = "lblAddress3";
-            lblAddress3.Size = new Size(2, 32);
+            lblAddress3.Size = new Size(2, 27);
             lblAddress3.TabIndex = 13;
             // 
             // lblName
@@ -231,9 +245,10 @@
             lblName.AutoSize = true;
             lblName.BorderStyle = BorderStyle.Fixed3D;
             lblName.Font = new Font("Segoe UI", 11F);
-            lblName.Location = new Point(214, 98);
+            lblName.Location = new Point(171, 78);
+            lblName.Margin = new Padding(2, 0, 2, 0);
             lblName.Name = "lblName";
-            lblName.Size = new Size(2, 32);
+            lblName.Size = new Size(2, 27);
             lblName.TabIndex = 14;
             // 
             // lblDate
@@ -241,9 +256,10 @@
             lblDate.AutoSize = true;
             lblDate.BorderStyle = BorderStyle.Fixed3D;
             lblDate.Font = new Font("Segoe UI", 11F);
-            lblDate.Location = new Point(740, 240);
+            lblDate.Location = new Point(592, 192);
+            lblDate.Margin = new Padding(2, 0, 2, 0);
             lblDate.Name = "lblDate";
-            lblDate.Size = new Size(2, 32);
+            lblDate.Size = new Size(2, 27);
             lblDate.TabIndex = 15;
             // 
             // lblPeriod
@@ -251,9 +267,10 @@
             lblPeriod.AutoSize = true;
             lblPeriod.BorderStyle = BorderStyle.Fixed3D;
             lblPeriod.Font = new Font("Segoe UI", 11F);
-            lblPeriod.Location = new Point(740, 192);
+            lblPeriod.Location = new Point(592, 154);
+            lblPeriod.Margin = new Padding(2, 0, 2, 0);
             lblPeriod.Name = "lblPeriod";
-            lblPeriod.Size = new Size(2, 32);
+            lblPeriod.Size = new Size(2, 27);
             lblPeriod.TabIndex = 16;
             // 
             // lblJob
@@ -261,18 +278,20 @@
             lblJob.AutoSize = true;
             lblJob.BorderStyle = BorderStyle.Fixed3D;
             lblJob.Font = new Font("Segoe UI", 11F);
-            lblJob.Location = new Point(740, 98);
+            lblJob.Location = new Point(592, 78);
+            lblJob.Margin = new Padding(2, 0, 2, 0);
             lblJob.Name = "lblJob";
-            lblJob.Size = new Size(2, 32);
+            lblJob.Size = new Size(2, 27);
             lblJob.TabIndex = 17;
             // 
             // label16
             // 
             label16.AutoSize = true;
             label16.Font = new Font("Segoe UI", 11F);
-            label16.Location = new Point(669, 603);
+            label16.Location = new Point(535, 482);
+            label16.Margin = new Padding(2, 0, 2, 0);
             label16.Name = "label16";
-            label16.Size = new Size(196, 30);
+            label16.Size = new Size(168, 25);
             label16.TabIndex = 18;
             label16.Text = "Net Income (RM) : ";
             // 
@@ -281,9 +300,10 @@
             lblNet.AutoSize = true;
             lblNet.BorderStyle = BorderStyle.Fixed3D;
             lblNet.Font = new Font("Segoe UI", 11F);
-            lblNet.Location = new Point(871, 603);
+            lblNet.Location = new Point(697, 482);
+            lblNet.Margin = new Padding(2, 0, 2, 0);
             lblNet.Name = "lblNet";
-            lblNet.Size = new Size(2, 32);
+            lblNet.Size = new Size(2, 27);
             lblNet.TabIndex = 19;
             lblNet.TextAlign = ContentAlignment.MiddleRight;
             // 
@@ -291,18 +311,19 @@
             // 
             lblBack.AutoSize = true;
             lblBack.Font = new Font("Segoe UI", 11F);
-            lblBack.Location = new Point(22, 657);
+            lblBack.Location = new Point(18, 526);
+            lblBack.Margin = new Padding(2, 0, 2, 0);
             lblBack.Name = "lblBack";
-            lblBack.Size = new Size(79, 30);
+            lblBack.Size = new Size(69, 25);
             lblBack.TabIndex = 20;
             lblBack.Text = "< Back";
             lblBack.Click += lblBack_Click;
             // 
             // admin_incomeReport
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1072, 699);
+            ClientSize = new Size(858, 559);
             Controls.Add(lblBack);
             Controls.Add(lblNet);
             Controls.Add(label16);
@@ -324,8 +345,11 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
+            Margin = new Padding(2, 2, 2, 2);
             Name = "admin_incomeReport";
             Text = "incomeReport";
+            FormClosed += admin_incomeReport_FormClosed;
+            Load += admin_incomeReport_Load;
             ((System.ComponentModel.ISupportInitialize)dataReport).EndInit();
             ResumeLayout(false);
             PerformLayout();

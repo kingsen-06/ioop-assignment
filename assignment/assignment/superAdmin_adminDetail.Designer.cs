@@ -44,18 +44,20 @@
             lblAddress.AutoSize = true;
             lblAddress.BorderStyle = BorderStyle.Fixed3D;
             lblAddress.Font = new Font("Segoe UI", 11F);
-            lblAddress.Location = new Point(337, 236);
+            lblAddress.Location = new Point(270, 189);
+            lblAddress.Margin = new Padding(2, 0, 2, 0);
             lblAddress.Name = "lblAddress";
-            lblAddress.Size = new Size(2, 32);
+            lblAddress.Size = new Size(2, 27);
             lblAddress.TabIndex = 16;
             // 
             // label7
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 11F);
-            label7.Location = new Point(126, 236);
+            label7.Location = new Point(101, 189);
+            label7.Margin = new Padding(2, 0, 2, 0);
             label7.Name = "label7";
-            label7.Size = new Size(102, 30);
+            label7.Size = new Size(88, 25);
             label7.TabIndex = 15;
             label7.Text = "Address :";
             // 
@@ -64,9 +66,10 @@
             lblContact.AutoSize = true;
             lblContact.BorderStyle = BorderStyle.Fixed3D;
             lblContact.Font = new Font("Segoe UI", 11F);
-            lblContact.Location = new Point(337, 175);
+            lblContact.Location = new Point(270, 140);
+            lblContact.Margin = new Padding(2, 0, 2, 0);
             lblContact.Name = "lblContact";
-            lblContact.Size = new Size(2, 32);
+            lblContact.Size = new Size(2, 27);
             lblContact.TabIndex = 14;
             // 
             // lblEmail
@@ -74,9 +77,10 @@
             lblEmail.AutoSize = true;
             lblEmail.BorderStyle = BorderStyle.Fixed3D;
             lblEmail.Font = new Font("Segoe UI", 11F);
-            lblEmail.Location = new Point(337, 116);
+            lblEmail.Location = new Point(270, 93);
+            lblEmail.Margin = new Padding(2, 0, 2, 0);
             lblEmail.Name = "lblEmail";
-            lblEmail.Size = new Size(2, 32);
+            lblEmail.Size = new Size(2, 27);
             lblEmail.TabIndex = 13;
             // 
             // lblName
@@ -84,18 +88,20 @@
             lblName.AutoSize = true;
             lblName.BorderStyle = BorderStyle.Fixed3D;
             lblName.Font = new Font("Segoe UI", 11F);
-            lblName.Location = new Point(337, 57);
+            lblName.Location = new Point(270, 46);
+            lblName.Margin = new Padding(2, 0, 2, 0);
             lblName.Name = "lblName";
-            lblName.Size = new Size(2, 32);
+            lblName.Size = new Size(2, 27);
             lblName.TabIndex = 12;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 11F);
-            label3.Location = new Point(126, 175);
+            label3.Location = new Point(101, 140);
+            label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
-            label3.Size = new Size(184, 30);
+            label3.Size = new Size(160, 25);
             label3.TabIndex = 11;
             label3.Text = "Contact Number :";
             // 
@@ -103,9 +109,10 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 11F);
-            label2.Location = new Point(126, 116);
+            label2.Location = new Point(101, 93);
+            label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(75, 30);
+            label2.Size = new Size(67, 25);
             label2.TabIndex = 10;
             label2.Text = "Email :";
             // 
@@ -113,9 +120,10 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 11F);
-            label1.Location = new Point(126, 57);
+            label1.Location = new Point(101, 46);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(82, 30);
+            label1.Size = new Size(71, 25);
             label1.TabIndex = 9;
             label1.Text = "Name :";
             // 
@@ -123,18 +131,19 @@
             // 
             lblBack.AutoSize = true;
             lblBack.Font = new Font("Segoe UI", 11F);
-            lblBack.Location = new Point(61, 304);
+            lblBack.Location = new Point(49, 243);
+            lblBack.Margin = new Padding(2, 0, 2, 0);
             lblBack.Name = "lblBack";
-            lblBack.Size = new Size(79, 30);
+            lblBack.Size = new Size(69, 25);
             lblBack.TabIndex = 17;
             lblBack.Text = "< Back";
             lblBack.Click += lblBack_Click;
             // 
             // superAdmin_adminDetail
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(736, 357);
+            ClientSize = new Size(589, 286);
             Controls.Add(lblBack);
             Controls.Add(lblAddress);
             Controls.Add(label7);
@@ -144,8 +153,11 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
+            Margin = new Padding(2);
             Name = "superAdmin_adminDetail";
             Text = "adminDetail";
+            FormClosed += superAdmin_adminDetail_FormClosed;
+            Load += superAdmin_adminDetail_Load;
             ResumeLayout(false);
             PerformLayout();
         }

@@ -42,10 +42,11 @@
             // 
             dataSchedule.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataSchedule.Columns.AddRange(new DataGridViewColumn[] { name, level, trainer, schedule, Venue });
-            dataSchedule.Location = new Point(54, 57);
+            dataSchedule.Location = new Point(43, 46);
+            dataSchedule.Margin = new Padding(2);
             dataSchedule.Name = "dataSchedule";
             dataSchedule.RowHeadersWidth = 62;
-            dataSchedule.Size = new Size(813, 283);
+            dataSchedule.Size = new Size(650, 226);
             dataSchedule.TabIndex = 0;
             // 
             // name
@@ -87,22 +88,26 @@
             // 
             lblBack.AutoSize = true;
             lblBack.Font = new Font("Segoe UI", 11F);
-            lblBack.Location = new Point(14, 375);
+            lblBack.Location = new Point(11, 300);
+            lblBack.Margin = new Padding(2, 0, 2, 0);
             lblBack.Name = "lblBack";
-            lblBack.Size = new Size(247, 30);
+            lblBack.Size = new Size(214, 25);
             lblBack.TabIndex = 1;
             lblBack.Text = "< Back to Student Menu";
             lblBack.Click += lblBack_Click;
             // 
             // student_viewSchedule
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(919, 425);
+            ClientSize = new Size(735, 340);
             Controls.Add(lblBack);
             Controls.Add(dataSchedule);
+            Margin = new Padding(2);
             Name = "student_viewSchedule";
             Text = "viewSchedule";
+            FormClosed += student_viewSchedule_FormClosed;
+            Load += student_viewSchedule_Load;
             ((System.ComponentModel.ISupportInitialize)dataSchedule).EndInit();
             ResumeLayout(false);
             PerformLayout();

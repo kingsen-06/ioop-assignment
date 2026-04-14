@@ -38,9 +38,10 @@
             // btnUpdate
             // 
             btnUpdate.Font = new Font("Segoe UI", 11F);
-            btnUpdate.Location = new Point(149, 250);
+            btnUpdate.Location = new Point(119, 200);
+            btnUpdate.Margin = new Padding(2, 2, 2, 2);
             btnUpdate.Name = "btnUpdate";
-            btnUpdate.Size = new Size(430, 43);
+            btnUpdate.Size = new Size(344, 34);
             btnUpdate.TabIndex = 24;
             btnUpdate.Text = "Update Account Profile";
             btnUpdate.UseVisualStyleBackColor = true;
@@ -49,9 +50,10 @@
             // btnViewRequest
             // 
             btnViewRequest.Font = new Font("Segoe UI", 11F);
-            btnViewRequest.Location = new Point(148, 184);
+            btnViewRequest.Location = new Point(118, 147);
+            btnViewRequest.Margin = new Padding(2, 2, 2, 2);
             btnViewRequest.Name = "btnViewRequest";
-            btnViewRequest.Size = new Size(430, 43);
+            btnViewRequest.Size = new Size(344, 34);
             btnViewRequest.TabIndex = 23;
             btnViewRequest.Text = "View Student Request";
             btnViewRequest.UseVisualStyleBackColor = true;
@@ -60,9 +62,10 @@
             // btnManage
             // 
             btnManage.Font = new Font("Segoe UI", 11F);
-            btnManage.Location = new Point(149, 119);
+            btnManage.Location = new Point(119, 95);
+            btnManage.Margin = new Padding(2, 2, 2, 2);
             btnManage.Name = "btnManage";
-            btnManage.Size = new Size(430, 43);
+            btnManage.Size = new Size(344, 34);
             btnManage.TabIndex = 21;
             btnManage.Text = "Manage Student";
             btnManage.UseVisualStyleBackColor = true;
@@ -72,9 +75,10 @@
             // 
             lblBack.AutoSize = true;
             lblBack.Font = new Font("Segoe UI", 11F);
-            lblBack.Location = new Point(25, 324);
+            lblBack.Location = new Point(20, 259);
+            lblBack.Margin = new Padding(2, 0, 2, 0);
             lblBack.Name = "lblBack";
-            lblBack.Size = new Size(217, 30);
+            lblBack.Size = new Size(189, 25);
             lblBack.TabIndex = 20;
             lblBack.Text = "< Back to Login Page";
             lblBack.Click += lblBack_Click;
@@ -83,24 +87,27 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 18F);
-            label1.Location = new Point(133, 46);
+            label1.Location = new Point(106, 37);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(468, 48);
+            label1.Size = new Size(390, 41);
             label1.TabIndex = 19;
             label1.Text = "Lecturer Functional Features";
             // 
             // lec_menu
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(727, 376);
+            ClientSize = new Size(582, 301);
             Controls.Add(btnUpdate);
             Controls.Add(btnViewRequest);
             Controls.Add(btnManage);
             Controls.Add(lblBack);
             Controls.Add(label1);
+            Margin = new Padding(2, 2, 2, 2);
             Name = "lec_menu";
             Text = "lecturerMenu";
+            FormClosed += lec_menu_FormClosed;
             ResumeLayout(false);
             PerformLayout();
         }

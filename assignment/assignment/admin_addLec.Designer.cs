@@ -46,9 +46,10 @@
             // btnRegister
             // 
             btnRegister.Font = new Font("Segoe UI", 11F);
-            btnRegister.Location = new Point(331, 412);
+            btnRegister.Location = new Point(265, 330);
+            btnRegister.Margin = new Padding(2, 2, 2, 2);
             btnRegister.Name = "btnRegister";
-            btnRegister.Size = new Size(236, 43);
+            btnRegister.Size = new Size(189, 34);
             btnRegister.TabIndex = 32;
             btnRegister.Text = "Register New Lecturer";
             btnRegister.UseVisualStyleBackColor = true;
@@ -58,9 +59,10 @@
             // 
             lblBack.AutoSize = true;
             lblBack.Font = new Font("Segoe UI", 11F);
-            lblBack.Location = new Point(41, 456);
+            lblBack.Location = new Point(33, 365);
+            lblBack.Margin = new Padding(2, 0, 2, 0);
             lblBack.Name = "lblBack";
-            lblBack.Size = new Size(79, 30);
+            lblBack.Size = new Size(69, 25);
             lblBack.TabIndex = 31;
             lblBack.Text = "< Back";
             lblBack.Click += lblBack_Click;
@@ -69,51 +71,57 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 18F);
-            label6.Location = new Point(154, 35);
+            label6.Location = new Point(123, 28);
+            label6.Margin = new Padding(2, 0, 2, 0);
             label6.Name = "label6";
-            label6.Size = new Size(428, 48);
+            label6.Size = new Size(356, 41);
             label6.TabIndex = 30;
             label6.Text = "New Lecturer Information";
             // 
             // txtAddress
             // 
             txtAddress.Font = new Font("Segoe UI", 11F);
-            txtAddress.Location = new Point(301, 348);
+            txtAddress.Location = new Point(241, 278);
+            txtAddress.Margin = new Padding(2, 2, 2, 2);
             txtAddress.Name = "txtAddress";
-            txtAddress.Size = new Size(295, 37);
+            txtAddress.Size = new Size(237, 32);
             txtAddress.TabIndex = 29;
             // 
             // txtContact
             // 
             txtContact.Font = new Font("Segoe UI", 11F);
-            txtContact.Location = new Point(301, 286);
+            txtContact.Location = new Point(241, 229);
+            txtContact.Margin = new Padding(2, 2, 2, 2);
             txtContact.Name = "txtContact";
-            txtContact.Size = new Size(295, 37);
+            txtContact.Size = new Size(237, 32);
             txtContact.TabIndex = 28;
             // 
             // txtEmail
             // 
             txtEmail.Font = new Font("Segoe UI", 11F);
-            txtEmail.Location = new Point(301, 226);
+            txtEmail.Location = new Point(241, 181);
+            txtEmail.Margin = new Padding(2, 2, 2, 2);
             txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(295, 37);
+            txtEmail.Size = new Size(237, 32);
             txtEmail.TabIndex = 27;
             // 
             // txtName
             // 
             txtName.Font = new Font("Segoe UI", 11F);
-            txtName.Location = new Point(301, 111);
+            txtName.Location = new Point(241, 89);
+            txtName.Margin = new Padding(2, 2, 2, 2);
             txtName.Name = "txtName";
-            txtName.Size = new Size(295, 37);
+            txtName.Size = new Size(237, 32);
             txtName.TabIndex = 25;
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 11F);
-            label5.Location = new Point(111, 351);
+            label5.Location = new Point(89, 281);
+            label5.Margin = new Padding(2, 0, 2, 0);
             label5.Name = "label5";
-            label5.Size = new Size(102, 30);
+            label5.Size = new Size(88, 25);
             label5.TabIndex = 24;
             label5.Text = "Address: ";
             // 
@@ -121,9 +129,10 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 11F);
-            label4.Location = new Point(111, 289);
+            label4.Location = new Point(89, 231);
+            label4.Margin = new Padding(2, 0, 2, 0);
             label4.Name = "label4";
-            label4.Size = new Size(184, 30);
+            label4.Size = new Size(160, 25);
             label4.TabIndex = 23;
             label4.Text = "Contact Number: ";
             // 
@@ -131,9 +140,10 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 11F);
-            label3.Location = new Point(111, 229);
+            label3.Location = new Point(89, 183);
+            label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
-            label3.Size = new Size(75, 30);
+            label3.Size = new Size(67, 25);
             label3.TabIndex = 22;
             label3.Text = "Email: ";
             // 
@@ -141,9 +151,10 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 11F);
-            label2.Location = new Point(111, 170);
+            label2.Location = new Point(89, 136);
+            label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(146, 30);
+            label2.Size = new Size(127, 25);
             label2.TabIndex = 21;
             label2.Text = "Date of Birth: ";
             // 
@@ -151,25 +162,27 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 11F);
-            label1.Location = new Point(111, 114);
+            label1.Location = new Point(89, 91);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(121, 30);
+            label1.Size = new Size(106, 25);
             label1.TabIndex = 20;
             label1.Text = "Full Name: ";
             // 
             // dateDOB
             // 
             dateDOB.Font = new Font("Segoe UI", 11F);
-            dateDOB.Location = new Point(301, 165);
+            dateDOB.Location = new Point(241, 132);
+            dateDOB.Margin = new Padding(2, 2, 2, 2);
             dateDOB.Name = "dateDOB";
-            dateDOB.Size = new Size(295, 37);
+            dateDOB.Size = new Size(237, 32);
             dateDOB.TabIndex = 33;
             // 
             // admin_addLec
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(715, 529);
+            ClientSize = new Size(572, 423);
             Controls.Add(dateDOB);
             Controls.Add(btnRegister);
             Controls.Add(lblBack);
@@ -183,8 +196,10 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
+            Margin = new Padding(2, 2, 2, 2);
             Name = "admin_addLec";
             Text = "admin_addLec";
+            FormClosed += admin_addLec_FormClosed;
             ResumeLayout(false);
             PerformLayout();
         }

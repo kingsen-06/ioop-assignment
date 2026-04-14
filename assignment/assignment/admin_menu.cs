@@ -59,6 +59,11 @@ namespace assignment
             this.Hide();
         }
 
-        
+        private void btnAddModule_Click(object sender, EventArgs e)
+        {
+            admin_newModule newModule = new admin_newModule();
+            newModule.Show();
+            this.Hide();
+        }
     }
 }
