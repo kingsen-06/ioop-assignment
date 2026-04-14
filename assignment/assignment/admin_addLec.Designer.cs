@@ -47,7 +47,7 @@
             // 
             btnRegister.Font = new Font("Segoe UI", 11F);
             btnRegister.Location = new Point(265, 330);
-            btnRegister.Margin = new Padding(2, 2, 2, 2);
+            btnRegister.Margin = new Padding(2);
             btnRegister.Name = "btnRegister";
             btnRegister.Size = new Size(189, 34);
             btnRegister.TabIndex = 32;
@@ -82,7 +82,7 @@
             // 
             txtAddress.Font = new Font("Segoe UI", 11F);
             txtAddress.Location = new Point(241, 278);
-            txtAddress.Margin = new Padding(2, 2, 2, 2);
+            txtAddress.Margin = new Padding(2);
             txtAddress.Name = "txtAddress";
             txtAddress.Size = new Size(237, 32);
             txtAddress.TabIndex = 29;
@@ -91,7 +91,7 @@
             // 
             txtContact.Font = new Font("Segoe UI", 11F);
             txtContact.Location = new Point(241, 229);
-            txtContact.Margin = new Padding(2, 2, 2, 2);
+            txtContact.Margin = new Padding(2);
             txtContact.Name = "txtContact";
             txtContact.Size = new Size(237, 32);
             txtContact.TabIndex = 28;
@@ -100,7 +100,7 @@
             // 
             txtEmail.Font = new Font("Segoe UI", 11F);
             txtEmail.Location = new Point(241, 181);
-            txtEmail.Margin = new Padding(2, 2, 2, 2);
+            txtEmail.Margin = new Padding(2);
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(237, 32);
             txtEmail.TabIndex = 27;
@@ -109,7 +109,7 @@
             // 
             txtName.Font = new Font("Segoe UI", 11F);
             txtName.Location = new Point(241, 89);
-            txtName.Margin = new Padding(2, 2, 2, 2);
+            txtName.Margin = new Padding(2);
             txtName.Name = "txtName";
             txtName.Size = new Size(237, 32);
             txtName.TabIndex = 25;
@@ -173,7 +173,7 @@
             // 
             dateDOB.Font = new Font("Segoe UI", 11F);
             dateDOB.Location = new Point(241, 132);
-            dateDOB.Margin = new Padding(2, 2, 2, 2);
+            dateDOB.Margin = new Padding(2);
             dateDOB.Name = "dateDOB";
             dateDOB.Size = new Size(237, 32);
             dateDOB.TabIndex = 33;
@@ -196,9 +196,9 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "admin_addLec";
-            Text = "admin_addLec";
+            Text = "addLec";
             FormClosed += admin_addLec_FormClosed;
             ResumeLayout(false);
             PerformLayout();

@@ -115,7 +115,7 @@
             Controls.Add(label2);
             Margin = new Padding(2);
             Name = "admin_assignModule";
-            Text = "assignTrainer";
+            Text = "assignModule";
             FormClosed += admin_assignModule_FormClosed;
             Load += admin_assignModule_Load;
             ResumeLayout(false);
