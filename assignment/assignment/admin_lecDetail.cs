@@ -5,7 +5,6 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
-using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,13 +13,12 @@ namespace assignment
 {
     public partial class admin_lecDetail : Form
     {
-        string connectionString = ConfigurationManager.ConnectionStrings["CodeCamp"].ConnectionString;
+        LecturerManager lecManager = new LecturerManager();
         string currentLecturerID;
 
         public admin_lecDetail(string selectedID)
         {
             InitializeComponent();
-
             currentLecturerID = selectedID;
         }
 
@@ -34,46 +32,36 @@ namespace assignment
             loadLecturerProfile();
         }
 
+        private void loadLecturerProfile()
+        {
+            try
+            {
+                User lecDetails = lecManager.getLecturerDetails(currentLecturerID);
+
+                if (lecDetails != null)
+                {
+                    lblName.Text = lecDetails.Name;
+                    lblEmail.Text = lecDetails.Email;
+                    lblContact.Text = lecDetails.ContactNumber;
+                    lblAddress.Text = lecDetails.Address;
+                    lblDOB.Text = lecDetails.DOB;
+                }
+                else
+                {
+                    MessageBox.Show("Lecturer details not found in database.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading profile: " + ex.Message);
+            }
+        }
+
         private void lblBack_Click(object sender, EventArgs e)
         {
             admin_manageLec managePage = new admin_manageLec();
             managePage.Show();
             this.Hide();
-        }
-
-        private void loadLecturerProfile()
-        {
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                try
-                {
-                    connection.Open();
-
-                    string query = "select Name, DateOfBirth, Email, ContactNumber, Address from Lecturer where UserID = @UserID";
-                    using (SqlCommand command = new SqlCommand(query, connection))
-                    {
-                        command.Parameters.AddWithValue("@UserID", currentLecturerID);
-
-                        using (SqlDataReader reader = command.ExecuteReader())
-                        {
-                            if (reader.Read())
-                            {
-                                lblName.Text = reader["Name"].ToString();
-                                lblEmail.Text = reader["Email"].ToString();
-                                lblContact.Text = reader["ContactNumber"].ToString();
-                                lblAddress.Text = reader["Address"].ToString();
-
-                                DateTime dob = Convert.ToDateTime(reader["DateOfBirth"]);
-                                lblDOB.Text = dob.ToString("dd MMM yyyy");
-                            }
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error loading profile: " + ex.Message);
-                }
-            }
         }
     }
 }

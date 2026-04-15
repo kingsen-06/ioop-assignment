@@ -39,12 +39,17 @@
             // 
             // dataFeedback
             // 
+            dataFeedback.AllowUserToAddRows = false;
+            dataFeedback.AllowUserToDeleteRows = false;
+            dataFeedback.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataFeedback.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataFeedback.Columns.AddRange(new DataGridViewColumn[] { feedback, trainer, date });
             dataFeedback.Location = new Point(26, 30);
             dataFeedback.Margin = new Padding(2);
             dataFeedback.Name = "dataFeedback";
+            dataFeedback.ReadOnly = true;
             dataFeedback.RowHeadersWidth = 62;
+            dataFeedback.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataFeedback.Size = new Size(586, 254);
             dataFeedback.TabIndex = 0;
             // 
@@ -53,21 +58,21 @@
             feedback.HeaderText = "Feedback";
             feedback.MinimumWidth = 8;
             feedback.Name = "feedback";
-            feedback.Width = 350;
+            feedback.ReadOnly = true;
             // 
             // trainer
             // 
             trainer.HeaderText = "Trainer";
             trainer.MinimumWidth = 8;
             trainer.Name = "trainer";
-            trainer.Width = 200;
+            trainer.ReadOnly = true;
             // 
             // date
             // 
             date.HeaderText = "Date";
             date.MinimumWidth = 8;
             date.Name = "date";
-            date.Width = 120;
+            date.ReadOnly = true;
             // 
             // lblBack
             // 

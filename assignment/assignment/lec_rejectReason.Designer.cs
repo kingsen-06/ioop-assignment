@@ -90,7 +90,7 @@
             Controls.Add(label1);
             Margin = new Padding(2);
             Name = "lec_rejectReason";
-            Text = "lec_rejectReason";
+            Text = "rejectReason";
             FormClosed += lec_rejectReason_FormClosed;
             ResumeLayout(false);
             PerformLayout();

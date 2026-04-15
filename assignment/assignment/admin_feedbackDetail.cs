@@ -14,7 +14,7 @@ namespace assignment
 {
     public partial class admin_feedbackDetail : Form
     {
-        string connectionString = ConfigurationManager.ConnectionStrings["CodeCamp"].ConnectionString;
+        FeedbackManager feedbackManager = new FeedbackManager();
         string selectedFeedbackID = "";
 
         public admin_feedbackDetail(string feedbackID)
@@ -32,52 +32,17 @@ namespace assignment
 
         private void admin_feedbackDetail_Load(object sender, EventArgs e)
         {
-            txtFeedback.ReadOnly = true;
-            txtFeedback.BackColor = System.Drawing.Color.White;
+            Feedback details = feedbackManager.getFeedbackByID(selectedFeedbackID);
 
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            if (details != null)
             {
-                try
-                {
-                    conn.Open();
-
-                    string query = """
-                        select 
-                            f.Message, 
-                            f.SubmittedAt, 
-                            t.Name 
-                        from Feedback f
-                        inner join Trainer t on f.Email = t.Email
-                        where f.FeedbackID = @feedbackID
-                        """;
-
-                    using (SqlCommand cmd = new SqlCommand(query, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@feedbackID", selectedFeedbackID);
-
-                        using (SqlDataReader reader = cmd.ExecuteReader())
-                        {
-                            if (reader.Read())
-                            {
-                                lblTrainer.Text = reader["Name"].ToString();
-
-                                // Format the date to look professional (e.g., 14 Apr 2026, 02:30 PM)
-                                DateTime submitDate = Convert.ToDateTime(reader["SubmittedAt"]);
-                                lblDate.Text = submitDate.ToString("dd MMM yyyy, hh:mm tt");
-
-                                txtFeedback.Text = reader["Message"].ToString();
-                            }
-                            else
-                            {
-                                MessageBox.Show("Feedback record not found.");
-                            }
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Database Error: " + ex.Message);
-                }
+                lblTrainer.Text = details.Name;
+                lblDate.Text = details.SubmittedAt.ToString("dd MMM yyyy, hh:mm tt");
+                txtFeedback.Text = details.Message;
+            }
+            else
+            {
+                MessageBox.Show("Feedback record not found.");
             }
         }
     }

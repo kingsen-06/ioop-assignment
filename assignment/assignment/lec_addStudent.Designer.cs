@@ -235,7 +235,7 @@
             Controls.Add(label1);
             Margin = new Padding(2);
             Name = "lec_addStudent";
-            Text = "lec_addStudent";
+            Text = "addStudent";
             FormClosed += lec_addStudent_FormClosed;
             Load += lec_addStudent_Load;
             ResumeLayout(false);

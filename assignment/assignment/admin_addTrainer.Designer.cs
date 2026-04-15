@@ -37,11 +37,11 @@
             txtEmail = new TextBox();
             txtContact = new TextBox();
             txtAddress = new TextBox();
-            label6 = new Label();
+            label8 = new Label();
             lblBack = new Label();
             btnRegister = new Button();
+            label6 = new Label();
             label7 = new Label();
-            label8 = new Label();
             cmbModule = new ComboBox();
             dateDOB = new DateTimePicker();
             lblLevel = new Label();
@@ -136,16 +136,16 @@
             txtAddress.Size = new Size(237, 32);
             txtAddress.TabIndex = 9;
             // 
-            // label6
+            // label8
             // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 18F);
-            label6.Location = new Point(101, 18);
-            label6.Margin = new Padding(2, 0, 2, 0);
-            label6.Name = "label6";
-            label6.Size = new Size(337, 41);
-            label6.TabIndex = 10;
-            label6.Text = "New Trainer Information";
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 18F);
+            label8.Location = new Point(101, 18);
+            label8.Margin = new Padding(2, 0, 2, 0);
+            label8.Name = "label8";
+            label8.Size = new Size(337, 41);
+            label8.TabIndex = 10;
+            label8.Text = "New Trainer Information";
             // 
             // lblBack
             // 
@@ -170,27 +170,27 @@
             btnRegister.UseVisualStyleBackColor = true;
             btnRegister.Click += btnRegister_Click;
             // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 11F);
+            label6.Location = new Point(66, 324);
+            label6.Margin = new Padding(2, 0, 2, 0);
+            label6.Name = "label6";
+            label6.Size = new Size(136, 25);
+            label6.TabIndex = 15;
+            label6.Text = "Module Name:";
+            // 
             // label7
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 11F);
-            label7.Location = new Point(66, 324);
+            label7.Location = new Point(66, 375);
             label7.Margin = new Padding(2, 0, 2, 0);
             label7.Name = "label7";
-            label7.Size = new Size(136, 25);
-            label7.TabIndex = 15;
-            label7.Text = "Module Name:";
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI", 11F);
-            label8.Location = new Point(66, 375);
-            label8.Margin = new Padding(2, 0, 2, 0);
-            label8.Name = "label8";
-            label8.Size = new Size(107, 25);
-            label8.TabIndex = 17;
-            label8.Text = "Class Level:";
+            label7.Size = new Size(107, 25);
+            label7.TabIndex = 17;
+            label7.Text = "Class Level:";
             // 
             // cmbModule
             // 
@@ -229,11 +229,11 @@
             Controls.Add(lblLevel);
             Controls.Add(dateDOB);
             Controls.Add(cmbModule);
-            Controls.Add(label8);
             Controls.Add(label7);
+            Controls.Add(label6);
             Controls.Add(btnRegister);
             Controls.Add(lblBack);
-            Controls.Add(label6);
+            Controls.Add(label8);
             Controls.Add(txtAddress);
             Controls.Add(txtContact);
             Controls.Add(txtEmail);
@@ -263,11 +263,11 @@
         private TextBox txtEmail;
         private TextBox txtContact;
         private TextBox txtAddress;
-        private Label label6;
+        private Label label8;
         private Label lblBack;
         private Button btnRegister;
+        private Label label6;
         private Label label7;
-        private Label label8;
         private ComboBox cmbModule;
         private DateTimePicker dateDOB;
         private Label lblLevel;

@@ -1,6 +1,6 @@
 ﻿namespace assignment
 {
-    partial class admin_newModule
+    partial class admin_addModule
     {
         /// <summary>
         /// Required designer variable.
@@ -114,7 +114,7 @@
             txtModule.Size = new Size(334, 32);
             txtModule.TabIndex = 4;
             // 
-            // admin_newModule
+            // admin_addModule
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -127,8 +127,8 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Margin = new Padding(2);
-            Name = "admin_newModule";
-            Text = "admin_newModule";
+            Name = "admin_addModule";
+            Text = "addModule";
             FormClosed += admin_newModule_FormClosed;
             ResumeLayout(false);
             PerformLayout();

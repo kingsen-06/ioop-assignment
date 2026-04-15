@@ -30,15 +30,15 @@
         {
             lblBack = new Label();
             lblAddress = new Label();
-            label7 = new Label();
+            label5 = new Label();
             lblContact = new Label();
             lblDOB = new Label();
             lblName = new Label();
-            label3 = new Label();
+            label4 = new Label();
             label2 = new Label();
             label1 = new Label();
             lblEmail = new Label();
-            label5 = new Label();
+            label3 = new Label();
             SuspendLayout();
             // 
             // lblBack
@@ -64,16 +64,16 @@
             lblAddress.Size = new Size(2, 27);
             lblAddress.TabIndex = 19;
             // 
-            // label7
+            // label5
             // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 11F);
-            label7.Location = new Point(82, 241);
-            label7.Margin = new Padding(2, 0, 2, 0);
-            label7.Name = "label7";
-            label7.Size = new Size(88, 25);
-            label7.TabIndex = 18;
-            label7.Text = "Address :";
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 11F);
+            label5.Location = new Point(82, 241);
+            label5.Margin = new Padding(2, 0, 2, 0);
+            label5.Name = "label5";
+            label5.Size = new Size(88, 25);
+            label5.TabIndex = 18;
+            label5.Text = "Address :";
             // 
             // lblContact
             // 
@@ -108,16 +108,16 @@
             lblName.Size = new Size(2, 27);
             lblName.TabIndex = 15;
             // 
-            // label3
+            // label4
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 11F);
-            label3.Location = new Point(82, 192);
-            label3.Margin = new Padding(2, 0, 2, 0);
-            label3.Name = "label3";
-            label3.Size = new Size(160, 25);
-            label3.TabIndex = 14;
-            label3.Text = "Contact Number :";
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 11F);
+            label4.Location = new Point(82, 192);
+            label4.Margin = new Padding(2, 0, 2, 0);
+            label4.Name = "label4";
+            label4.Size = new Size(160, 25);
+            label4.TabIndex = 14;
+            label4.Text = "Contact Number :";
             // 
             // label2
             // 
@@ -152,16 +152,16 @@
             lblEmail.Size = new Size(2, 27);
             lblEmail.TabIndex = 23;
             // 
-            // label5
+            // label3
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 11F);
-            label5.Location = new Point(82, 145);
-            label5.Margin = new Padding(2, 0, 2, 0);
-            label5.Name = "label5";
-            label5.Size = new Size(67, 25);
-            label5.TabIndex = 22;
-            label5.Text = "Email :";
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 11F);
+            label3.Location = new Point(82, 145);
+            label3.Margin = new Padding(2, 0, 2, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(67, 25);
+            label3.TabIndex = 22;
+            label3.Text = "Email :";
             // 
             // admin_lecDetail
             // 
@@ -169,14 +169,14 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(592, 372);
             Controls.Add(lblEmail);
-            Controls.Add(label5);
+            Controls.Add(label3);
             Controls.Add(lblBack);
             Controls.Add(lblAddress);
-            Controls.Add(label7);
+            Controls.Add(label5);
             Controls.Add(lblContact);
             Controls.Add(lblDOB);
             Controls.Add(lblName);
-            Controls.Add(label3);
+            Controls.Add(label4);
             Controls.Add(label2);
             Controls.Add(label1);
             Margin = new Padding(2);
@@ -192,14 +192,14 @@
 
         private Label lblBack;
         private Label lblAddress;
-        private Label label7;
+        private Label label5;
         private Label lblContact;
         private Label lblDOB;
         private Label lblName;
-        private Label label3;
+        private Label label4;
         private Label label2;
         private Label label1;
         private Label lblEmail;
-        private Label label5;
+        private Label label3;
     }
 }

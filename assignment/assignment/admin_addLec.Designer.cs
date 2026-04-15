@@ -198,7 +198,7 @@
             Controls.Add(label1);
             Margin = new Padding(2);
             Name = "admin_addLec";
-            Text = "addLec";
+            Text = "addLecturer";
             FormClosed += admin_addLec_FormClosed;
             ResumeLayout(false);
             PerformLayout();

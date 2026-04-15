@@ -5,18 +5,17 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
-using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace assignment
 {
-    public partial class admin_newModule : Form
+    public partial class admin_addModule : Form
     {
-        string connectionString = ConfigurationManager.ConnectionStrings["CodeCamp"].ConnectionString;
+        ModuleManager moduleManager = new ModuleManager();
 
-        public admin_newModule()
+        public admin_addModule()
         {
             InitializeComponent();
         }
@@ -42,44 +41,23 @@ namespace assignment
                 return;
             }
 
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            string result = moduleManager.addModule(moduleName, classLevel);
+
+            if (result == "Success")
             {
-                try
-                {
-                    connection.Open();
-
-                    string checkQuery = "select count(*) from Modules where ModuleName = @moduleName";
-                    using (SqlCommand cmdCheck = new SqlCommand(checkQuery, connection))
-                    {
-                        cmdCheck.Parameters.AddWithValue("@moduleName", moduleName);
-
-                        int exists = int.Parse(cmdCheck.ExecuteScalar().ToString());
-                        if (exists > 0)
-                        {
-                            MessageBox.Show($"The module '{moduleName}' already exists in the system!");
-                            return;
-                        }
-                    }
-
-                    string insertQuery = "insert into Modules values (@moduleName, @classLevel)";
-                    using (SqlCommand cmdInsert = new SqlCommand(insertQuery, connection))
-                    {
-                        cmdInsert.Parameters.AddWithValue("@moduleName", moduleName);
-                        cmdInsert.Parameters.AddWithValue("@classLevel", classLevel);
-
-                        cmdInsert.ExecuteNonQuery();
-                    }
-
-                    MessageBox.Show($"Successfully added '{moduleName}' at the {classLevel} level.");
-
-                    txtModule.Clear();
-                    txtModule.Focus();
-                    cmbLevel.SelectedIndex = -1;
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Database Error: " + ex.Message);
-                }
+                MessageBox.Show($"Successfully added '{moduleName}' at the '{classLevel}' level.");
+                txtModule.Clear();
+                txtModule.Focus();
+                cmbLevel.SelectedIndex = -1;
+            }
+            else if (result == "Exists")
+            {
+                MessageBox.Show($"The module '{moduleName}' already exists in the system!");
+                txtModule.Focus();
+            }
+            else
+            {
+                MessageBox.Show(result);
             }
         }
 

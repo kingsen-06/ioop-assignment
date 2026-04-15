@@ -30,25 +30,27 @@
         {
             btnNew = new Button();
             label1 = new Label();
-            label2 = new Label();
             label3 = new Label();
+            label4 = new Label();
             lblName = new Label();
             lblEmail = new Label();
             lblContact = new Label();
-            label7 = new Label();
+            label5 = new Label();
             lblAddress = new Label();
             dataClass = new DataGridView();
             name = new DataGridViewTextBoxColumn();
             level = new DataGridViewTextBoxColumn();
             lblBack = new Label();
             btnRemove = new Button();
+            lblDOB = new Label();
+            label2 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataClass).BeginInit();
             SuspendLayout();
             // 
             // btnNew
             // 
             btnNew.Font = new Font("Segoe UI", 11F);
-            btnNew.Location = new Point(122, 386);
+            btnNew.Location = new Point(122, 433);
             btnNew.Margin = new Padding(2);
             btnNew.Name = "btnNew";
             btnNew.Size = new Size(185, 35);
@@ -68,17 +70,6 @@
             label1.TabIndex = 1;
             label1.Text = "Name :";
             // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 11F);
-            label2.Location = new Point(62, 90);
-            label2.Margin = new Padding(2, 0, 2, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(67, 25);
-            label2.TabIndex = 2;
-            label2.Text = "Email :";
-            // 
             // label3
             // 
             label3.AutoSize = true;
@@ -86,9 +77,20 @@
             label3.Location = new Point(62, 137);
             label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
-            label3.Size = new Size(160, 25);
-            label3.TabIndex = 3;
-            label3.Text = "Contact Number :";
+            label3.Size = new Size(67, 25);
+            label3.TabIndex = 2;
+            label3.Text = "Email :";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 11F);
+            label4.Location = new Point(62, 184);
+            label4.Margin = new Padding(2, 0, 2, 0);
+            label4.Name = "label4";
+            label4.Size = new Size(160, 25);
+            label4.TabIndex = 3;
+            label4.Text = "Contact Number :";
             // 
             // lblName
             // 
@@ -106,7 +108,7 @@
             lblEmail.AutoSize = true;
             lblEmail.BorderStyle = BorderStyle.FixedSingle;
             lblEmail.Font = new Font("Segoe UI", 11F);
-            lblEmail.Location = new Point(230, 90);
+            lblEmail.Location = new Point(230, 137);
             lblEmail.Margin = new Padding(2, 0, 2, 0);
             lblEmail.Name = "lblEmail";
             lblEmail.Size = new Size(2, 27);
@@ -117,29 +119,29 @@
             lblContact.AutoSize = true;
             lblContact.BorderStyle = BorderStyle.FixedSingle;
             lblContact.Font = new Font("Segoe UI", 11F);
-            lblContact.Location = new Point(230, 137);
+            lblContact.Location = new Point(230, 184);
             lblContact.Margin = new Padding(2, 0, 2, 0);
             lblContact.Name = "lblContact";
             lblContact.Size = new Size(2, 27);
             lblContact.TabIndex = 6;
             // 
-            // label7
+            // label5
             // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 11F);
-            label7.Location = new Point(62, 186);
-            label7.Margin = new Padding(2, 0, 2, 0);
-            label7.Name = "label7";
-            label7.Size = new Size(88, 25);
-            label7.TabIndex = 7;
-            label7.Text = "Address :";
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 11F);
+            label5.Location = new Point(62, 233);
+            label5.Margin = new Padding(2, 0, 2, 0);
+            label5.Name = "label5";
+            label5.Size = new Size(88, 25);
+            label5.TabIndex = 7;
+            label5.Text = "Address :";
             // 
             // lblAddress
             // 
             lblAddress.AutoSize = true;
             lblAddress.BorderStyle = BorderStyle.FixedSingle;
             lblAddress.Font = new Font("Segoe UI", 11F);
-            lblAddress.Location = new Point(230, 186);
+            lblAddress.Location = new Point(230, 233);
             lblAddress.Margin = new Padding(2, 0, 2, 0);
             lblAddress.Name = "lblAddress";
             lblAddress.Size = new Size(2, 27);
@@ -149,7 +151,7 @@
             // 
             dataClass.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataClass.Columns.AddRange(new DataGridViewColumn[] { name, level });
-            dataClass.Location = new Point(88, 230);
+            dataClass.Location = new Point(88, 277);
             dataClass.Margin = new Padding(2);
             dataClass.Name = "dataClass";
             dataClass.RowHeadersWidth = 62;
@@ -174,7 +176,7 @@
             // 
             lblBack.AutoSize = true;
             lblBack.Font = new Font("Segoe UI", 11F);
-            lblBack.Location = new Point(25, 423);
+            lblBack.Location = new Point(25, 470);
             lblBack.Margin = new Padding(2, 0, 2, 0);
             lblBack.Name = "lblBack";
             lblBack.Size = new Size(69, 25);
@@ -186,7 +188,7 @@
             // 
             btnRemove.Font = new Font("Segoe UI", 11F);
             btnRemove.ForeColor = Color.Red;
-            btnRemove.Location = new Point(325, 386);
+            btnRemove.Location = new Point(325, 433);
             btnRemove.Margin = new Padding(2);
             btnRemove.Name = "btnRemove";
             btnRemove.Size = new Size(185, 35);
@@ -195,21 +197,45 @@
             btnRemove.UseVisualStyleBackColor = true;
             btnRemove.Click += btnRemove_Click;
             // 
+            // lblDOB
+            // 
+            lblDOB.AutoSize = true;
+            lblDOB.BorderStyle = BorderStyle.FixedSingle;
+            lblDOB.Font = new Font("Segoe UI", 11F);
+            lblDOB.Location = new Point(230, 86);
+            lblDOB.Margin = new Padding(2, 0, 2, 0);
+            lblDOB.Name = "lblDOB";
+            lblDOB.Size = new Size(2, 27);
+            lblDOB.TabIndex = 18;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 11F);
+            label2.Location = new Point(62, 86);
+            label2.Margin = new Padding(2, 0, 2, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(132, 25);
+            label2.TabIndex = 17;
+            label2.Text = "Date of Birth : ";
+            // 
             // admin_trainerDetail
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(622, 462);
+            ClientSize = new Size(622, 536);
+            Controls.Add(lblDOB);
+            Controls.Add(label2);
             Controls.Add(btnRemove);
             Controls.Add(lblBack);
             Controls.Add(dataClass);
             Controls.Add(lblAddress);
-            Controls.Add(label7);
+            Controls.Add(label5);
             Controls.Add(lblContact);
             Controls.Add(lblEmail);
             Controls.Add(lblName);
+            Controls.Add(label4);
             Controls.Add(label3);
-            Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(btnNew);
             Margin = new Padding(2);
@@ -226,17 +252,19 @@
 
         private Button btnNew;
         private Label label1;
-        private Label label2;
         private Label label3;
+        private Label label4;
         private Label lblName;
         private Label lblEmail;
         private Label lblContact;
-        private Label label7;
+        private Label label5;
         private Label lblAddress;
         private DataGridView dataClass;
         private DataGridViewTextBoxColumn name;
         private DataGridViewTextBoxColumn level;
         private Label lblBack;
         private Button btnRemove;
+        private Label lblDOB;
+        private Label label2;
     }
 }

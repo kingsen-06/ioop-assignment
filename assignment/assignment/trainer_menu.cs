@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,6 +14,11 @@ namespace assignment
         public trainer_menu()
         {
             InitializeComponent();
+        }
+
+        private void trainer_menu_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
 
         private void btnUpdateClass_Click(object sender, EventArgs e)
@@ -47,14 +51,11 @@ namespace assignment
 
         private void lblBack_Click(object sender, EventArgs e)
         {
+            User.CurrentUser = null;
+
             main_loginPage loginPage = new main_loginPage();
             loginPage.Show();
             this.Hide();
-        }
-
-        private void trainer_menu_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
         }
     }
 }

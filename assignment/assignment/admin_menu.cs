@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -36,6 +35,13 @@ namespace assignment
             this.Hide();
         }
 
+        private void btnAddModule_Click(object sender, EventArgs e)
+        {
+            admin_addModule newModule = new admin_addModule();
+            newModule.Show();
+            this.Hide();
+        }
+
         private void btnViewFeedback_Click(object sender, EventArgs e)
         {
             admin_viewFeedback viewFeedback = new admin_viewFeedback();
@@ -56,13 +62,6 @@ namespace assignment
 
             main_loginPage loginPage = new main_loginPage();
             loginPage.Show();
-            this.Hide();
-        }
-
-        private void btnAddModule_Click(object sender, EventArgs e)
-        {
-            admin_newModule newModule = new admin_newModule();
-            newModule.Show();
             this.Hide();
         }
     }

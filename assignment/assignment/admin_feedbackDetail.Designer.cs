@@ -85,8 +85,9 @@
             txtFeedback.BorderStyle = BorderStyle.None;
             txtFeedback.Font = new Font("Segoe UI", 11F);
             txtFeedback.Location = new Point(52, 122);
-            txtFeedback.Margin = new Padding(2, 2, 2, 2);
+            txtFeedback.Margin = new Padding(2);
             txtFeedback.Name = "txtFeedback";
+            txtFeedback.ReadOnly = true;
             txtFeedback.Size = new Size(403, 183);
             txtFeedback.TabIndex = 4;
             txtFeedback.Text = "";
@@ -114,7 +115,7 @@
             Controls.Add(lblTrainer);
             Controls.Add(label2);
             Controls.Add(label1);
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "admin_feedbackDetail";
             Text = "feedbackDetail";
             Load += admin_feedbackDetail_Load;

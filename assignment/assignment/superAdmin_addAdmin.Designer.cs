@@ -161,7 +161,7 @@
             Controls.Add(label1);
             Margin = new Padding(2);
             Name = "superAdmin_addAdmin";
-            Text = "superAdmin_addAdmin";
+            Text = "addAdmin";
             FormClosed += superAdmin_addAdmin_FormClosed;
             ResumeLayout(false);
             PerformLayout();

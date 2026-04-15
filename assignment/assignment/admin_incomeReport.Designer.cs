@@ -91,11 +91,16 @@
             // 
             // dataReport
             // 
+            dataReport.AllowUserToAddRows = false;
+            dataReport.AllowUserToDeleteRows = false;
+            dataReport.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataReport.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataReport.Columns.AddRange(new DataGridViewColumn[] { earn, rmEarn, deduct, rmDeduct });
             dataReport.Location = new Point(42, 234);
-            dataReport.Margin = new Padding(2, 2, 2, 2);
+            dataReport.Margin = new Padding(2);
             dataReport.Name = "dataReport";
+            dataReport.ReadOnly = true;
+            dataReport.RowHeadersVisible = false;
             dataReport.RowHeadersWidth = 62;
             dataReport.Size = new Size(769, 188);
             dataReport.TabIndex = 3;
@@ -105,28 +110,24 @@
             earn.HeaderText = "Earnings";
             earn.MinimumWidth = 8;
             earn.Name = "earn";
-            earn.Width = 300;
             // 
             // rmEarn
             // 
             rmEarn.HeaderText = "RM";
             rmEarn.MinimumWidth = 8;
             rmEarn.Name = "rmEarn";
-            rmEarn.Width = 150;
             // 
             // deduct
             // 
             deduct.HeaderText = "Deductions";
             deduct.MinimumWidth = 8;
             deduct.Name = "deduct";
-            deduct.Width = 300;
             // 
             // rmDeduct
             // 
             rmDeduct.HeaderText = "RM";
             rmDeduct.MinimumWidth = 8;
             rmDeduct.Name = "rmDeduct";
-            rmDeduct.Width = 150;
             // 
             // lblTotal
             // 
@@ -345,7 +346,7 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "admin_incomeReport";
             Text = "incomeReport";
             FormClosed += admin_incomeReport_FormClosed;

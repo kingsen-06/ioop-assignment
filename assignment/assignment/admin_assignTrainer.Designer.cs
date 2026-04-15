@@ -1,6 +1,6 @@
 ﻿namespace assignment
 {
-    partial class admin_assignModule
+    partial class admin_assignTrainer
     {
         /// <summary>
         /// Required designer variable.
@@ -28,24 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label2 = new Label();
+            label1 = new Label();
             cmbModule = new ComboBox();
             btnAssign = new Button();
             lblBack = new Label();
-            label3 = new Label();
+            label2 = new Label();
             lblLevel = new Label();
             SuspendLayout();
             // 
-            // label2
+            // label1
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 11F);
-            label2.Location = new Point(124, 45);
-            label2.Margin = new Padding(2, 0, 2, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(141, 25);
-            label2.TabIndex = 1;
-            label2.Text = "Module Name: ";
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 11F);
+            label1.Location = new Point(124, 45);
+            label1.Margin = new Padding(2, 0, 2, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(141, 25);
+            label1.TabIndex = 1;
+            label1.Text = "Module Name: ";
             // 
             // cmbModule
             // 
@@ -82,16 +82,16 @@
             lblBack.Text = "< Back";
             lblBack.Click += lblBack_Click;
             // 
-            // label3
+            // label2
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 11F);
-            label3.Location = new Point(124, 123);
-            label3.Margin = new Padding(2, 0, 2, 0);
-            label3.Name = "label3";
-            label3.Size = new Size(112, 25);
-            label3.TabIndex = 0;
-            label3.Text = "Class Level: ";
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 11F);
+            label2.Location = new Point(124, 123);
+            label2.Margin = new Padding(2, 0, 2, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(112, 25);
+            label2.TabIndex = 0;
+            label2.Text = "Class Level: ";
             // 
             // lblLevel
             // 
@@ -102,7 +102,7 @@
             lblLevel.Size = new Size(0, 25);
             lblLevel.TabIndex = 7;
             // 
-            // admin_assignModule
+            // admin_assignTrainer
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -111,11 +111,11 @@
             Controls.Add(lblBack);
             Controls.Add(btnAssign);
             Controls.Add(cmbModule);
-            Controls.Add(label3);
             Controls.Add(label2);
+            Controls.Add(label1);
             Margin = new Padding(2);
-            Name = "admin_assignModule";
-            Text = "assignModule";
+            Name = "admin_assignTrainer";
+            Text = "assignTrainer";
             FormClosed += admin_assignModule_FormClosed;
             Load += admin_assignModule_Load;
             ResumeLayout(false);
@@ -123,11 +123,11 @@
         }
 
         #endregion
-        private Label label2;
+        private Label label1;
         private ComboBox cmbModule;
         private Button btnAssign;
         private Label lblBack;
-        private Label label3;
+        private Label label2;
         private Label lblLevel;
     }
 }

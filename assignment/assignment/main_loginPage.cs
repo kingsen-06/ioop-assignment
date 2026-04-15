@@ -1,6 +1,5 @@
 using System.Data.SqlClient;
 using System.Configuration;
-using Microsoft.VisualBasic.ApplicationServices;
 using System.Text.RegularExpressions;
 
 namespace assignment
@@ -12,7 +11,6 @@ namespace assignment
         public main_loginPage()
         {
             InitializeComponent();
-            txtPassword.PasswordChar = '*';
         }
 
         private void main_loginPage_FormClosed(object sender, FormClosedEventArgs e)
@@ -41,7 +39,7 @@ namespace assignment
 
             if (!Regex.IsMatch(email, emailPattern))
             {
-                MessageBox.Show("Please enter a valid email format. (e.g. user@mail.apu.edu.my)");
+                MessageBox.Show("Please enter a valid email format. (e.g. example@gmail.com)");
                 return;
             }
 
@@ -51,21 +49,21 @@ namespace assignment
                 {
                     connection.Open();
 
-                    string query = "select UserID, Role from Users where Email = @email and Password = @password";
-                    using (SqlCommand cmd = new SqlCommand(query, connection))
+                    string loginQuery = "select UserID, Role from Users where Email = @email and Password = @password";
+                    using (SqlCommand loginCommand = new SqlCommand(loginQuery, connection))
                     {
-                        cmd.Parameters.AddWithValue("@email", email);
-                        cmd.Parameters.AddWithValue("@password", password);
+                        loginCommand.Parameters.AddWithValue("@email", email);
+                        loginCommand.Parameters.AddWithValue("@password", password);
 
                         string id = "";
                         string role = "";
 
-                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        using (SqlDataReader loginReader = loginCommand.ExecuteReader())
                         {
-                            if (reader.Read())
+                            if (loginReader.Read())
                             {
-                                id = reader["UserID"].ToString();
-                                role = reader["Role"].ToString();
+                                id = loginReader["UserID"].ToString();
+                                role = loginReader["Role"].ToString();
 
                                 User.CurrentUser = new User(id, email, role);
                             }
@@ -95,7 +93,9 @@ namespace assignment
 
                             if (!string.IsNullOrEmpty(tableName))
                             {
-                                string profileQuery = isStudent ? $"select Name, TPNumber from {tableName} where UserID = @UserID" : $"select Name from {tableName} where UserID = @UserID";
+                                string profileQuery = isStudent ? 
+                                    $"select Name, TPNumber from {tableName} where UserID = @UserID" : 
+                                    $"select Name from {tableName} where UserID = @UserID";
 
                                 using (SqlCommand profileCommand = new SqlCommand(profileQuery, connection))
                                 {
@@ -106,23 +106,21 @@ namespace assignment
                                         if (profileReader.Read())
                                         {
                                             User.CurrentUser.Name = profileReader["Name"].ToString();
-
-                                            if (isStudent)
-                                            {
-                                                User.CurrentUser.TPNumber = profileReader["TPNumber"].ToString();
-                                            }
                                         }
                                     }
                                 }
                             }
                             MessageBox.Show($"Login Successful! Welcome, {User.CurrentUser.Name}!");
 
-                            this.Hide();
-
                             if (role == "Admin")
                             {
                                 admin_menu adminMenu = new admin_menu();
                                 adminMenu.Show();
+                            }
+                            else if (role == "Super Admin")
+                            {
+                                superAdmin_menu superAdminMenu = new superAdmin_menu();
+                                superAdminMenu.Show();
                             }
                             else if (role == "Lecturer")
                             {
@@ -138,12 +136,9 @@ namespace assignment
                             {
                                 student_menu studentMenu = new student_menu();
                                 studentMenu.Show();
-                            }
-                            else if (role == "Super Admin")
-                            {
-                                superAdmin_menu superAdminMenu = new superAdmin_menu();
-                                superAdminMenu.Show();
-                            }
+                            }         
+
+                            this.Hide();
                         }
                         else
                         {

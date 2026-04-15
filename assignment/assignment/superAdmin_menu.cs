@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,10 +16,21 @@ namespace assignment
             InitializeComponent();
         }
 
+        private void superAdmin_menu_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
         private void btnManageAdmin_Click(object sender, EventArgs e)
         {
             superAdmin_manageAdmin manageAdmin = new superAdmin_manageAdmin();
             manageAdmin.Show();
+            this.Hide();
+        }
+        private void btnManageLecturer_Click(object sender, EventArgs e)
+        {
+            admin_manageLec manageLec = new admin_manageLec();
+            manageLec.Show();
             this.Hide();
         }
 
@@ -28,6 +38,13 @@ namespace assignment
         {
             admin_manageTrainer manageTrainer = new admin_manageTrainer();
             manageTrainer.Show();
+            this.Hide();
+        }
+
+        private void btnAddModule_Click(object sender, EventArgs e)
+        {
+            admin_addModule addModule = new admin_addModule();
+            addModule.Show();
             this.Hide();
         }
 
@@ -47,22 +64,10 @@ namespace assignment
 
         private void lblBack_Click(object sender, EventArgs e)
         {
+            User.CurrentUser = null;
+
             main_loginPage loginPage = new main_loginPage();
             loginPage.Show();
-            this.Hide();
-        }
-
-        private void btnManageLecturer_Click(object sender, EventArgs e)
-        {
-            admin_manageLec manageLec = new admin_manageLec();
-            manageLec.Show();
-            this.Hide();
-        }
-
-        private void btnAddModule_Click(object sender, EventArgs e)
-        {
-            admin_menu adminMenu = new admin_menu();
-            adminMenu.Show();
             this.Hide();
         }
     }

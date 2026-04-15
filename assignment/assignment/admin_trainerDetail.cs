@@ -5,7 +5,6 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
-using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,13 +13,12 @@ namespace assignment
 {
     public partial class admin_trainerDetail : Form
     {
-        string connectionString = ConfigurationManager.ConnectionStrings["CodeCamp"].ConnectionString;
+        TrainerManager trainerManager = new TrainerManager();
         string currentTrainerID;
 
         public admin_trainerDetail(string selectedID)
         {
             InitializeComponent();
-
             currentTrainerID = selectedID;
         }
 
@@ -35,77 +33,49 @@ namespace assignment
             loadTrainerModules();
         }
 
-        private void btnNew_Click(object sender, EventArgs e)
-        {
-            admin_assignModule assignClass = new admin_assignModule(currentTrainerID);
-            assignClass.Show();
-            this.Hide();
-        }
-
-        private void lblBack_Click(object sender, EventArgs e)
-        {
-            admin_manageTrainer managePage = new admin_manageTrainer();
-            managePage.Show();
-            this.Hide();
-        }
-
         private void loadTrainerProfile()
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            try
             {
-                try
-                {
-                    connection.Open();
+                User trainerDetails = trainerManager.getTrainerDetails(currentTrainerID);
 
-                    string query = "select Name, Email, ContactNumber, Address from Trainer where UserID = @UserID";
-                    using (SqlCommand command = new SqlCommand(query, connection))
-                    {
-                        command.Parameters.AddWithValue("@UserID", currentTrainerID);
-
-                        using (SqlDataReader reader = command.ExecuteReader())
-                        {
-                            if (reader.Read())
-                            {
-                                lblName.Text = reader["Name"].ToString();
-                                lblEmail.Text = reader["Email"].ToString();
-                                lblContact.Text = reader["ContactNumber"].ToString();
-                                lblAddress.Text = reader["Address"].ToString();
-                            }
-                        }
-                    }
-                }
-                catch (Exception ex)
+                if (trainerDetails != null)
                 {
-                    MessageBox.Show("Error loading profile: " + ex.Message);
+                    lblName.Text = trainerDetails.Name;
+                    lblEmail.Text = trainerDetails.Email;
+                    lblContact.Text = trainerDetails.ContactNumber;
+                    lblAddress.Text = trainerDetails.Address;
+                    lblDOB.Text = trainerDetails.DOB;
                 }
+                else
+                {
+                    MessageBox.Show("Trainer details not found in database");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading profile: " + ex.Message);
             }
         }
 
         private void loadTrainerModules()
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            try
             {
-                try
-                {
-                    connection.Open();
-
-                    string query = "select m.ModuleID, m.ModuleName as 'Module Name', m.ClassLevel as 'Class Level' from TrainerAssignedModules tam join Modules m on tam.ModuleID = m.ModuleID where tam.UserID = @UserID";
-                    using (SqlDataAdapter adapter = new SqlDataAdapter(query, connection))
-                    {
-                        adapter.SelectCommand.Parameters.AddWithValue("@UserID", currentTrainerID);
-
-                        DataTable moduleTable = new DataTable();
-                        adapter.Fill(moduleTable);
-                        dataClass.Columns.Clear();
-
-                        dataClass.DataSource = moduleTable;
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error loading modules: " + ex.Message);
-                }
+                DataTable trainerModules = new DataTable();
+                dataClass.DataSource = trainerModules;
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading modules: " + ex.Message);
+            }
+        }
+
+        private void btnNew_Click(object sender, EventArgs e)
+        {
+            admin_assignTrainer assignClass = new admin_assignTrainer(currentTrainerID);
+            assignClass.Show();
+            this.Hide();
         }
 
         private void btnRemove_Click(object sender, EventArgs e)
@@ -115,33 +85,20 @@ namespace assignment
                 string selectedModuleID = dataClass.CurrentRow.Cells["ModuleID"].Value.ToString();
                 string selectedModuleName = dataClass.CurrentRow.Cells["Module Name"].Value.ToString();
 
-                DialogResult confirm = MessageBox.Show($"Are you sure you want to remove '{selectedModuleName}' from this trainer?\nThis action cannot be redone!", "Confirm Removal", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                DialogResult confirm = MessageBox.Show($"Are you sure you want to remove '{selectedModuleName}' from this trainer?\nThis action cannot be undone!", "Confirm Removal", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
                 if (confirm == DialogResult.Yes)
                 {
-                    using (SqlConnection connection = new SqlConnection(connectionString))
+                    bool isSuccess = trainerManager.removeTrainerModule(currentTrainerID, selectedModuleID);
+
+                    if (isSuccess)
                     {
-                        try
-                        {
-                            connection.Open();
-
-                            string deleteQuery = "delete from TrainerAssignedModules where UserID = @UserID and ModuleID = @ModuleID";
-                            using (SqlCommand command = new SqlCommand(deleteQuery, connection))
-                            {
-                                command.Parameters.AddWithValue("@UserID", currentTrainerID);
-                                command.Parameters.AddWithValue("@ModuleID", selectedModuleID);
-
-                                command.ExecuteNonQuery();
-                            }
-
-                            MessageBox.Show($"{selectedModuleName} has been removed successfully!");
-
-                            loadTrainerModules();
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show("Error removing module: " + ex.Message);
-                        }
+                        MessageBox.Show($"{selectedModuleName} has been successfully removed.");
+                        loadTrainerModules();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error removing module from the database.");
                     }
                 }
             }
@@ -149,6 +106,13 @@ namespace assignment
             {
                 MessageBox.Show("Please select a module from the list to remove.");
             }
+        }
+
+        private void lblBack_Click(object sender, EventArgs e)
+        {
+            admin_manageTrainer managePage = new admin_manageTrainer();
+            managePage.Show();
+            this.Hide();
         }
     }
 }
